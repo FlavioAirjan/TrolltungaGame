@@ -67,6 +67,7 @@
     <Compile Include="Assets\scripts\GUITextureAboveObject.cs" />
     <Compile Include="Assets\scripts\Parallaxing.cs" />
     <Compile Include="Assets\scripts\checkFloor.cs" />
+    <Compile Include="Assets\scripts\menuScript.cs" />
     <Compile Include="Assets\scripts\playerController.cs" />
     <Compile Include="Assets\scripts\tiling.cs" />
     <Compile Include="Assets\scripts\vidaObjeto.cs" />
