@@ -8,10 +8,12 @@ public class Enemy_0 : MonoBehaviour{
     private Animator animator;
     public int moveSpeed;
     public int rotationSpeed;
+    private bool atacking;
 
     void Start()
     {
         //target = GameObject.Find("Player").transform;
+        atacking = false;
         animator = enemy.GetComponent<Animator>();
     }
 
@@ -19,11 +21,12 @@ public class Enemy_0 : MonoBehaviour{
     {
 
 
-        if (target != null)
+        if (target != null && atacking == false)
         {
             float dir = target.position.x - transform.position.x;
-            if (dir>0.5||dir<-0.5) {
-                animator.SetBool("walk",true);
+            if (dir > 0.5 || dir < -0.5)
+            {
+                animator.SetBool("walk", true);
                 Vector2 direction;
                 direction.x = 0;
                 direction.y = 0;
@@ -31,8 +34,6 @@ public class Enemy_0 : MonoBehaviour{
                 {
                     direction.x = -1;
                     enemy.GetComponent<SpriteRenderer>().flipX = true;
-
-
                 }
 
                 if (dir > 0)
@@ -44,14 +45,30 @@ public class Enemy_0 : MonoBehaviour{
                 //Move Towards Target
 
                 transform.Translate(direction * moveSpeed * Time.deltaTime);
-            }else
+            }
+            else
             {
-                animator.SetBool("walk", false);
+
+                StartCoroutine(Atack());
             }
         }
-        
-        transform.GetComponent<Rigidbody2D>().velocity= Vector3.zero;
+        else
+        {
+
+            transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
       
+    }
+
+    IEnumerator Atack()
+    {
+            atacking = true;
+            animator.SetBool("walk", false);
+            animator.SetBool("atack", true);
+            yield return new WaitForSeconds(1);
+            animator.SetBool("atack", false);
+            yield return new WaitForSeconds(1);
+            atacking = false;
     }
 
 
