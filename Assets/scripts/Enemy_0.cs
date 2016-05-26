@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy_0 : MonoBehaviour{
     public Transform target;
     public Transform enemy;
+    public float dist;
 
     private Animator animator;
     public int moveSpeed;
@@ -24,7 +25,7 @@ public class Enemy_0 : MonoBehaviour{
         if (target != null && atacking == false)
         {
             float dir = target.position.x - transform.position.x;
-            if (dir > 0.5 || dir < -0.5)
+            if (dir > dist || dir < -dist)
             {
                 animator.SetBool("walk", true);
                 Vector2 direction;

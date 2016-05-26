@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9f85446a1d3250b498d3bad0c145aaa9
-timeCreated: 1464099967
+timeCreated: 1464269220
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,16 +84,16 @@ TextureImporter:
         y: 816
         width: 81
         height: 171
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -40.5, y: 85.5}
-        - {x: -40.5, y: -85.5}
-        - {x: 30.5, y: -85.5}
-        - {x: 40.5, y: -83.5}
-        - {x: 40.5, y: 78.5}
-        - {x: 21.5, y: 85.5}
+      - - {x: -40.5, y: 171}
+        - {x: -40.5, y: 0}
+        - {x: 30.5, y: 0}
+        - {x: 40.5, y: 2}
+        - {x: 40.5, y: 164}
+        - {x: 21.5, y: 171}
     - name: Barbarian_1
       rect:
         serializedVersion: 2
@@ -101,19 +101,19 @@ TextureImporter:
         y: 816
         width: 81
         height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 40.5, y: 82.5}
-        - {x: -21.5, y: 82.5}
-        - {x: -40.5, y: 72.5}
-        - {x: -40.5, y: -77.5}
-        - {x: -37.5, y: -82.5}
-        - {x: 28.5, y: -82.5}
-        - {x: 38.5, y: -74.5}
-        - {x: 39.5, y: -59.5}
-        - {x: 40.5, y: -58.5}
+      - - {x: 40.5, y: 165}
+        - {x: -21.5, y: 165}
+        - {x: -40.5, y: 155}
+        - {x: -40.5, y: 5}
+        - {x: -37.5, y: 0}
+        - {x: 28.5, y: 0}
+        - {x: 38.5, y: 8}
+        - {x: 39.5, y: 23}
+        - {x: 40.5, y: 24}
     - name: Barbarian_2
       rect:
         serializedVersion: 2
@@ -121,42 +121,34 @@ TextureImporter:
         y: 816
         width: 107
         height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -46.5, y: -85}
-        - {x: 53.5, y: -85}
-        - {x: 53.5, y: 37}
-        - {x: 43.5, y: 85}
-        - {x: -53.5, y: 85}
-        - {x: -53.5, y: -52}
+      - - {x: -46.5, y: 0}
+        - {x: 53.5, y: 0}
+        - {x: 53.5, y: 122}
+        - {x: 43.5, y: 170}
+        - {x: -53.5, y: 170}
+        - {x: -53.5, y: 33}
     - name: Barbarian_3
       rect:
         serializedVersion: 2
         x: 403
-        y: 816
+        y: 815
         width: 134
         height: 170
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 42, y: -27}
-        - {x: 59, y: -18}
-        - {x: 63, y: -11}
-        - {x: 61, y: 1}
-        - {x: 47, y: 17}
-        - {x: 4, y: 85}
-        - {x: -62, y: 85}
-        - {x: -67, y: 70}
-        - {x: -67, y: 0}
-        - {x: -19, y: -83}
-        - {x: -9, y: -85}
-        - {x: 66, y: -85}
-        - {x: 67, y: -81}
-        - {x: 67, y: -62}
-        - {x: 56, y: -54}
+      - - {x: -67, y: 170}
+        - {x: -67, y: 83}
+        - {x: -32, y: 0}
+        - {x: 61, y: 0}
+        - {x: 67, y: 1}
+        - {x: 67, y: 129}
+        - {x: 17, y: 170}
     - name: Barbarian_4
       rect:
         serializedVersion: 2
@@ -164,18 +156,18 @@ TextureImporter:
         y: 816
         width: 138
         height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -36, y: 52}
-        - {x: -44, y: 45}
-        - {x: -63, y: 29}
-        - {x: -69, y: 6}
-        - {x: -69, y: -52}
-        - {x: 20, y: -52}
-        - {x: 69, y: 3}
-        - {x: 69, y: 52}
+      - - {x: -36, y: 104}
+        - {x: -44, y: 97}
+        - {x: -63, y: 81}
+        - {x: -69, y: 58}
+        - {x: -69, y: 0}
+        - {x: 20, y: 0}
+        - {x: 69, y: 55}
+        - {x: 69, y: 104}
     - name: Barbarian_5
       rect:
         serializedVersion: 2
@@ -183,16 +175,16 @@ TextureImporter:
         y: 816
         width: 81
         height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -21.5, y: 48}
-        - {x: -40.5, y: 17}
-        - {x: -40.5, y: -48}
-        - {x: 40.5, y: -48}
-        - {x: 40.5, y: 40}
-        - {x: 30.5, y: 48}
+      - - {x: -21.5, y: 96}
+        - {x: -40.5, y: 65}
+        - {x: -40.5, y: 0}
+        - {x: 40.5, y: 0}
+        - {x: 40.5, y: 88}
+        - {x: 30.5, y: 96}
     - name: Barbarian_6
       rect:
         serializedVersion: 2
@@ -200,18 +192,18 @@ TextureImporter:
         y: 678
         width: 106
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -53, y: -30.5}
-        - {x: -36, y: -55.5}
-        - {x: 53, y: -55.5}
-        - {x: 53, y: 20.5}
-        - {x: 40, y: 52.5}
-        - {x: 31, y: 55.5}
-        - {x: -22, y: 55.5}
-        - {x: -53, y: 20.5}
+      - - {x: -53, y: 25}
+        - {x: -36, y: 0}
+        - {x: 53, y: 0}
+        - {x: 53, y: 76}
+        - {x: 40, y: 108}
+        - {x: 31, y: 111}
+        - {x: -22, y: 111}
+        - {x: -53, y: 76}
     - name: Barbarian_7
       rect:
         serializedVersion: 2
@@ -219,21 +211,21 @@ TextureImporter:
         y: 678
         width: 155
         height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 25.5, y: 44}
-        - {x: -17.5, y: 56}
-        - {x: -61.5, y: 56}
-        - {x: -77.5, y: 36}
-        - {x: -77.5, y: -54}
-        - {x: -73.5, y: -56}
-        - {x: -8.5, y: -56}
-        - {x: 9.5, y: -52}
-        - {x: 69.5, y: -19}
-        - {x: 77.5, y: -6}
-        - {x: 77.5, y: 26}
+      - - {x: 25.5, y: 100}
+        - {x: -17.5, y: 112}
+        - {x: -61.5, y: 112}
+        - {x: -77.5, y: 92}
+        - {x: -77.5, y: 2}
+        - {x: -73.5, y: 0}
+        - {x: -8.5, y: 0}
+        - {x: 9.5, y: 4}
+        - {x: 69.5, y: 37}
+        - {x: 77.5, y: 50}
+        - {x: 77.5, y: 82}
     - name: Barbarian_8
       rect:
         serializedVersion: 2
@@ -241,17 +233,17 @@ TextureImporter:
         y: 678
         width: 80
         height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -7, y: 55.5}
-        - {x: -30, y: 37.5}
-        - {x: -40, y: 24.5}
-        - {x: -40, y: -55.5}
-        - {x: 40, y: -55.5}
-        - {x: 40, y: 34.5}
-        - {x: 10, y: 55.5}
+      - - {x: -7, y: 111}
+        - {x: -30, y: 93}
+        - {x: -40, y: 80}
+        - {x: -40, y: 0}
+        - {x: 40, y: 0}
+        - {x: 40, y: 90}
+        - {x: 10, y: 111}
     - name: Barbarian_9
       rect:
         serializedVersion: 2
@@ -259,17 +251,17 @@ TextureImporter:
         y: 672
         width: 163
         height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -65.5, y: 58}
-        - {x: -81.5, y: 51}
-        - {x: -81.5, y: -40}
-        - {x: -60.5, y: -58}
-        - {x: 81.5, y: -58}
-        - {x: 81.5, y: 38}
-        - {x: 57.5, y: 58}
+      - - {x: -65.5, y: 116}
+        - {x: -81.5, y: 109}
+        - {x: -81.5, y: 18}
+        - {x: -60.5, y: 0}
+        - {x: 81.5, y: 0}
+        - {x: 81.5, y: 96}
+        - {x: 57.5, y: 116}
     - name: Barbarian_10
       rect:
         serializedVersion: 2
@@ -277,19 +269,19 @@ TextureImporter:
         y: 484
         width: 145
         height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -70.5, y: 72}
-        - {x: -72.5, y: 71}
-        - {x: -72.5, y: 19}
-        - {x: -8.5, y: -62}
-        - {x: 5.5, y: -72}
-        - {x: 68.5, y: -72}
-        - {x: 72.5, y: -66}
-        - {x: 72.5, y: 36}
-        - {x: 19.5, y: 72}
+      - - {x: -70.5, y: 144}
+        - {x: -72.5, y: 143}
+        - {x: -72.5, y: 91}
+        - {x: -8.5, y: 10}
+        - {x: 5.5, y: 0}
+        - {x: 68.5, y: 0}
+        - {x: 72.5, y: 6}
+        - {x: 72.5, y: 108}
+        - {x: 19.5, y: 144}
     - name: Barbarian_11
       rect:
         serializedVersion: 2
@@ -297,18 +289,18 @@ TextureImporter:
         y: 482
         width: 164
         height: 153
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -82, y: 76.5}
-        - {x: -82, y: -3.5}
-        - {x: -35, y: -76.5}
-        - {x: 77, y: -76.5}
-        - {x: 82, y: -71.5}
-        - {x: 82, y: -28.5}
-        - {x: 77, y: 34.5}
-        - {x: 6, y: 76.5}
+      - - {x: -82, y: 153}
+        - {x: -82, y: 73}
+        - {x: -35, y: 0}
+        - {x: 77, y: 0}
+        - {x: 82, y: 5}
+        - {x: 82, y: 48}
+        - {x: 77, y: 111}
+        - {x: 6, y: 153}
     - name: Barbarian_12
       rect:
         serializedVersion: 2
@@ -316,26 +308,26 @@ TextureImporter:
         y: 482
         width: 84
         height: 167
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 40, y: -14.5}
-        - {x: 42, y: 0.5}
-        - {x: 42, y: 77.5}
-        - {x: 28, y: 83.5}
-        - {x: -17, y: 83.5}
-        - {x: -37, y: 67.5}
-        - {x: -42, y: 62.5}
-        - {x: -42, y: 38.5}
-        - {x: -34, y: 29.5}
-        - {x: -41, y: 11.5}
-        - {x: -42, y: 8.5}
-        - {x: -42, y: -83.5}
-        - {x: 34, y: -83.5}
-        - {x: 37, y: -75.5}
-        - {x: 38, y: -60.5}
-        - {x: 30, y: -55.5}
+      - - {x: 40, y: 69}
+        - {x: 42, y: 84}
+        - {x: 42, y: 161}
+        - {x: 28, y: 167}
+        - {x: -17, y: 167}
+        - {x: -37, y: 151}
+        - {x: -42, y: 146}
+        - {x: -42, y: 122}
+        - {x: -34, y: 113}
+        - {x: -41, y: 95}
+        - {x: -42, y: 92}
+        - {x: -42, y: 0}
+        - {x: 34, y: 0}
+        - {x: 37, y: 8}
+        - {x: 38, y: 23}
+        - {x: 30, y: 28}
     - name: Barbarian_13
       rect:
         serializedVersion: 2
@@ -343,19 +335,19 @@ TextureImporter:
         y: 478
         width: 149
         height: 139
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 29.5, y: 62.5}
-        - {x: 8.5, y: 69.5}
-        - {x: -19.5, y: 69.5}
-        - {x: -74.5, y: 31.5}
-        - {x: -74.5, y: -64.5}
-        - {x: -68.5, y: -69.5}
-        - {x: 74.5, y: -69.5}
-        - {x: 74.5, y: -3.5}
-        - {x: 56.5, y: 24.5}
+      - - {x: 29.5, y: 132}
+        - {x: 8.5, y: 139}
+        - {x: -19.5, y: 139}
+        - {x: -74.5, y: 101}
+        - {x: -74.5, y: 5}
+        - {x: -68.5, y: 0}
+        - {x: 74.5, y: 0}
+        - {x: 74.5, y: 66}
+        - {x: 56.5, y: 94}
     - name: Barbarian_14
       rect:
         serializedVersion: 2
@@ -363,19 +355,19 @@ TextureImporter:
         y: 482
         width: 80
         height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 14, y: 53}
-        - {x: -39, y: 53}
-        - {x: -40, y: 45}
-        - {x: -40, y: -51}
-        - {x: -32, y: -53}
-        - {x: 27, y: -53}
-        - {x: 38, y: -41}
-        - {x: 40, y: -35}
-        - {x: 40, y: 43}
+      - - {x: 14, y: 106}
+        - {x: -39, y: 106}
+        - {x: -40, y: 98}
+        - {x: -40, y: 2}
+        - {x: -32, y: 0}
+        - {x: 27, y: 0}
+        - {x: 38, y: 12}
+        - {x: 40, y: 18}
+        - {x: 40, y: 96}
     - name: Barbarian_15
       rect:
         serializedVersion: 2
@@ -383,15 +375,15 @@ TextureImporter:
         y: 478
         width: 149
         height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -74.5, y: 52.5}
-        - {x: -74.5, y: -52.5}
-        - {x: 65.5, y: -52.5}
-        - {x: 74.5, y: -42.5}
-        - {x: 74.5, y: 52.5}
+      - - {x: -74.5, y: 105}
+        - {x: -74.5, y: 0}
+        - {x: 65.5, y: 0}
+        - {x: 74.5, y: 10}
+        - {x: 74.5, y: 105}
     - name: Barbarian_16
       rect:
         serializedVersion: 2
@@ -399,25 +391,25 @@ TextureImporter:
         y: 336
         width: 130
         height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 15, y: -35.5}
-        - {x: 9, y: -31.5}
-        - {x: 13, y: -28.5}
-        - {x: 34, y: -51.5}
-        - {x: 54, y: -48.5}
-        - {x: 65, y: -45.5}
-        - {x: 65, y: 62.5}
-        - {x: -51, y: 62.5}
-        - {x: -65, y: 11.5}
-        - {x: -65, y: -55.5}
-        - {x: -58, y: -62.5}
-        - {x: 16, y: -62.5}
-        - {x: 21, y: -53.5}
-        - {x: 22, y: -50.5}
-        - {x: 22, y: -40.5}
+      - - {x: 15, y: 27}
+        - {x: 9, y: 31}
+        - {x: 13, y: 34}
+        - {x: 34, y: 11}
+        - {x: 54, y: 14}
+        - {x: 65, y: 17}
+        - {x: 65, y: 125}
+        - {x: -51, y: 125}
+        - {x: -65, y: 74}
+        - {x: -65, y: 7}
+        - {x: -58, y: 0}
+        - {x: 16, y: 0}
+        - {x: 21, y: 9}
+        - {x: 22, y: 12}
+        - {x: 22, y: 22}
     - name: Barbarian_17
       rect:
         serializedVersion: 2
@@ -425,27 +417,27 @@ TextureImporter:
         y: 336
         width: 129
         height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 48.5, y: -43}
-        - {x: 64.5, y: -43}
-        - {x: 64.5, y: 45}
-        - {x: 17.5, y: 52}
-        - {x: 5.5, y: 46}
-        - {x: -2.5, y: 30}
-        - {x: -1.5, y: 38}
-        - {x: -18.5, y: 60}
-        - {x: -41.5, y: 60}
-        - {x: -49.5, y: 49}
-        - {x: -64.5, y: 24}
-        - {x: -64.5, y: -58}
-        - {x: -51.5, y: -60}
-        - {x: 6.5, y: -60}
-        - {x: 15.5, y: -52}
-        - {x: 14.5, y: -38}
-        - {x: 7.5, y: -33}
+      - - {x: 48.5, y: 17}
+        - {x: 64.5, y: 17}
+        - {x: 64.5, y: 105}
+        - {x: 17.5, y: 112}
+        - {x: 5.5, y: 106}
+        - {x: -2.5, y: 90}
+        - {x: -1.5, y: 98}
+        - {x: -18.5, y: 120}
+        - {x: -41.5, y: 120}
+        - {x: -49.5, y: 109}
+        - {x: -64.5, y: 84}
+        - {x: -64.5, y: 2}
+        - {x: -51.5, y: 0}
+        - {x: 6.5, y: 0}
+        - {x: 15.5, y: 8}
+        - {x: 14.5, y: 22}
+        - {x: 7.5, y: 27}
     - name: Barbarian_18
       rect:
         serializedVersion: 2
@@ -453,40 +445,42 @@ TextureImporter:
         y: 336
         width: 143
         height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 71.5, y: 34}
-        - {x: 38.5, y: 61}
-        - {x: -48.5, y: 61}
-        - {x: -71.5, y: 9}
-        - {x: -71.5, y: -61}
-        - {x: 6.5, y: -61}
-        - {x: 19.5, y: -51}
-        - {x: 59.5, y: -37}
-        - {x: 71.5, y: -22}
+      - - {x: 71.5, y: 95}
+        - {x: 38.5, y: 122}
+        - {x: -48.5, y: 122}
+        - {x: -71.5, y: 70}
+        - {x: -71.5, y: 0}
+        - {x: 6.5, y: 0}
+        - {x: 19.5, y: 10}
+        - {x: 59.5, y: 24}
+        - {x: 71.5, y: 39}
     - name: Barbarian_19
       rect:
         serializedVersion: 2
-        x: 636
+        x: 637
         y: 335
         width: 128
         height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 64, y: -33.5}
-        - {x: 64, y: 46.5}
-        - {x: 59, y: 60.5}
-        - {x: -64, y: 60.5}
-        - {x: -64, y: -60.5}
-        - {x: 5, y: -60.5}
-        - {x: 28, y: -53.5}
-        - {x: 12, y: -38.5}
-        - {x: 5, y: -33.5}
-        - {x: 37, y: -44.5}
+      - - {x: 64, y: 28}
+        - {x: 64, y: 83}
+        - {x: 35, y: 112}
+        - {x: 22, y: 121}
+        - {x: -51, y: 121}
+        - {x: -64, y: 104}
+        - {x: -64, y: 5}
+        - {x: -56, y: 0}
+        - {x: 2, y: 0}
+        - {x: 17, y: 10}
+        - {x: 6, y: 31}
+        - {x: 35, y: 10}
     - name: Barbarian_20
       rect:
         serializedVersion: 2
@@ -494,39 +488,39 @@ TextureImporter:
         y: 186
         width: 131
         height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 16.5, y: -35.5}
-        - {x: 33.5, y: -56.5}
-        - {x: 64.5, y: -43.5}
-        - {x: 65.5, y: -36.5}
-        - {x: 65.5, y: 11.5}
-        - {x: 58.5, y: 17.5}
-        - {x: 36.5, y: 43.5}
-        - {x: 18.5, y: 42.5}
-        - {x: 7.5, y: 32.5}
-        - {x: 5.5, y: 26.5}
-        - {x: 6.5, y: 22.5}
-        - {x: 7.5, y: 19.5}
-        - {x: -7.5, y: 52.5}
-        - {x: -20.5, y: 62.5}
-        - {x: -40.5, y: 62.5}
-        - {x: -59.5, y: 26.5}
-        - {x: -65.5, y: -9.5}
-        - {x: -65.5, y: -37.5}
-        - {x: -61.5, y: -39.5}
-        - {x: -53.5, y: -37.5}
-        - {x: -55.5, y: -37.5}
-        - {x: -58.5, y: -40.5}
-        - {x: -59.5, y: -43.5}
-        - {x: -59.5, y: -50.5}
-        - {x: -55.5, y: -62.5}
-        - {x: 11.5, y: -62.5}
-        - {x: 18.5, y: -54.5}
-        - {x: 19.5, y: -39.5}
-        - {x: 11.5, y: -34.5}
+      - - {x: 16.5, y: 27}
+        - {x: 33.5, y: 6}
+        - {x: 64.5, y: 19}
+        - {x: 65.5, y: 26}
+        - {x: 65.5, y: 74}
+        - {x: 58.5, y: 80}
+        - {x: 36.5, y: 106}
+        - {x: 18.5, y: 105}
+        - {x: 7.5, y: 95}
+        - {x: 5.5, y: 89}
+        - {x: 6.5, y: 85}
+        - {x: 7.5, y: 82}
+        - {x: -7.5, y: 115}
+        - {x: -20.5, y: 125}
+        - {x: -40.5, y: 125}
+        - {x: -59.5, y: 89}
+        - {x: -65.5, y: 53}
+        - {x: -65.5, y: 25}
+        - {x: -61.5, y: 23}
+        - {x: -53.5, y: 25}
+        - {x: -55.5, y: 25}
+        - {x: -58.5, y: 22}
+        - {x: -59.5, y: 19}
+        - {x: -59.5, y: 12}
+        - {x: -55.5, y: 0}
+        - {x: 11.5, y: 0}
+        - {x: 18.5, y: 8}
+        - {x: 19.5, y: 23}
+        - {x: 11.5, y: 28}
     - name: Barbarian_21
       rect:
         serializedVersion: 2
@@ -534,20 +528,20 @@ TextureImporter:
         y: 185
         width: 132
         height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 0, y: 61}
-        - {x: -36, y: 61}
-        - {x: -52, y: 27}
-        - {x: -66, y: -20}
-        - {x: -66, y: -44}
-        - {x: -53, y: -61}
-        - {x: 63, y: -61}
-        - {x: 66, y: -54}
-        - {x: 66, y: 3}
-        - {x: 46, y: 43}
+      - - {x: 0, y: 122}
+        - {x: -36, y: 122}
+        - {x: -52, y: 88}
+        - {x: -66, y: 41}
+        - {x: -66, y: 17}
+        - {x: -53, y: 0}
+        - {x: 63, y: 0}
+        - {x: 66, y: 7}
+        - {x: 66, y: 64}
+        - {x: 46, y: 104}
     - name: Barbarian_22
       rect:
         serializedVersion: 2
@@ -555,23 +549,23 @@ TextureImporter:
         y: 175
         width: 131
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 17.5, y: 64}
-        - {x: -29.5, y: 64}
-        - {x: -47.5, y: 29}
-        - {x: -65.5, y: -19}
-        - {x: -65.5, y: -37}
-        - {x: -34.5, y: -50}
-        - {x: -21.5, y: -54}
-        - {x: -15.5, y: -55}
-        - {x: 19.5, y: -64}
-        - {x: 54.5, y: -64}
-        - {x: 65.5, y: -51}
-        - {x: 65.5, y: 17}
-        - {x: 49.5, y: 53}
+      - - {x: 17.5, y: 128}
+        - {x: -29.5, y: 128}
+        - {x: -47.5, y: 93}
+        - {x: -65.5, y: 45}
+        - {x: -65.5, y: 27}
+        - {x: -34.5, y: 14}
+        - {x: -21.5, y: 10}
+        - {x: -15.5, y: 9}
+        - {x: 19.5, y: 0}
+        - {x: 54.5, y: 0}
+        - {x: 65.5, y: 13}
+        - {x: 65.5, y: 81}
+        - {x: 49.5, y: 117}
     - name: Barbarian_23
       rect:
         serializedVersion: 2
@@ -579,24 +573,24 @@ TextureImporter:
         y: 184
         width: 131
         height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 6.5, y: 20}
-        - {x: 7.5, y: 24}
-        - {x: 9.5, y: 43}
-        - {x: -3.5, y: 61}
-        - {x: -34.5, y: 61}
-        - {x: -65.5, y: -9}
-        - {x: -65.5, y: -54}
-        - {x: -49.5, y: -61}
-        - {x: 58.5, y: -61}
-        - {x: 65.5, y: -51}
-        - {x: 65.5, y: 4}
-        - {x: 64.5, y: 5}
-        - {x: 40.5, y: 31}
-        - {x: 17.5, y: 31}
+      - - {x: 6.5, y: 81}
+        - {x: 7.5, y: 85}
+        - {x: 9.5, y: 104}
+        - {x: -3.5, y: 122}
+        - {x: -34.5, y: 122}
+        - {x: -65.5, y: 52}
+        - {x: -65.5, y: 7}
+        - {x: -49.5, y: 0}
+        - {x: 58.5, y: 0}
+        - {x: 65.5, y: 10}
+        - {x: 65.5, y: 65}
+        - {x: 64.5, y: 66}
+        - {x: 40.5, y: 92}
+        - {x: 17.5, y: 92}
     - name: Barbarian_24
       rect:
         serializedVersion: 2
@@ -604,16 +598,16 @@ TextureImporter:
         y: 1
         width: 81
         height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16.5, y: 84.5}
-        - {x: -40.5, y: 74.5}
-        - {x: -40.5, y: -84.5}
-        - {x: 28.5, y: -84.5}
-        - {x: 40.5, y: -81.5}
-        - {x: 40.5, y: 84.5}
+      - - {x: -16.5, y: 169}
+        - {x: -40.5, y: 159}
+        - {x: -40.5, y: 0}
+        - {x: 28.5, y: 0}
+        - {x: 40.5, y: 3}
+        - {x: 40.5, y: 169}
     - name: Barbarian_25
       rect:
         serializedVersion: 2
@@ -621,18 +615,18 @@ TextureImporter:
         y: 0
         width: 93
         height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -46.5, y: 33}
-        - {x: -46.5, y: -66}
-        - {x: 46.5, y: -66}
-        - {x: 46.5, y: 26}
-        - {x: 39.5, y: 59}
-        - {x: 23.5, y: 66}
-        - {x: -5.5, y: 66}
-        - {x: -11.5, y: 63}
+      - - {x: -46.5, y: 99}
+        - {x: -46.5, y: 0}
+        - {x: 46.5, y: 0}
+        - {x: 46.5, y: 92}
+        - {x: 39.5, y: 125}
+        - {x: 23.5, y: 132}
+        - {x: -5.5, y: 132}
+        - {x: -11.5, y: 129}
     - name: Barbarian_26
       rect:
         serializedVersion: 2
@@ -641,7 +635,7 @@ TextureImporter:
         width: 203
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -101.5, y: 18.5}

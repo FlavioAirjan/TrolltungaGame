@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a1710c5a0e2eea34ead3de547d0a1073
-timeCreated: 1464093681
+timeCreated: 1464269647
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -50,6 +50,13 @@ TextureImporter:
     21300086: Esqueleto_50
     21300088: Esqueleto_51
     21300090: Esqueleto_52
+    21300092: Esqueleto_38
+    21300094: Esqueleto_39
+    21300096: Esqueleto_41
+    21300098: Esqueleto_42
+    21300100: Esqueleto_44
+    21300102: Esqueleto_47
+    21300104: Esqueleto_48
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -103,22 +110,22 @@ TextureImporter:
         y: 370
         width: 40
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 15, y: 27}
-        - {x: 12, y: 24}
-        - {x: 12, y: 31}
-        - {x: 8, y: 35}
-        - {x: -3, y: 35}
-        - {x: -15, y: 23}
-        - {x: -20, y: 15}
-        - {x: -20, y: -35}
-        - {x: 16, y: -35}
-        - {x: 20, y: -33}
-        - {x: 20, y: 23}
-        - {x: 17, y: 28}
+      - - {x: 15, y: 62}
+        - {x: 12, y: 59}
+        - {x: 12, y: 66}
+        - {x: 8, y: 70}
+        - {x: -3, y: 70}
+        - {x: -15, y: 58}
+        - {x: -20, y: 50}
+        - {x: -20, y: 0}
+        - {x: 16, y: 0}
+        - {x: 20, y: 2}
+        - {x: 20, y: 58}
+        - {x: 17, y: 63}
     - name: Esqueleto_1
       rect:
         serializedVersion: 2
@@ -126,15 +133,15 @@ TextureImporter:
         y: 370
         width: 38
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 35}
-        - {x: -19, y: 21}
-        - {x: -19, y: -35}
-        - {x: 19, y: -35}
-        - {x: 19, y: 35}
+      - - {x: -10, y: 70}
+        - {x: -19, y: 56}
+        - {x: -19, y: 0}
+        - {x: 19, y: 0}
+        - {x: 19, y: 70}
     - name: Esqueleto_2
       rect:
         serializedVersion: 2
@@ -142,16 +149,16 @@ TextureImporter:
         y: 370
         width: 38
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17, y: 34.5}
-        - {x: -19, y: 26.5}
-        - {x: -19, y: -34.5}
-        - {x: 16, y: -34.5}
-        - {x: 19, y: -30.5}
-        - {x: 19, y: 34.5}
+      - - {x: -17, y: 69}
+        - {x: -19, y: 61}
+        - {x: -19, y: 0}
+        - {x: 16, y: 0}
+        - {x: 19, y: 4}
+        - {x: 19, y: 69}
     - name: Esqueleto_3
       rect:
         serializedVersion: 2
@@ -159,22 +166,22 @@ TextureImporter:
         y: 370
         width: 40
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 15, y: 27.5}
-        - {x: 12, y: 24.5}
-        - {x: 12, y: 21.5}
-        - {x: 12, y: 30.5}
-        - {x: 8, y: 34.5}
-        - {x: -12, y: 34.5}
-        - {x: -20, y: 20.5}
-        - {x: -20, y: -34.5}
-        - {x: 12, y: -34.5}
-        - {x: 20, y: -29.5}
-        - {x: 20, y: 23.5}
-        - {x: 17, y: 28.5}
+      - - {x: 15, y: 62}
+        - {x: 12, y: 59}
+        - {x: 12, y: 56}
+        - {x: 12, y: 65}
+        - {x: 8, y: 69}
+        - {x: -12, y: 69}
+        - {x: -20, y: 55}
+        - {x: -20, y: 0}
+        - {x: 12, y: 0}
+        - {x: 20, y: 5}
+        - {x: 20, y: 58}
+        - {x: 17, y: 63}
     - name: Esqueleto_4
       rect:
         serializedVersion: 2
@@ -182,22 +189,22 @@ TextureImporter:
         y: 370
         width: 40
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 15, y: 27.5}
-        - {x: 12, y: 24.5}
-        - {x: 12, y: 21.5}
-        - {x: 12, y: 30.5}
-        - {x: 8, y: 34.5}
-        - {x: -12, y: 34.5}
-        - {x: -20, y: 20.5}
-        - {x: -20, y: -34.5}
-        - {x: 12, y: -34.5}
-        - {x: 20, y: -26.5}
-        - {x: 20, y: 25.5}
-        - {x: 17, y: 28.5}
+      - - {x: 15, y: 62}
+        - {x: 12, y: 59}
+        - {x: 12, y: 56}
+        - {x: 12, y: 65}
+        - {x: 8, y: 69}
+        - {x: -12, y: 69}
+        - {x: -20, y: 55}
+        - {x: -20, y: 0}
+        - {x: 12, y: 0}
+        - {x: 20, y: 8}
+        - {x: 20, y: 60}
+        - {x: 17, y: 63}
     - name: Esqueleto_5
       rect:
         serializedVersion: 2
@@ -205,8 +212,8 @@ TextureImporter:
         y: 407
         width: 36
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_6
@@ -216,8 +223,8 @@ TextureImporter:
         y: 407
         width: 38
         height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_7
@@ -227,8 +234,8 @@ TextureImporter:
         y: 407
         width: 38
         height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_8
@@ -238,8 +245,8 @@ TextureImporter:
         y: 407
         width: 36
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_9
@@ -249,8 +256,8 @@ TextureImporter:
         y: 407
         width: 35
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_10
@@ -260,8 +267,8 @@ TextureImporter:
         y: 407
         width: 35
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_11
@@ -271,8 +278,8 @@ TextureImporter:
         y: 373
         width: 46
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_12
@@ -282,8 +289,8 @@ TextureImporter:
         y: 373
         width: 46
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_13
@@ -293,16 +300,16 @@ TextureImporter:
         y: 292
         width: 43
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -18.5, y: 34.5}
-        - {x: -21.5, y: 24.5}
-        - {x: -21.5, y: -34.5}
-        - {x: 21.5, y: -34.5}
-        - {x: 21.5, y: 30.5}
-        - {x: 16.5, y: 34.5}
+      - - {x: -18.5, y: 69}
+        - {x: -21.5, y: 59}
+        - {x: -21.5, y: 0}
+        - {x: 21.5, y: 0}
+        - {x: 21.5, y: 65}
+        - {x: 16.5, y: 69}
     - name: Esqueleto_14
       rect:
         serializedVersion: 2
@@ -310,17 +317,17 @@ TextureImporter:
         y: 292
         width: 42
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 6, y: 35}
-        - {x: -12, y: 35}
-        - {x: -21, y: 27}
-        - {x: -21, y: -35}
-        - {x: 21, y: -35}
-        - {x: 21, y: 20}
-        - {x: 8, y: 34}
+      - - {x: 6, y: 70}
+        - {x: -12, y: 70}
+        - {x: -21, y: 62}
+        - {x: -21, y: 0}
+        - {x: 21, y: 0}
+        - {x: 21, y: 55}
+        - {x: 8, y: 69}
     - name: Esqueleto_15
       rect:
         serializedVersion: 2
@@ -328,20 +335,20 @@ TextureImporter:
         y: 292
         width: 38
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 16, y: -34.5}
-        - {x: 19, y: -31.5}
-        - {x: 19, y: 30.5}
-        - {x: 9, y: 34.5}
-        - {x: -14, y: 34.5}
-        - {x: -19, y: 27.5}
-        - {x: -19, y: -34.5}
-        - {x: -3, y: -34.5}
-        - {x: -3, y: -30.5}
-        - {x: -3, y: -34.5}
+      - - {x: 16, y: 0}
+        - {x: 19, y: 3}
+        - {x: 19, y: 65}
+        - {x: 9, y: 69}
+        - {x: -14, y: 69}
+        - {x: -19, y: 62}
+        - {x: -19, y: 0}
+        - {x: -3, y: 0}
+        - {x: -3, y: 4}
+        - {x: -3, y: 0}
     - name: Esqueleto_16
       rect:
         serializedVersion: 2
@@ -349,17 +356,17 @@ TextureImporter:
         y: 292
         width: 49
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13.5, y: 34}
-        - {x: -24.5, y: -9}
-        - {x: -24.5, y: -34}
-        - {x: 19.5, y: -34}
-        - {x: 24.5, y: -28}
-        - {x: 24.5, y: 24}
-        - {x: 13.5, y: 34}
+      - - {x: -13.5, y: 68}
+        - {x: -24.5, y: 25}
+        - {x: -24.5, y: 0}
+        - {x: 19.5, y: 0}
+        - {x: 24.5, y: 6}
+        - {x: 24.5, y: 58}
+        - {x: 13.5, y: 68}
     - name: Esqueleto_17
       rect:
         serializedVersion: 2
@@ -367,15 +374,15 @@ TextureImporter:
         y: 292
         width: 41
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10.5, y: 34}
-        - {x: -20.5, y: 8}
-        - {x: -20.5, y: -34}
-        - {x: 20.5, y: -34}
-        - {x: 20.5, y: 34}
+      - - {x: -10.5, y: 68}
+        - {x: -20.5, y: 42}
+        - {x: -20.5, y: 0}
+        - {x: 20.5, y: 0}
+        - {x: 20.5, y: 68}
     - name: Esqueleto_18
       rect:
         serializedVersion: 2
@@ -383,16 +390,16 @@ TextureImporter:
         y: 292
         width: 43
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17.5, y: 34.5}
-        - {x: -21.5, y: 31.5}
-        - {x: -21.5, y: -34.5}
-        - {x: 21.5, y: -34.5}
-        - {x: 21.5, y: 28.5}
-        - {x: 19.5, y: 34.5}
+      - - {x: -17.5, y: 69}
+        - {x: -21.5, y: 66}
+        - {x: -21.5, y: 0}
+        - {x: 21.5, y: 0}
+        - {x: 21.5, y: 63}
+        - {x: 19.5, y: 69}
     - name: Esqueleto_19
       rect:
         serializedVersion: 2
@@ -400,17 +407,17 @@ TextureImporter:
         y: 292
         width: 47
         height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -7.5, y: 33}
-        - {x: -23.5, y: 14}
-        - {x: -23.5, y: -33}
-        - {x: 16.5, y: -33}
-        - {x: 23.5, y: -32}
-        - {x: 23.5, y: 20}
-        - {x: 16.5, y: 33}
+      - - {x: -7.5, y: 66}
+        - {x: -23.5, y: 47}
+        - {x: -23.5, y: 0}
+        - {x: 16.5, y: 0}
+        - {x: 23.5, y: 1}
+        - {x: 23.5, y: 53}
+        - {x: 16.5, y: 66}
     - name: Esqueleto_20
       rect:
         serializedVersion: 2
@@ -418,15 +425,15 @@ TextureImporter:
         y: 292
         width: 42
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13, y: 34.5}
-        - {x: -21, y: 28.5}
-        - {x: -21, y: -34.5}
-        - {x: 21, y: -34.5}
-        - {x: 21, y: 34.5}
+      - - {x: -13, y: 69}
+        - {x: -21, y: 63}
+        - {x: -21, y: 0}
+        - {x: 21, y: 0}
+        - {x: 21, y: 69}
     - name: Esqueleto_21
       rect:
         serializedVersion: 2
@@ -434,20 +441,20 @@ TextureImporter:
         y: 292
         width: 37
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 13.5, y: -20}
-        - {x: 18.5, y: -5}
-        - {x: 18.5, y: 23}
-        - {x: 8.5, y: 35}
-        - {x: -18.5, y: 35}
-        - {x: -18.5, y: -35}
-        - {x: 6.5, y: -35}
-        - {x: 18.5, y: -33}
-        - {x: 18.5, y: -21}
-        - {x: 16.5, y: -20}
+      - - {x: 13.5, y: 15}
+        - {x: 18.5, y: 30}
+        - {x: 18.5, y: 58}
+        - {x: 8.5, y: 70}
+        - {x: -18.5, y: 70}
+        - {x: -18.5, y: 0}
+        - {x: 6.5, y: 0}
+        - {x: 18.5, y: 2}
+        - {x: 18.5, y: 14}
+        - {x: 16.5, y: 15}
     - name: Esqueleto_22
       rect:
         serializedVersion: 2
@@ -455,24 +462,24 @@ TextureImporter:
         y: 196
         width: 53
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 8.5, y: -34.5}
-        - {x: 20.5, y: -34.5}
-        - {x: 26.5, y: -33.5}
-        - {x: 26.5, y: 25.5}
-        - {x: 16.5, y: 33.5}
-        - {x: 14.5, y: 34.5}
-        - {x: -8.5, y: 34.5}
-        - {x: -26.5, y: 5.5}
-        - {x: -26.5, y: -32.5}
-        - {x: -24.5, y: -34.5}
-        - {x: 3.5, y: -34.5}
-        - {x: 3.5, y: -31.5}
-        - {x: 2.5, y: -29.5}
-        - {x: 5.5, y: -33.5}
+      - - {x: 8.5, y: 0}
+        - {x: 20.5, y: 0}
+        - {x: 26.5, y: 1}
+        - {x: 26.5, y: 60}
+        - {x: 16.5, y: 68}
+        - {x: 14.5, y: 69}
+        - {x: -8.5, y: 69}
+        - {x: -26.5, y: 40}
+        - {x: -26.5, y: 2}
+        - {x: -24.5, y: 0}
+        - {x: 3.5, y: 0}
+        - {x: 3.5, y: 3}
+        - {x: 2.5, y: 5}
+        - {x: 5.5, y: 1}
     - name: Esqueleto_23
       rect:
         serializedVersion: 2
@@ -480,20 +487,20 @@ TextureImporter:
         y: 196
         width: 59
         height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -5.5, y: 31.5}
-        - {x: -3.5, y: 42.5}
-        - {x: -3.5, y: 44.5}
-        - {x: -17.5, y: 44.5}
-        - {x: -29.5, y: 31.5}
-        - {x: -29.5, y: -44.5}
-        - {x: 26.5, y: -44.5}
-        - {x: 29.5, y: -40.5}
-        - {x: 29.5, y: 11.5}
-        - {x: 8.5, y: 25.5}
+      - - {x: -5.5, y: 76}
+        - {x: -3.5, y: 87}
+        - {x: -3.5, y: 89}
+        - {x: -17.5, y: 89}
+        - {x: -29.5, y: 76}
+        - {x: -29.5, y: 0}
+        - {x: 26.5, y: 0}
+        - {x: 29.5, y: 4}
+        - {x: 29.5, y: 56}
+        - {x: 8.5, y: 70}
     - name: Esqueleto_24
       rect:
         serializedVersion: 2
@@ -501,17 +508,17 @@ TextureImporter:
         y: 196
         width: 85
         height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -19.5, y: 33.5}
-        - {x: -42.5, y: 18.5}
-        - {x: -42.5, y: -28.5}
-        - {x: -36.5, y: -33.5}
-        - {x: 42.5, y: -33.5}
-        - {x: 42.5, y: 22.5}
-        - {x: 9.5, y: 33.5}
+      - - {x: -19.5, y: 67}
+        - {x: -42.5, y: 52}
+        - {x: -42.5, y: 5}
+        - {x: -36.5, y: 0}
+        - {x: 42.5, y: 0}
+        - {x: 42.5, y: 56}
+        - {x: 9.5, y: 67}
     - name: Esqueleto_25
       rect:
         serializedVersion: 2
@@ -519,22 +526,22 @@ TextureImporter:
         y: 196
         width: 51
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -4.5, y: -34.5}
-        - {x: 18.5, y: -34.5}
-        - {x: 25.5, y: -31.5}
-        - {x: 25.5, y: 18.5}
-        - {x: 11.5, y: 34.5}
-        - {x: -13.5, y: 34.5}
-        - {x: -25.5, y: 27.5}
-        - {x: -25.5, y: -34.5}
-        - {x: -9.5, y: -34.5}
-        - {x: -9.5, y: -31.5}
-        - {x: -10.5, y: -29.5}
-        - {x: -5.5, y: -33.5}
+      - - {x: -4.5, y: 0}
+        - {x: 18.5, y: 0}
+        - {x: 25.5, y: 3}
+        - {x: 25.5, y: 53}
+        - {x: 11.5, y: 69}
+        - {x: -13.5, y: 69}
+        - {x: -25.5, y: 62}
+        - {x: -25.5, y: 0}
+        - {x: -9.5, y: 0}
+        - {x: -9.5, y: 3}
+        - {x: -10.5, y: 5}
+        - {x: -5.5, y: 1}
     - name: Esqueleto_26
       rect:
         serializedVersion: 2
@@ -542,27 +549,27 @@ TextureImporter:
         y: 196
         width: 58
         height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 6, y: -33.5}
-        - {x: 7, y: -34.5}
-        - {x: 19, y: -34.5}
-        - {x: 29, y: -29.5}
-        - {x: 29, y: -21.5}
-        - {x: 28, y: -20.5}
-        - {x: 29, y: -15.5}
-        - {x: 29, y: 17.5}
-        - {x: 12, y: 34.5}
-        - {x: -5, y: 34.5}
-        - {x: -29, y: 7.5}
-        - {x: -29, y: -32.5}
-        - {x: -27, y: -34.5}
-        - {x: 6, y: -34.5}
-        - {x: 6, y: -31.5}
-        - {x: 5, y: -29.5}
-        - {x: 6, y: -31.5}
+      - - {x: 6, y: 1}
+        - {x: 7, y: 0}
+        - {x: 19, y: 0}
+        - {x: 29, y: 5}
+        - {x: 29, y: 13}
+        - {x: 28, y: 14}
+        - {x: 29, y: 19}
+        - {x: 29, y: 52}
+        - {x: 12, y: 69}
+        - {x: -5, y: 69}
+        - {x: -29, y: 42}
+        - {x: -29, y: 2}
+        - {x: -27, y: 0}
+        - {x: 6, y: 0}
+        - {x: 6, y: 3}
+        - {x: 5, y: 5}
+        - {x: 6, y: 3}
     - name: Esqueleto_27
       rect:
         serializedVersion: 2
@@ -570,16 +577,16 @@ TextureImporter:
         y: 195
         width: 50
         height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 46.5}
-        - {x: -25, y: 46.5}
-        - {x: -25, y: -46.5}
-        - {x: 25, y: -46.5}
-        - {x: 25, y: 12.5}
-        - {x: 17, y: 31.5}
+      - - {x: 9, y: 93}
+        - {x: -25, y: 93}
+        - {x: -25, y: 0}
+        - {x: 25, y: 0}
+        - {x: 25, y: 59}
+        - {x: 17, y: 78}
     - name: Esqueleto_28
       rect:
         serializedVersion: 2
@@ -587,17 +594,17 @@ TextureImporter:
         y: 195
         width: 46
         height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -8, y: 31}
-        - {x: -21, y: 21}
-        - {x: -23, y: 4}
-        - {x: -23, y: -31}
-        - {x: 23, y: -31}
-        - {x: 23, y: 7}
-        - {x: 16, y: 31}
+      - - {x: -8, y: 62}
+        - {x: -21, y: 52}
+        - {x: -23, y: 35}
+        - {x: -23, y: 0}
+        - {x: 23, y: 0}
+        - {x: 23, y: 38}
+        - {x: 16, y: 62}
     - name: Esqueleto_29
       rect:
         serializedVersion: 2
@@ -605,16 +612,16 @@ TextureImporter:
         y: 196
         width: 42
         height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 34}
-        - {x: -21, y: 21}
-        - {x: -21, y: -34}
-        - {x: 21, y: -34}
-        - {x: 21, y: 26}
-        - {x: 17, y: 34}
+      - - {x: -11, y: 68}
+        - {x: -21, y: 55}
+        - {x: -21, y: 0}
+        - {x: 21, y: 0}
+        - {x: 21, y: 60}
+        - {x: 17, y: 68}
     - name: Esqueleto_30
       rect:
         serializedVersion: 2
@@ -622,16 +629,16 @@ TextureImporter:
         y: 97
         width: 45
         height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13.5, y: 35.5}
-        - {x: -22.5, y: 26.5}
-        - {x: -22.5, y: -35.5}
-        - {x: 22.5, y: -35.5}
-        - {x: 22.5, y: 17.5}
-        - {x: 8.5, y: 35.5}
+      - - {x: -13.5, y: 71}
+        - {x: -22.5, y: 62}
+        - {x: -22.5, y: 0}
+        - {x: 22.5, y: 0}
+        - {x: 22.5, y: 53}
+        - {x: 8.5, y: 71}
     - name: Esqueleto_31
       rect:
         serializedVersion: 2
@@ -639,30 +646,30 @@ TextureImporter:
         y: 97
         width: 61
         height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 23.5, y: -35.5}
-        - {x: 24.5, y: -33.5}
-        - {x: 30.5, y: -30.5}
-        - {x: 30.5, y: -18.5}
-        - {x: 12.5, y: -7.5}
-        - {x: 11.5, y: -0.5}
-        - {x: 11.5, y: -2.5}
-        - {x: 15.5, y: -5.5}
-        - {x: 21.5, y: -6.5}
-        - {x: 30.5, y: 0.5}
-        - {x: 30.5, y: 21.5}
-        - {x: 10.5, y: 35.5}
-        - {x: -8.5, y: 35.5}
-        - {x: -30.5, y: 6.5}
-        - {x: -30.5, y: -33.5}
-        - {x: -27.5, y: -35.5}
-        - {x: 5.5, y: -35.5}
-        - {x: 5.5, y: -32.5}
-        - {x: 4.5, y: -30.5}
-        - {x: 9.5, y: -35.5}
+      - - {x: 23.5, y: 0}
+        - {x: 24.5, y: 2}
+        - {x: 30.5, y: 5}
+        - {x: 30.5, y: 17}
+        - {x: 12.5, y: 28}
+        - {x: 11.5, y: 35}
+        - {x: 11.5, y: 33}
+        - {x: 15.5, y: 30}
+        - {x: 21.5, y: 29}
+        - {x: 30.5, y: 36}
+        - {x: 30.5, y: 57}
+        - {x: 10.5, y: 71}
+        - {x: -8.5, y: 71}
+        - {x: -30.5, y: 42}
+        - {x: -30.5, y: 2}
+        - {x: -27.5, y: 0}
+        - {x: 5.5, y: 0}
+        - {x: 5.5, y: 3}
+        - {x: 4.5, y: 5}
+        - {x: 9.5, y: 0}
     - name: Esqueleto_32
       rect:
         serializedVersion: 2
@@ -670,20 +677,20 @@ TextureImporter:
         y: 97
         width: 59
         height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 29.5, y: -48}
-        - {x: 29.5, y: 24}
-        - {x: -8.5, y: 48}
-        - {x: -29.5, y: 48}
-        - {x: -29.5, y: -45}
-        - {x: -13.5, y: -48}
-        - {x: 9.5, y: -48}
-        - {x: 8.5, y: -45}
-        - {x: 7.5, y: -43}
-        - {x: 12.5, y: -48}
+      - - {x: 29.5, y: 0}
+        - {x: 29.5, y: 72}
+        - {x: -8.5, y: 96}
+        - {x: -29.5, y: 96}
+        - {x: -29.5, y: 3}
+        - {x: -13.5, y: 0}
+        - {x: 9.5, y: 0}
+        - {x: 8.5, y: 3}
+        - {x: 7.5, y: 5}
+        - {x: 12.5, y: 0}
     - name: Esqueleto_33
       rect:
         serializedVersion: 2
@@ -691,25 +698,25 @@ TextureImporter:
         y: 97
         width: 57
         height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12.5, y: -45.5}
-        - {x: 14.5, y: -43.5}
-        - {x: 14.5, y: -41.5}
-        - {x: 10.5, y: -37.5}
-        - {x: 22.5, y: -34.5}
-        - {x: 28.5, y: -30.5}
-        - {x: 28.5, y: 45.5}
-        - {x: 15.5, y: 45.5}
-        - {x: -9.5, y: 37.5}
-        - {x: -28.5, y: 11.5}
-        - {x: -28.5, y: -45.5}
-        - {x: -4.5, y: -45.5}
-        - {x: -4.5, y: -40.5}
-        - {x: -3.5, y: -43.5}
-        - {x: -2.5, y: -45.5}
+      - - {x: 12.5, y: 0}
+        - {x: 14.5, y: 2}
+        - {x: 14.5, y: 4}
+        - {x: 10.5, y: 8}
+        - {x: 22.5, y: 11}
+        - {x: 28.5, y: 15}
+        - {x: 28.5, y: 91}
+        - {x: 15.5, y: 91}
+        - {x: -9.5, y: 83}
+        - {x: -28.5, y: 57}
+        - {x: -28.5, y: 0}
+        - {x: -4.5, y: 0}
+        - {x: -4.5, y: 5}
+        - {x: -3.5, y: 2}
+        - {x: -2.5, y: 0}
     - name: Esqueleto_34
       rect:
         serializedVersion: 2
@@ -717,17 +724,17 @@ TextureImporter:
         y: 97
         width: 38
         height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 19, y: 14}
-        - {x: 8, y: 34}
-        - {x: 6, y: 36}
-        - {x: -11, y: 36}
-        - {x: -19, y: 26}
-        - {x: -19, y: -36}
-        - {x: 19, y: -36}
+      - - {x: 19, y: 50}
+        - {x: 8, y: 70}
+        - {x: 6, y: 72}
+        - {x: -11, y: 72}
+        - {x: -19, y: 62}
+        - {x: -19, y: 0}
+        - {x: 19, y: 0}
     - name: Esqueleto_35
       rect:
         serializedVersion: 2
@@ -735,25 +742,25 @@ TextureImporter:
         y: 97
         width: 66
         height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 18, y: 8.5}
-        - {x: 20, y: 6.5}
-        - {x: 22, y: 3.5}
-        - {x: 33, y: 7.5}
-        - {x: 33, y: 32.5}
-        - {x: -33, y: 32.5}
-        - {x: -33, y: 14.5}
-        - {x: -16, y: -2.5}
-        - {x: -9, y: -4.5}
-        - {x: -33, y: -14.5}
-        - {x: -33, y: -25.5}
-        - {x: -11, y: -32.5}
-        - {x: 33, y: -32.5}
-        - {x: 33, y: -13.5}
-        - {x: 21, y: 5.5}
+      - - {x: 18, y: 41}
+        - {x: 20, y: 39}
+        - {x: 22, y: 36}
+        - {x: 33, y: 40}
+        - {x: 33, y: 65}
+        - {x: -33, y: 65}
+        - {x: -33, y: 47}
+        - {x: -16, y: 30}
+        - {x: -9, y: 28}
+        - {x: -33, y: 18}
+        - {x: -33, y: 7}
+        - {x: -11, y: 0}
+        - {x: 33, y: 0}
+        - {x: 33, y: 19}
+        - {x: 21, y: 38}
     - name: Esqueleto_36
       rect:
         serializedVersion: 2
@@ -761,23 +768,23 @@ TextureImporter:
         y: 97
         width: 56
         height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 13, y: 4.5}
-        - {x: 10, y: 7.5}
-        - {x: 10, y: 9.5}
-        - {x: 14, y: 2.5}
-        - {x: 18, y: -3.5}
-        - {x: 28, y: 2.5}
-        - {x: 28, y: 32.5}
-        - {x: 25, y: 33.5}
-        - {x: -28, y: 33.5}
-        - {x: -28, y: -33.5}
-        - {x: 28, y: -33.5}
-        - {x: 28, y: -17.5}
-        - {x: 17, y: -12.5}
+      - - {x: 13, y: 38}
+        - {x: 10, y: 41}
+        - {x: 10, y: 43}
+        - {x: 14, y: 36}
+        - {x: 18, y: 30}
+        - {x: 28, y: 36}
+        - {x: 28, y: 66}
+        - {x: 25, y: 67}
+        - {x: -28, y: 67}
+        - {x: -28, y: 0}
+        - {x: 28, y: 0}
+        - {x: 28, y: 16}
+        - {x: 17, y: 21}
     - name: Esqueleto_37
       rect:
         serializedVersion: 2
@@ -785,94 +792,129 @@ TextureImporter:
         y: 97
         width: 47
         height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 5.5, y: 33.5}
-        - {x: -12.5, y: 33.5}
-        - {x: -23.5, y: 23.5}
-        - {x: -23.5, y: -33.5}
-        - {x: 14.5, y: -33.5}
-        - {x: 23.5, y: -27.5}
-        - {x: 23.5, y: 23.5}
-        - {x: 8.5, y: 32.5}
+      - - {x: 5.5, y: 67}
+        - {x: -12.5, y: 67}
+        - {x: -23.5, y: 57}
+        - {x: -23.5, y: 0}
+        - {x: 14.5, y: 0}
+        - {x: 23.5, y: 6}
+        - {x: 23.5, y: 57}
+        - {x: 8.5, y: 66}
+    - name: Esqueleto_38
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 49
+        width: 15
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Esqueleto_39
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 61
+        width: 15
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Esqueleto_40
       rect:
         serializedVersion: 2
-        x: 7
+        x: 25
         y: 11
-        width: 57
-        height: 76
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 39
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 13.5, y: 32}
-        - {x: 8.5, y: 25}
-        - {x: 9.5, y: 18}
-        - {x: -1.5, y: 30}
-        - {x: -8.5, y: 30}
-        - {x: -14.5, y: 22}
-        - {x: -13.5, y: 18}
-        - {x: -8.5, y: 13}
-        - {x: -11.5, y: 8}
-        - {x: -19.5, y: 38}
-        - {x: -28.5, y: 38}
-        - {x: -28.5, y: -33}
-        - {x: -8.5, y: -38}
-        - {x: 28.5, y: -38}
-        - {x: 28.5, y: 26}
-        - {x: 19.5, y: 34}
+      - - {x: -19.5, y: 67}
+        - {x: -19.5, y: 7}
+        - {x: -15.5, y: 0}
+        - {x: 19.5, y: 0}
+        - {x: 19.5, y: 67}
+    - name: Esqueleto_41
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 35
+        width: 18
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Esqueleto_42
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 45
+        width: 27
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Esqueleto_43
       rect:
         serializedVersion: 2
-        x: 70
+        x: 82
         y: 11
-        width: 51
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 39
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 6.5, y: 29.5}
-        - {x: -25.5, y: 29.5}
-        - {x: -25.5, y: -32.5}
-        - {x: 25.5, y: -32.5}
-        - {x: 25.5, y: 18.5}
-        - {x: 14.5, y: 25.5}
+      - - {x: -19.5, y: 42}
+        - {x: -19.5, y: 0}
+        - {x: 19.5, y: 0}
+        - {x: 19.5, y: 42}
+    - name: Esqueleto_44
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 42
+        width: 13
+        height: 11
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Esqueleto_45
       rect:
         serializedVersion: 2
-        x: 125
+        x: 129
         y: 11
-        width: 44
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 40
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 2, y: 16}
-        - {x: -16, y: 7}
-        - {x: -18, y: -4}
-        - {x: -18, y: -9}
-        - {x: -16, y: -11}
-        - {x: -13, y: -11}
-        - {x: -19, y: -11}
-        - {x: -20, y: -14}
-        - {x: -20, y: -18}
-        - {x: -18, y: -22}
-        - {x: 22, y: -22}
-        - {x: 22, y: 10}
-        - {x: 18, y: 16}
-      - - {x: -17, y: 22}
-        - {x: -20, y: 20}
-        - {x: -20, y: 11}
-        - {x: -18, y: 7}
-        - {x: -7, y: 7}
-        - {x: -3, y: 9}
-        - {x: -3, y: 18}
-        - {x: -5, y: 22}
+      - - {x: 2, y: 36}
+        - {x: -10, y: 31}
+        - {x: -20, y: 26}
+        - {x: -20, y: 0}
+        - {x: 20, y: 0}
+        - {x: 20, y: 33}
+        - {x: 18, y: 36}
+      - - {x: -20, y: 36}
+        - {x: -20, y: 31}
+        - {x: -18, y: 29}
+        - {x: -11, y: 29}
+        - {x: -8, y: 30}
+        - {x: -5, y: 34}
+        - {x: -5, y: 36}
     - name: Esqueleto_46
       rect:
         serializedVersion: 2
@@ -880,15 +922,37 @@ TextureImporter:
         y: 11
         width: 90
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 45, y: 16}
-        - {x: 6, y: 16}
-        - {x: -45, y: 10}
-        - {x: -45, y: -16}
-        - {x: 45, y: -16}
+      - - {x: 45, y: 32}
+        - {x: 6, y: 32}
+        - {x: -45, y: 26}
+        - {x: -45, y: 0}
+        - {x: 45, y: 0}
+    - name: Esqueleto_47
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 20
+        width: 15
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Esqueleto_48
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 16
+        width: 17
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     - name: Esqueleto_49
       rect:
         serializedVersion: 2
@@ -896,8 +960,8 @@ TextureImporter:
         y: 11
         width: 40
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_50
@@ -907,8 +971,8 @@ TextureImporter:
         y: 11
         width: 41
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_51
@@ -918,8 +982,8 @@ TextureImporter:
         y: 11
         width: 39
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Esqueleto_52
@@ -929,8 +993,8 @@ TextureImporter:
         y: 11
         width: 41
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

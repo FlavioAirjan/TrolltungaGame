@@ -6,6 +6,7 @@ public class playerController : MonoBehaviour
 
     public Transform spritePlayer;
     private Animator animator;
+    private bool stopMove;
 
     public float initialVelocity = 2;
     public float velocity;
@@ -31,8 +32,56 @@ public class playerController : MonoBehaviour
     void Update()
     {
         
-        Moviments();
+        if (!stopMove)
+        {
+            attack();
+            if (!stopMove)
+            {
+                Moviments();
+            }
+        }
+        
 
+    }
+
+    IEnumerator Atack(int attack)
+    {
+        
+        animator.SetInteger("Attack", attack);
+        yield return new WaitForSeconds((float)0.7);
+        animator.SetInteger("Attack", 0);
+        yield return new WaitForSeconds((float)0.2);
+        stopMove = false;
+
+
+    }
+
+
+    void attack()
+    {
+        bool atack1 = Input.GetButtonDown("Fire1");
+        bool atack2 = Input.GetButtonDown("Fire2");
+        bool atack3 = Input.GetButtonDown("Fire3");
+
+        if (atack1||atack2|| atack3)
+        {
+            stopMove = true;
+            animator.SetFloat("Hdirection",0);
+            if (atack1)
+            {
+                StartCoroutine(Atack(1));
+            }
+            else if(atack2)
+            {
+                StartCoroutine(Atack(2));
+            }
+            else
+            {
+                StartCoroutine(Atack(3));
+            }
+       
+        }
+        
     }
 
     void Moviments()
@@ -55,14 +104,14 @@ public class playerController : MonoBehaviour
         {
             
             transform.Translate(Vector2.right * velocity * Time.deltaTime);
-            spritePlayer.GetComponent<SpriteRenderer>().flipX = true;
+            spritePlayer.GetComponent<SpriteRenderer>().flipX = false;
 
         }
 
         if (Hdirection < 0)
         {
             transform.Translate(Vector2.left * velocity * Time.deltaTime);
-            spritePlayer.GetComponent<SpriteRenderer>().flipX = false;
+            spritePlayer.GetComponent<SpriteRenderer>().flipX = true;
 
         }
 
