@@ -15,6 +15,7 @@ public class playerController : MonoBehaviour
     public float jumpForce;
 
     public float Hdirection = 0;
+    public float lastHdirection = 0;
 
     public int maxJumps;
     public int jumps = 0;
@@ -25,6 +26,7 @@ public class playerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        lastHdirection = 1f;
         maxJumps = 2;
         animator = spritePlayer.GetComponent<Animator>();
     }
@@ -103,7 +105,7 @@ public class playerController : MonoBehaviour
 
         if (Hdirection > 0)
         {
-            
+            lastHdirection = Hdirection;
             transform.Translate(Vector2.right * velocity * Time.deltaTime);
             spritePlayer.GetComponent<SpriteRenderer>().flipX = false;
 
@@ -111,6 +113,7 @@ public class playerController : MonoBehaviour
 
         if (Hdirection < 0)
         {
+            lastHdirection = Hdirection;
             transform.Translate(Vector2.left * velocity * Time.deltaTime);
             spritePlayer.GetComponent<SpriteRenderer>().flipX = true;
 
@@ -139,12 +142,14 @@ public class playerController : MonoBehaviour
         if (collisor.gameObject.layer == enemyLayer)
         {
             Vector2 v = gameObject.GetComponent<Rigidbody2D>().velocity;
-            v.x = -5f;
+            v.x = -lastHdirection*3f;
+            v.y = 2f;
             gameObject.GetComponent<Rigidbody2D>().velocity = v;
             
 
         }
     }
 
+   
 
 }
