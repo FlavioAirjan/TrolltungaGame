@@ -3,26 +3,30 @@ using System.Collections;
 
 public class vidaObjeto : MonoBehaviour {
 
-    
-    
+
+   
     public int maxVida;
     private int vidaAtual;
+    private Animator animator;
 
     // Use this for initialization
     void Start () {
+
         
         //Vida
         vidaAtual = maxVida;
-        gameObject.GetComponent<GUIText>().color = new Vector4(0.25f, 0.5f, 0.25f, 1f);
-        //barraVida.GetComponent<GUIText>().color = new Vector4(0.25f, 0.5f, 0.25f, 1f);
-        gameObject.GetComponent<GUIText>().text = "HP: " + vidaAtual + "/" + maxVida;
-        //barraVida.GetComponent<GUIText>().text = "HP: " + vidaAtual + "/" + maxVida;
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetInteger("lifeSprite",12);
     }
 
     // Update is called once per frame
     void Update () {
-	
+
+        
+
 	}
+
+   
 
     //barraVida.GetComponent<GUIText>().
     public void PerdeVida(int dano)
@@ -31,32 +35,17 @@ public class vidaObjeto : MonoBehaviour {
 
         if (vidaAtual <= 0)
         {
+            animator.SetInteger("lifeSprite", 0);
+           
             DestroyObject(gameObject.transform.parent.gameObject);
         }
 
-        if ((vidaAtual * 100 / maxVida) < 30)
-        {
-            gameObject.GetComponent<GUIText>().color = Color.red;
-        }
+        animator.SetInteger("lifeSprite", vidaAtual * 12 / maxVida);
+        
 
-        gameObject.GetComponent<GUIText>().text = "HP: " + vidaAtual + "/" + maxVida;
+     
     }
 
-    public void RecuperaVida(int recupera)
-    {
-        vidaAtual += recupera;
-
-        if (vidaAtual > maxVida)
-        {
-            vidaAtual = maxVida;
-        }
-
-        if ((vidaAtual * 100 / maxVida) >= 30)
-        {
-            gameObject.GetComponent<GUIText>().color = new Vector4(0.25f, 0.5f, 0.25f, 1f);
-        }
-
-        gameObject.GetComponent<GUIText>().text = "HP: " + vidaAtual + "/" + maxVida;
-    }
+ 
 
 }
