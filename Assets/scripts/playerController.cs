@@ -16,7 +16,7 @@ public class playerController : MonoBehaviour
 
     public float Hdirection = 0;
 
-    public int maxJumps = 1;
+    public int maxJumps;
     public int jumps = 0;
 
     public bool isOnFloor;
@@ -25,6 +25,7 @@ public class playerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        maxJumps = 2;
         animator = spritePlayer.GetComponent<Animator>();
     }
 
@@ -132,6 +133,18 @@ public class playerController : MonoBehaviour
 
     }
 
+    void OnCollisionEnter2D(Collision2D collisor)
+    {
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        if (collisor.gameObject.layer == enemyLayer)
+        {
+            Vector2 v = gameObject.GetComponent<Rigidbody2D>().velocity;
+            v.x = -5f;
+            gameObject.GetComponent<Rigidbody2D>().velocity = v;
+            
+
+        }
+    }
 
 
 }

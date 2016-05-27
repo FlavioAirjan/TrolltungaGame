@@ -5,8 +5,10 @@ public class checkFloor : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D target)
     {
-        gameObject.GetComponentInParent<playerController>().isOnFloor = true;
-        
+        if (target.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        { 
+            gameObject.GetComponentInParent<playerController>().isOnFloor = true;
+        }
 
 
     }
@@ -22,9 +24,10 @@ public class checkFloor : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D target)
     {
-
-        gameObject.GetComponentInParent<playerController>().isOnFloor = false;
-
+        if (target.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        { 
+            gameObject.GetComponentInParent<playerController>().isOnFloor = false;
+        }
 
     }
 
