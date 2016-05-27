@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class playerController : MonoBehaviour
 {
+
+    public int maxVida;
+    private int vidaAtual;
+    private GameObject painelVida;
 
     public Transform spritePlayer;
     private Animator animator;
@@ -26,9 +31,12 @@ public class playerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        vidaAtual = maxVida;
         lastHdirection = 1f;
         maxJumps = 2;
         animator = spritePlayer.GetComponent<Animator>();
+        painelVida = GameObject.Find("Canvas/PainelVida");
+        painelVida.GetComponentInChildren<Text>().text = vidaAtual.ToString() + "  /  " + maxVida.ToString(); 
     }
 
     // Update is called once per frame
@@ -43,7 +51,6 @@ public class playerController : MonoBehaviour
                 Moviments();
             }
         }
-        
 
     }
 
@@ -150,6 +157,24 @@ public class playerController : MonoBehaviour
         }
     }
 
-   
+    public void PerdeVida(int dano)
+    {
+        vidaAtual -= dano;
+
+        
+
+        if (vidaAtual <= 0)
+        {
+            vidaAtual = 0;
+
+            //DestroyObject(gameObject);
+            Debug.Log("morreu");
+        }
+
+        painelVida.GetComponentInChildren<Text>().text = vidaAtual.ToString() + "  /  " + maxVida.ToString();
+
+
+
+    }
 
 }

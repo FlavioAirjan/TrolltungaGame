@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class vidaObjeto : MonoBehaviour {
+public class vidaPlayer : MonoBehaviour {
 
 
    
     public int maxVida;
     private int vidaAtual;
+
+
     private Animator animator;
 
     // Use this for initialization
     void Start () {
 
-        
+       
         //Vida
         vidaAtual = maxVida;
         animator = gameObject.GetComponent<Animator>();

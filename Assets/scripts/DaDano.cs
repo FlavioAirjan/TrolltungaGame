@@ -25,7 +25,7 @@ public class DaDano : MonoBehaviour {
         if (colisor.gameObject.tag == "Inimigo")
         {
             //Tira vida do inimigo.
-            var inimigo = colisor.gameObject.GetComponentInChildren<vidaObjeto>();
+            var inimigo = colisor.gameObject.GetComponentInChildren<vidaPlayer>();
             inimigo.PerdeVida(dano);
 
         
