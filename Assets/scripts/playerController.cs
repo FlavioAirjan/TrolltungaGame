@@ -12,6 +12,11 @@ public class playerController : MonoBehaviour
     private int vidaAtual;
     private GameObject painelVida;
 
+    public int maxMana;
+    private int manaAtual;
+    private GameObject painelMana;
+
+
     public Transform spritePlayer;
     private Animator animator;
     private bool stopMove;
@@ -35,11 +40,15 @@ public class playerController : MonoBehaviour
     void Start()
     {
         vidaAtual = maxVida;
+        manaAtual = maxMana;
+
         lastHdirection = 1f;
         maxJumps = 2;
         animator = spritePlayer.GetComponent<Animator>();
         painelVida = GameObject.Find("Canvas/PainelVida");
-        painelVida.GetComponentInChildren<Text>().text = vidaAtual.ToString() + "  /  " + maxVida.ToString(); 
+        painelMana = GameObject.Find("Canvas/PainelMana");
+        painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
+        painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
     }
 
     // Update is called once per frame
@@ -65,15 +74,25 @@ public class playerController : MonoBehaviour
         
         animator.SetInteger("Attack", attack);
         yield return new WaitForSeconds((float)0.7);
-        if (lastHdirection == 1)
+
+        if (attack == 1)
+        {
+            if (lastHdirection == 1)
+            {
+                weaponRight.SetActive(true);
+            }
+            else
+            {
+                weaponLeft.SetActive(true);
+            }
+        }
+        else if (attack == 2)
         {
             weaponRight.SetActive(true);
-        }
-        else
-        {
             weaponLeft.SetActive(true);
+            
         }
-
+        
         animator.SetInteger("Attack", 0);
         yield return new WaitForSeconds((float)0.2);
         stopMove = false;
@@ -171,7 +190,7 @@ public class playerController : MonoBehaviour
         if (collisor.gameObject.layer == enemyLayer)
         {
             Vector2 v = gameObject.GetComponent<Rigidbody2D>().velocity;
-            v.x = -lastHdirection*3f;
+            v.x = lastHdirection*-2f;
             v.y = 2f;
             gameObject.GetComponent<Rigidbody2D>().velocity = v;
             
@@ -193,7 +212,7 @@ public class playerController : MonoBehaviour
             Debug.Log("morreu");
         }
 
-        painelVida.GetComponentInChildren<Text>().text = vidaAtual.ToString() + "  /  " + maxVida.ToString();
+        painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
 
 
 

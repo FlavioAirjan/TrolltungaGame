@@ -45,7 +45,7 @@ public class DaDano : MonoBehaviour {
                 Player.GetComponent<playerController>().PerdeVida(dano);
 
                     Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
-                    v.x = Player.GetComponent<playerController>().lastHdirection * -3f;
+                    v.x = Player.GetComponent<playerController>().lastHdirection * -2f;
                     v.y = 2f;
                     Player.GetComponent<Rigidbody2D>().velocity = v;
 
