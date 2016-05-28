@@ -64,7 +64,7 @@ public class playerController : MonoBehaviour
                 Moviments();
             }
         }
-        
+
         
 
     }
@@ -217,5 +217,61 @@ public class playerController : MonoBehaviour
 
 
     }
+
+    public void ganhaVida(int valor)
+    {
+
+        vidaAtual += valor;
+
+
+
+        if (vidaAtual >= maxVida)
+        {
+            vidaAtual = maxVida;
+
+
+        }
+
+        painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
+
+
+    }
+
+    public void ganhaMana(int valor)
+    {
+
+        manaAtual += valor;
+
+
+
+        if (manaAtual >= maxMana)
+        {
+            manaAtual = maxMana;
+
+
+        }
+
+        painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
+
+    }
+
+    public void PerdeMana(int dano)
+    {
+        manaAtual -= dano;
+
+
+
+        if (manaAtual <= 0)
+        {
+            manaAtual = 0;
+
+        }
+
+        painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
+
+
+
+    }
+
 
 }

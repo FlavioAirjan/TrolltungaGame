@@ -89,6 +89,7 @@
     <Compile Include="Assets\scripts\playerController.cs" />
     <Compile Include="Assets\scripts\tiling.cs" />
     <Compile Include="Assets\scripts\vidaObjeto.cs" />
+    <Compile Include="Assets\usaItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
