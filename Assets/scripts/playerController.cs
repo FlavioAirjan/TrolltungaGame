@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class playerController : MonoBehaviour
 {
 
+    public GameObject Tiro1;
+
     public GameObject weaponRight;
     public GameObject weaponLeft;
 
@@ -90,7 +92,12 @@ public class playerController : MonoBehaviour
         {
             weaponRight.SetActive(true);
             weaponLeft.SetActive(true);
-            
+
+        }
+        else if (attack == 3)
+        {
+            Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
+            PerdeMana(10);
         }
         
         animator.SetInteger("Attack", 0);

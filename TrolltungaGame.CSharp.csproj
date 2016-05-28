@@ -88,6 +88,7 @@
     <Compile Include="Assets\scripts\menuScript.cs" />
     <Compile Include="Assets\scripts\playerController.cs" />
     <Compile Include="Assets\scripts\tiling.cs" />
+    <Compile Include="Assets\scripts\tiro.cs" />
     <Compile Include="Assets\scripts\vidaObjeto.cs" />
     <Compile Include="Assets\usaItem.cs" />
   </ItemGroup>
