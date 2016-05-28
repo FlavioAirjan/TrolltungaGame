@@ -36,11 +36,18 @@ public class playerController : MonoBehaviour
     public int jumps = 0;
 
     public bool isOnFloor;
+    public AudioClip attack1Sound;
+    public AudioClip attack2Sound;
+    public AudioClip attack3Sound;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
 
 
     // Use this for initialization
     void Start()
     {
+        source = GetComponent<AudioSource>();
         vidaAtual = maxVida;
         manaAtual = maxMana;
 
@@ -73,8 +80,20 @@ public class playerController : MonoBehaviour
 
     IEnumerator Atack(int attack)
     {
-        
-        animator.SetInteger("Attack", attack);
+        float vol = Random.Range(volLowRange, volHighRange);
+        if (attack == 1)
+        {
+            source.PlayOneShot(attack1Sound, vol);
+        }
+        else if (attack == 2)
+        {
+            source.PlayOneShot(attack2Sound, vol);
+        }
+        else
+        {
+            source.PlayOneShot(attack3Sound, vol);
+        }
+            animator.SetInteger("Attack", attack);
         yield return new WaitForSeconds((float)0.7);
 
         if (attack == 1)
@@ -87,16 +106,18 @@ public class playerController : MonoBehaviour
             {
                 weaponLeft.SetActive(true);
             }
+            
         }
         else if (attack == 2)
         {
             weaponRight.SetActive(true);
             weaponLeft.SetActive(true);
-
+           
         }
         else if (attack == 3)
         {
             Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
+            
             PerdeMana(10);
         }
         
