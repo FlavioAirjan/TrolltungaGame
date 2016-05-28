@@ -9,7 +9,8 @@ public class Enemy_0 : MonoBehaviour{
     private Animator animator;
     public int moveSpeed;
     public int rotationSpeed;
-    private bool atacking;
+    public bool atacking;
+    public float dir;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class Enemy_0 : MonoBehaviour{
 
         if (target != null && atacking == false)
         {
-            float dir = target.position.x - transform.position.x;
+            dir = target.position.x - transform.position.x;
             if (dir > dist || dir < -dist)
             {
                 animator.SetBool("walk", true);
@@ -66,10 +67,17 @@ public class Enemy_0 : MonoBehaviour{
             atacking = true;
             animator.SetBool("walk", false);
             animator.SetBool("atack", true);
+            
             yield return new WaitForSeconds(1);
+            
             animator.SetBool("atack", false);
-            yield return new WaitForSeconds(1);
+            //yield return new WaitForSeconds(0.5f);
+            gameObject.GetComponent<DaDano>().enemyAttack();
+            yield return new WaitForSeconds(1.0f);
+            
             atacking = false;
+       
+
     }
 
 

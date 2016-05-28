@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class vidaPlayer : MonoBehaviour {
+public class vidaObjeto : MonoBehaviour {
 
 
    

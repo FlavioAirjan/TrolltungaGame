@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class playerController : MonoBehaviour
 {
 
+    public GameObject weaponRight;
+    public GameObject weaponLeft;
+
     public int maxVida;
     private int vidaAtual;
     private GameObject painelVida;
@@ -42,15 +45,18 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (!stopMove)
         {
             attack();
+            
             if (!stopMove)
             {
                 Moviments();
             }
         }
+        
+        
 
     }
 
@@ -59,6 +65,15 @@ public class playerController : MonoBehaviour
         
         animator.SetInteger("Attack", attack);
         yield return new WaitForSeconds((float)0.7);
+        if (lastHdirection == 1)
+        {
+            weaponRight.SetActive(true);
+        }
+        else
+        {
+            weaponLeft.SetActive(true);
+        }
+
         animator.SetInteger("Attack", 0);
         yield return new WaitForSeconds((float)0.2);
         stopMove = false;
@@ -89,9 +104,16 @@ public class playerController : MonoBehaviour
             {
                 StartCoroutine(Atack(3));
             }
-       
+
+            
+
         }
-        
+        else
+        {
+            weaponRight.SetActive(false);
+            weaponLeft.SetActive(false);
+        }
+
     }
 
     void Moviments()
