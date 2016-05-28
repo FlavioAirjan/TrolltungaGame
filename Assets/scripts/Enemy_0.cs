@@ -12,8 +12,14 @@ public class Enemy_0 : MonoBehaviour{
     public bool atacking;
     public float dir;
 
+    public AudioClip attack1Sound;
+    private AudioSource source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
     void Start()
     {
+        source = GetComponent<AudioSource>();
         //target = GameObject.Find("Player").transform;
         atacking = false;
         animator = enemy.GetComponent<Animator>();
@@ -64,11 +70,13 @@ public class Enemy_0 : MonoBehaviour{
 
     IEnumerator Atack()
     {
-            atacking = true;
+        float vol = Random.Range(volLowRange, volHighRange);
+        atacking = true;
             animator.SetBool("walk", false);
             animator.SetBool("atack", true);
-            
-            yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.7f);
+        source.PlayOneShot(attack1Sound, vol);
+        yield return new WaitForSeconds(0.3f);
             
             animator.SetBool("atack", false);
             //yield return new WaitForSeconds(0.5f);
