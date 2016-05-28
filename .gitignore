@@ -218,9 +218,9 @@ pip-log.txt
 Library/ShaderCache/4/4a4bc4f5384abd2be904ceb572b22120.bin
 *.info
 
-###########################
+#############
 UNITY
-###########################
+#############
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
