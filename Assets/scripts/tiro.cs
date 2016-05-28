@@ -11,6 +11,7 @@ public class tiro : MonoBehaviour {
     private float yPos;
     private float zPos;
     public float velocidade;
+    public float ditInit;
   
 
 	// Use this for initialization
@@ -32,13 +33,14 @@ public class tiro : MonoBehaviour {
         
         if (direcao >= 0)
         {
+            xPos = xPos + ditInit;
             direcao = 1f;
             gameObject.GetComponentInChildren<SpriteRenderer>().flipX = true;
 
         }
         else
         {
-
+            xPos = xPos - ditInit;
             direcao = -1f;
             gameObject.GetComponentInChildren<SpriteRenderer>().flipX = false;
             //transform.eulerAngles = new Vector2(0, 0);
