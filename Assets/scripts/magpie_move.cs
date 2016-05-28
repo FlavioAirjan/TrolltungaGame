@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class move : MonoBehaviour {
+public class magpie_move : MonoBehaviour {
 	public float speed = 0.02f;
 
 	// Use this for initialization
