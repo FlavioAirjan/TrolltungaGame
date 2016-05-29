@@ -54,7 +54,7 @@ public class vidaObjeto : MonoBehaviour {
 
     {
         gameObject.transform.parent.gameObject.GetComponent<Enemy_0>().dead();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         DestroyObject(gameObject.transform.parent.gameObject);
     }
 

@@ -73,11 +73,11 @@ public class DaDano : MonoBehaviour {
                
             int dir;
             //Tira vida do inimigo.
-            colisor.gameObject.GetComponent<Enemy_0>().damaged();
+            
             var inimigo = colisor.gameObject.GetComponentInChildren<vidaObjeto>();
             
             inimigo.PerdeVida(dano);
-            
+                colisor.gameObject.GetComponent<Enemy_0>().damaged();
 
                 Vector2 position = colisor.gameObject.transform.position;
             if (colisor.gameObject.GetComponent<Enemy_0>().dir >= 0)

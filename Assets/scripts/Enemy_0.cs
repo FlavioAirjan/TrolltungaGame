@@ -16,21 +16,24 @@ public class Enemy_0 : MonoBehaviour{
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
-    public bool stop;
+    private bool stop;
+    private bool deadStop;
 
     void Start()
     {
+        GetComponent<CircleCollider2D>().enabled = false;
         source = GetComponent<AudioSource>();
         //target = GameObject.Find("Player").transform;
         atacking = false;
         animator = enemy.GetComponent<Animator>();
         stop = false;
+        deadStop = false;
     }
 
     void Update()
     {
 
-        if (stop == false) {
+        if (stop == false && deadStop==false) {
         if (target != null && atacking == false )
         {
             dir = target.position.x - transform.position.x;
@@ -93,7 +96,9 @@ public class Enemy_0 : MonoBehaviour{
 
     public void damaged()
     {
-        StartCoroutine(damagedAmine());
+        if (stop==false) {
+            StartCoroutine(damagedAmine());
+        }
     }
 
 
@@ -113,12 +118,20 @@ public class Enemy_0 : MonoBehaviour{
         stop = true;
         animator.SetBool("walk", false);
         animator.SetBool("atack", false);
+        animator.SetBool("damaged", false);
+        //transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
     public void dead()
     {
         stopmove();
+        deadStop = true;
+        // Debug.Log("teste dead");
+        GetComponent<CircleCollider2D>().enabled = true;
+        GetComponent<CircleCollider2D>().isTrigger = false;
+        GetComponent<BoxCollider2D>().enabled = false;
         animator.SetBool("dead", true);
+        
     }
 
 
