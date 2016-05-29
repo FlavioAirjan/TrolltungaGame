@@ -3,7 +3,7 @@ using System.Collections;
 
 public class usaItem : MonoBehaviour {
 
-    private GameObject Player;
+   // private GameObject Player;
     public int playerLayer;
     
     public int quantidadeGanha;
@@ -17,7 +17,7 @@ public class usaItem : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        Player = GameObject.Find("Player");
+       // Player = GameObject.Find("Player");
         playerLayer = LayerMask.NameToLayer("Player");
 
     }

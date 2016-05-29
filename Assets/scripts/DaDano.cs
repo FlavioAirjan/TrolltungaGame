@@ -16,6 +16,7 @@ public class DaDano : MonoBehaviour {
 
     private GameObject Player;
 
+
     // Use this for initialization
     void Start()
     {
@@ -24,6 +25,8 @@ public class DaDano : MonoBehaviour {
         playerLayer = LayerMask.NameToLayer("Player");
         tiroLayer = LayerMask.NameToLayer("Tiro");
         weaponLayer = LayerMask.NameToLayer("Weapon");
+
+
 
     }
 
@@ -40,14 +43,13 @@ public class DaDano : MonoBehaviour {
         
         if (gameObject.layer == enemyLayer)
         {
-            Debug.Log(gameObject.name);
+//            Debug.Log(gameObject.name);
           if (gameObject.GetComponent<Enemy_0>().atacking == true)
         {
             if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano)
             {
                 
-                Player.GetComponent<playerController>().PerdeVida(dano);
-
+                    Player.GetComponent<playerController>().PerdeVida(dano);
                     Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
                     v.x = Player.GetComponent<playerController>().lastHdirection * -2f;
                     v.y = 2f;
@@ -71,11 +73,13 @@ public class DaDano : MonoBehaviour {
                
             int dir;
             //Tira vida do inimigo.
+            colisor.gameObject.GetComponent<Enemy_0>().damaged();
             var inimigo = colisor.gameObject.GetComponentInChildren<vidaObjeto>();
-
+            
             inimigo.PerdeVida(dano);
+            
 
-            Vector2 position = colisor.gameObject.transform.position;
+                Vector2 position = colisor.gameObject.transform.position;
             if (colisor.gameObject.GetComponent<Enemy_0>().dir >= 0)
             {
                 dir = 1;
@@ -86,10 +90,6 @@ public class DaDano : MonoBehaviour {
             }
             
             position.x += dir * -0.3f;
-
-            
-
-
            
             colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(position);
             
@@ -97,10 +97,6 @@ public class DaDano : MonoBehaviour {
 
         }
         }
-
-
-
-
         
                 //Se for tiro.
                 if (gameObject.layer == tiroLayer)
@@ -110,7 +106,7 @@ public class DaDano : MonoBehaviour {
                     {
                 if (colisor.gameObject.layer == enemyLayer)
                 {
-
+                    colisor.gameObject.GetComponent<Enemy_0>().damaged();
                     int dir;
                     
                     Vector2 Position = colisor.gameObject.transform.position;
@@ -124,12 +120,14 @@ public class DaDano : MonoBehaviour {
                     }
 
                     Position.x += dir * -0.3f;
+
                     
 
 
-
                     colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
+                    
                     colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);
+
                     
                 }
                         //Se destroiAtacante tiver habilitado.

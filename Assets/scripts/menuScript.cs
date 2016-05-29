@@ -3,21 +3,23 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class menuScript : MonoBehaviour {
+public class menuScript : MonoBehaviour
+{
 
     public Canvas quitMenu;
     public Button startText;
     public Button exitText;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         quitMenu = quitMenu.GetComponent<Canvas>();
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
         quitMenu.enabled = false;
     }
-	
+
 
     public void ExitPress()
     {
@@ -36,7 +38,8 @@ public class menuScript : MonoBehaviour {
 
     public void StartGame()
     {
-        SceneManager.LoadScene("scene01");
+        SceneManager.LoadScene("IntoScene");
+
     }
 
     public void ExitGame()

@@ -9,6 +9,7 @@ public class vidaObjeto : MonoBehaviour {
     private int vidaAtual;
 
 
+
     private Animator animator;
 
     // Use this for initialization
@@ -38,8 +39,9 @@ public class vidaObjeto : MonoBehaviour {
         if (vidaAtual <= 0)
         {
             animator.SetInteger("lifeSprite", 0);
-           
-            DestroyObject(gameObject.transform.parent.gameObject);
+
+            StartCoroutine(dead());
+
         }
 
         animator.SetInteger("lifeSprite", vidaAtual * 12 / maxVida);
@@ -48,6 +50,14 @@ public class vidaObjeto : MonoBehaviour {
      
     }
 
- 
+    IEnumerator dead()
 
-}
+    {
+        gameObject.transform.parent.gameObject.GetComponent<Enemy_0>().dead();
+        yield return new WaitForSeconds(3f);
+        DestroyObject(gameObject.transform.parent.gameObject);
+    }
+
+
+
+    }

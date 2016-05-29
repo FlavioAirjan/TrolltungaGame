@@ -16,6 +16,7 @@ public class Enemy_0 : MonoBehaviour{
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
+    public bool stop;
 
     void Start()
     {
@@ -23,13 +24,14 @@ public class Enemy_0 : MonoBehaviour{
         //target = GameObject.Find("Player").transform;
         atacking = false;
         animator = enemy.GetComponent<Animator>();
+        stop = false;
     }
 
     void Update()
     {
 
-
-        if (target != null && atacking == false)
+        if (stop == false) {
+        if (target != null && atacking == false )
         {
             dir = target.position.x - transform.position.x;
             if (dir > dist || dir < -dist)
@@ -65,7 +67,8 @@ public class Enemy_0 : MonoBehaviour{
 
             transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
-      
+        }
+
     }
 
     IEnumerator Atack()
@@ -86,6 +89,36 @@ public class Enemy_0 : MonoBehaviour{
             atacking = false;
        
 
+    }
+
+    public void damaged()
+    {
+        StartCoroutine(damagedAmine());
+    }
+
+
+    IEnumerator damagedAmine()
+
+    {
+        stopmove();
+        animator.SetBool("damaged", true);
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("damaged", false);
+        stop = false;
+
+    }
+
+    public void stopmove()
+    {
+        stop = true;
+        animator.SetBool("walk", false);
+        animator.SetBool("atack", false);
+    }
+
+    public void dead()
+    {
+        stopmove();
+        animator.SetBool("dead", true);
     }
 
 

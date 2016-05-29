@@ -81,6 +81,9 @@ public class playerController : MonoBehaviour
     IEnumerator Atack(int attack)
     {
         float vol = Random.Range(volLowRange, volHighRange);
+
+        animator.SetInteger("Attack", attack);
+        yield return new WaitForSeconds((float)0.3);
         if (attack == 1)
         {
             source.PlayOneShot(attack1Sound, vol);
@@ -92,9 +95,8 @@ public class playerController : MonoBehaviour
         else
         {
             source.PlayOneShot(attack3Sound, vol);
-        }
-            animator.SetInteger("Attack", attack);
-        yield return new WaitForSeconds((float)0.7);
+        } 
+        yield return new WaitForSeconds((float)0.4);
 
         if (attack == 1)
         {
