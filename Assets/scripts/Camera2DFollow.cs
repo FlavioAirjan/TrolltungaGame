@@ -11,9 +11,12 @@ namespace UnityStandardAssets._2D
         public float lookAheadReturnSpeed = 0.5f;
         public float lookAheadMoveThreshold = 0.1f;
         public float lowY;
+        private float initialLowY;
         public Transform startMap;
         public Transform endMap;
         public float cameraSize;
+
+        public bool followYplayer;
 
         private float m_OffsetZ;
         private Vector3 m_LastTargetPosition;
@@ -28,13 +31,23 @@ namespace UnityStandardAssets._2D
             m_LastTargetPosition = new Vector3(target.position.x, lowY, target.position.z);
             m_OffsetZ = (transform.position - target.position).z;
             transform.parent = null;
-            
+            initialLowY = lowY;
+           
+
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+            if (followYplayer)
+            {
+                lowY = target.position.y;
+            }
+            else {
+                lowY = initialLowY;
+            }
+
             if (target.position.x > (startMap.position.x+(cameraSize)) && target.position.x < (endMap.position.x - (cameraSize))) { 
             Vector3 posZero = new Vector3(target.position.x, lowY, target.position.z);
 

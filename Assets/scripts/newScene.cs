@@ -24,4 +24,12 @@ public class newScene : MonoBehaviour {
 
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(scene);
+        }
+    }
+
 }

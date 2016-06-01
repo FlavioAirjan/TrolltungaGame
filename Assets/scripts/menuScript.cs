@@ -38,7 +38,7 @@ public class menuScript : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("IntoScene");
+        SceneManager.LoadScene("scene01");
 
     }
 
