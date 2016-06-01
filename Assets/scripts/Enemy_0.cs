@@ -132,11 +132,14 @@ public class Enemy_0 : MonoBehaviour{
         stopmove();
         deadStop = true;
         // Debug.Log("teste dead");
-        GetComponent<CircleCollider2D>().enabled = true;
+        GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<CircleCollider2D>().isTrigger = false;
         GetComponent<BoxCollider2D>().enabled = false;
-        animator.SetBool("dead", true);
         
+        animator.SetBool("dead", true);
+        Destroy(GetComponent<Rigidbody2D>());
+
+
     }
 
 
