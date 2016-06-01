@@ -35,14 +35,14 @@ public class tiro : MonoBehaviour {
         {
             xPos = xPos + ditInit;
             direcao = 1f;
-            gameObject.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            gameObject.GetComponentInChildren<SpriteRenderer>().flipX = false;
 
         }
         else
         {
             xPos = xPos - ditInit;
             direcao = -1f;
-            gameObject.GetComponentInChildren<SpriteRenderer>().flipX = false;
+            gameObject.GetComponentInChildren<SpriteRenderer>().flipX = true;
             //transform.eulerAngles = new Vector2(0, 0);
         }
 

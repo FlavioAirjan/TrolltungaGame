@@ -74,14 +74,19 @@ public class Enemy_0 : MonoBehaviour{
 
     }
 
-    IEnumerator Atack()
+    public void hitsound()
     {
         float vol = Random.Range(volLowRange, volHighRange);
+        source.PlayOneShot(attack1Sound, vol);
+    }
+
+    IEnumerator Atack()
+    {
+        
         atacking = true;
             animator.SetBool("walk", false);
             animator.SetBool("atack", true);
         yield return new WaitForSeconds(0.7f);
-        source.PlayOneShot(attack1Sound, vol);
         yield return new WaitForSeconds(0.3f);
             
             animator.SetBool("atack", false);
