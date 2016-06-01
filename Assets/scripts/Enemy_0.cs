@@ -26,7 +26,8 @@ public class Enemy_0 : MonoBehaviour{
         //target = GameObject.Find("Player").transform;
         atacking = false;
         animator = enemy.GetComponent<Animator>();
-        stop = false;
+        animator.enabled = false;
+        stop = true;
         deadStop = false;
     }
 
@@ -125,6 +126,12 @@ public class Enemy_0 : MonoBehaviour{
         animator.SetBool("atack", false);
         animator.SetBool("damaged", false);
         //transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+    }
+
+    public void start()
+    {
+        stop = false;
+        animator.enabled = true;
     }
 
     public void dead()
