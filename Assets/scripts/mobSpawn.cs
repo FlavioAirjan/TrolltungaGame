@@ -7,6 +7,9 @@ public class mobSpawn : MonoBehaviour {
     public Transform target;
     private float dir;
     private bool on;
+    public string nameIA;
+    public mobIA mob;
+
 
 
 
@@ -14,6 +17,13 @@ public class mobSpawn : MonoBehaviour {
     void Start () {
         //GetComponent<Enemy_0>().stopmove();
         on = false;
+   
+        mob = gameObject.GetComponent(nameIA) as mobIA;
+    }
+
+    public string myIA()
+    {
+        return nameIA;
     }
 
     // Update is called once per frame
@@ -28,8 +38,9 @@ public class mobSpawn : MonoBehaviour {
             }
             if (dir < range)
             {
-                GetComponent<Enemy_0>().start();
                 on = true;
+                mob.start();
+                
             }
         }
     }

@@ -7,6 +7,7 @@ public class vidaObjeto : MonoBehaviour {
    
     public int maxVida;
     private int vidaAtual;
+    public string nameIA;
 
 
 
@@ -53,7 +54,7 @@ public class vidaObjeto : MonoBehaviour {
     IEnumerator dead()
 
     {
-        gameObject.transform.parent.gameObject.GetComponent<Enemy_0>().dead();
+        (gameObject.transform.parent.gameObject.GetComponent(nameIA) as mobIA).dead();
         yield return new WaitForSeconds(5f);
         DestroyObject(gameObject.transform.parent.gameObject);
     }

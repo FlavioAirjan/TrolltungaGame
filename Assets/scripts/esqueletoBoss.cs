@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy_0 : MonoBehaviour, mobIA {
-
+public class esqueletoBoss : MonoBehaviour, mobIA
+{
     public Transform target;
     public Transform enemy;
     public float dist;
@@ -35,45 +35,51 @@ public class Enemy_0 : MonoBehaviour, mobIA {
     public void Update()
     {
 
-        if (stop == false && deadStop==false) {
-        if (target != null && atacking == false )
+        if (stop == false && deadStop == false)
         {
-            dir = target.position.x - transform.position.x;
-            if (dir > dist || dir < -dist)
+            if (target != null && atacking == false)
             {
-                animator.SetBool("walk", true);
-                Vector2 direction;
-                direction.x = 0;
-                direction.y = 0;
-                if (dir < 0)
+                dir = target.position.x - transform.position.x;
+                if (dir > dist || dir < -dist)
                 {
-                    direction.x = -1;
-                    enemy.GetComponent<SpriteRenderer>().flipX = true;
-                }
+                    animator.SetBool("Walk", true);
+                    Vector2 direction;
+                    direction.x = 0;
+                    direction.y = 0;
+                    if (dir < 0)
+                    {
+                        direction.x = -1;
+                        enemy.GetComponent<SpriteRenderer>().flipX = true;
+                    }
 
-                if (dir > 0)
+                    if (dir > 0)
+                    {
+                        direction.x = 1;
+                        enemy.GetComponent<SpriteRenderer>().flipX = false;
+
+                    }
+                    //Move Towards Target
+
+                    transform.Translate(direction * moveSpeed * Time.deltaTime);
+                }
+                else
                 {
-                    direction.x = 1;
-                    enemy.GetComponent<SpriteRenderer>().flipX = false;
 
+                    StartCoroutine(Atack());
                 }
-                //Move Towards Target
-
-                transform.Translate(direction * moveSpeed * Time.deltaTime);
             }
             else
             {
 
-                StartCoroutine(Atack());
+                transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             }
         }
-        else
-        {
 
-            transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        }
-        }
+    }
 
+    public bool isAtacking()
+    {
+        return (atacking);
     }
 
     public void hitsound()
@@ -84,26 +90,37 @@ public class Enemy_0 : MonoBehaviour, mobIA {
 
     public IEnumerator Atack()
     {
-        
+
+        int atack = Random.Range(0, 30);
+
+        if (atack < 10)
+        {
+            atack = 1;
+        }else if (atack < 20)
+        {
+            atack = 2;
+        }else
+        {
+           atack = 3;
+        }
+
         atacking = true;
-            animator.SetBool("walk", false);
-            animator.SetBool("atack", true);
-        yield return new WaitForSeconds(0.7f);
-        yield return new WaitForSeconds(0.3f);
-            
-            animator.SetBool("atack", false);
-            //yield return new WaitForSeconds(0.5f);
-            gameObject.GetComponent<DaDano>().enemyAttack();
-            yield return new WaitForSeconds(1.0f);
-            
-            atacking = false;
-       
+        animator.SetBool("Walk", false);
+        animator.SetInteger("Attack", atack);
+        yield return new WaitForSeconds(1f);
+        animator.SetInteger("Attack", 0);
+        gameObject.GetComponent<DaDano>().enemyAttack();
+        yield return new WaitForSeconds(1.0f);
+
+        atacking = false;
+
 
     }
 
     public void damaged()
     {
-        if (stop==false) {
+        if (stop == false)
+        {
             StartCoroutine(damagedAmine());
         }
     }
@@ -113,9 +130,9 @@ public class Enemy_0 : MonoBehaviour, mobIA {
 
     {
         stopmove();
-        animator.SetBool("damaged", true);
+        animator.SetBool("Damaged", true);
         yield return new WaitForSeconds(1f);
-        animator.SetBool("damaged", false);
+        animator.SetBool("Damaged", false);
         stop = false;
 
     }
@@ -123,9 +140,9 @@ public class Enemy_0 : MonoBehaviour, mobIA {
     public void stopmove()
     {
         stop = true;
-        animator.SetBool("walk", false);
-        animator.SetBool("atack", false);
-        animator.SetBool("damaged", false);
+        animator.SetBool("Walk", false);
+        animator.SetInteger("Attack", 0);
+        animator.SetBool("Damaged", false);
         //transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
@@ -133,6 +150,7 @@ public class Enemy_0 : MonoBehaviour, mobIA {
     {
         stop = false;
         animator.enabled = true;
+        animator.SetBool("Alive", true);
     }
 
     public void dead()
@@ -143,17 +161,12 @@ public class Enemy_0 : MonoBehaviour, mobIA {
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<CircleCollider2D>().isTrigger = false;
         GetComponent<BoxCollider2D>().enabled = false;
-        
-        animator.SetBool("dead", true);
+
+        animator.SetBool("Dead", true);
         Destroy(GetComponent<Rigidbody2D>());
 
 
     }
-    public bool isAtacking()
-    {
-        return (atacking);
-    }
-
 
     public float dirValue()
     {

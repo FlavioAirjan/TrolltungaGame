@@ -6,6 +6,7 @@ public class DaDano : MonoBehaviour {
 
     public float dist_dano;
 
+    public string nameIA;
     public int dano;
     public bool destroiAtacante;
 
@@ -13,6 +14,7 @@ public class DaDano : MonoBehaviour {
     private int playerLayer;
     private int tiroLayer;
     private int weaponLayer;
+    public mobIA mob;
 
     private GameObject Player;
 
@@ -25,13 +27,13 @@ public class DaDano : MonoBehaviour {
         playerLayer = LayerMask.NameToLayer("Player");
         tiroLayer = LayerMask.NameToLayer("Tiro");
         weaponLayer = LayerMask.NameToLayer("Weapon");
-
+        mob= gameObject.GetComponent(nameIA) as mobIA;
 
 
     }
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
         
         
@@ -44,14 +46,14 @@ public class DaDano : MonoBehaviour {
         if (gameObject.layer == enemyLayer)
         {
 //            Debug.Log(gameObject.name);
-          if (gameObject.GetComponent<Enemy_0>().atacking == true)
+          if (mob.isAtacking())
         {
             if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano)
             {
                 
                     Player.GetComponent<playerController>().PerdeVida(dano);
                     Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
-                    gameObject.GetComponent<Enemy_0>().hitsound();
+                    mob.hitsound();
                     v.x = Player.GetComponent<playerController>().lastHdirection * -2f;
                     v.y = 2f;
                     Player.GetComponent<Rigidbody2D>().velocity = v;
@@ -65,23 +67,24 @@ public class DaDano : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D colisor)
     {
+        string ia;
 
         //Ataque do player.
         if (gameObject.layer == weaponLayer) { 
         //Se a colisão for com o inimigo.
         if (colisor.gameObject.layer == enemyLayer)
         {
-               
-            int dir;
+                 ia= colisor.gameObject.GetComponent<mobSpawn>().myIA();
+                int dir;
             //Tira vida do inimigo.
             
             var inimigo = colisor.gameObject.GetComponentInChildren<vidaObjeto>();
             
             inimigo.PerdeVida(dano);
-                colisor.gameObject.GetComponent<Enemy_0>().damaged();
+                (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
 
                 Vector2 position = colisor.gameObject.transform.position;
-            if (colisor.gameObject.GetComponent<Enemy_0>().dir >= 0)
+            if ((colisor.gameObject.GetComponent(ia) as mobIA).dirValue() >= 0)
             {
                 dir = 1;
             }
@@ -107,11 +110,12 @@ public class DaDano : MonoBehaviour {
                     {
                 if (colisor.gameObject.layer == enemyLayer)
                 {
-                    colisor.gameObject.GetComponent<Enemy_0>().damaged();
+                    ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
+                    (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
                     int dir;
                     
                     Vector2 Position = colisor.gameObject.transform.position;
-                    if (colisor.gameObject.GetComponent<Enemy_0>().dir >= 0)
+                    if ((colisor.gameObject.GetComponent(ia) as mobIA).dirValue() >= 0)
                     {
                         dir = 1;
                     }
