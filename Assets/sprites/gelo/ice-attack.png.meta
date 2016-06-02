@@ -1,9 +1,33 @@
 fileFormatVersion: 2
 guid: 42712f4d4b24ed344805ef053d3006f3
-timeCreated: 1464906763
+timeCreated: 1464910634
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ice-attack_0
+    21300002: ice-attack_1
+    21300004: ice-attack_2
+    21300006: ice-attack_3
+    21300008: ice-attack_4
+    21300010: ice-attack_5
+    21300012: ice-attack_6
+    21300014: ice-attack_7
+    21300016: ice-attack_8
+    21300018: ice-attack_9
+    21300020: ice-attack_10
+    21300022: ice-attack_11
+    21300024: ice-attack_12
+    21300026: ice-attack_13
+    21300028: ice-attack_14
+    21300030: ice-attack_15
+    21300032: ice-attack_16
+    21300034: ice-attack_17
+    21300036: ice-attack_18
+    21300038: ice-attack_19
+    21300040: ice-attack_20
+    21300042: ice-attack_21
+    21300044: ice-attack_22
+    21300046: ice-attack_23
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,11 +50,11 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -2
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +62,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +73,555 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ice-attack_0
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 331
+        width: 89
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 80.79999}
+        - {x: -44.5, y: 46.799988}
+        - {x: -31.5, y: -4.200012}
+        - {x: -17.5, y: -20.200012}
+        - {x: 44.5, y: -20.200012}
+        - {x: 44.5, y: 26.799988}
+        - {x: -9.5, y: 80.79999}
+    - name: ice-attack_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 331
+        width: 90
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 80.79999}
+        - {x: -45, y: 40.799988}
+        - {x: -12, y: -20.200012}
+        - {x: 45, y: -20.200012}
+        - {x: 45, y: 26.799988}
+        - {x: 25, y: 75.79999}
+        - {x: -9, y: 80.79999}
+    - name: ice-attack_2
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 331
+        width: 90
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 82.399994}
+        - {x: -45, y: 57.399994}
+        - {x: -26, y: -3.600006}
+        - {x: -14, y: -20.600006}
+        - {x: 45, y: -20.600006}
+        - {x: 45, y: 24.399994}
+        - {x: -7, y: 82.399994}
+    - name: ice-attack_3
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 331
+        width: 92
+        height: 106
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 4.799988}
+        - {x: 46, y: 24.799988}
+        - {x: 26, y: 45.799988}
+        - {x: 23, y: 41.799988}
+        - {x: 20, y: 38.799988}
+        - {x: 22, y: 40.799988}
+        - {x: 23, y: 43.799988}
+        - {x: 24, y: 53.799988}
+        - {x: -6, y: 74.79999}
+        - {x: -35, y: 74.79999}
+        - {x: -44, y: 69.79999}
+        - {x: -44, y: 29.799988}
+        - {x: -4, y: -21.200012}
+        - {x: 39, y: -21.200012}
+        - {x: 46, y: -13.200012}
+        - {x: 46, y: -2.2000122}
+        - {x: 43, y: -3.2000122}
+      - - {x: -23, y: -3.2000122}
+        - {x: -19, y: -4.200012}
+        - {x: -16, y: -2.2000122}
+        - {x: -17, y: 0.7999878}
+        - {x: -22, y: 1.7999878}
+        - {x: -24, y: -0.2000122}
+      - - {x: -28, y: 9.799988}
+        - {x: -25, y: 10.799988}
+        - {x: -25, y: 13.799988}
+        - {x: -28, y: 14.799988}
+        - {x: -30, y: 12.799988}
+      - - {x: -36, y: 14.799988}
+        - {x: -33, y: 15.799988}
+        - {x: -33, y: 18.799988}
+        - {x: -36, y: 19.799988}
+        - {x: -38, y: 17.799988}
+      - - {x: -43, y: 19.799988}
+        - {x: -43, y: 22.799988}
+        - {x: -46, y: 23.799988}
+        - {x: -46, y: 18.799988}
+      - - {x: -46, y: 48.799988}
+        - {x: -43, y: 45.799988}
+        - {x: -41, y: 45.799988}
+        - {x: -39, y: 47.799988}
+        - {x: -40, y: 50.799988}
+        - {x: -44, y: 51.799988}
+      - - {x: -43, y: 62.799988}
+        - {x: -40, y: 63.799988}
+        - {x: -40, y: 66.79999}
+        - {x: -43, y: 67.79999}
+        - {x: -45, y: 65.79999}
+      - - {x: -27, y: 81.79999}
+        - {x: -28, y: 84.79999}
+        - {x: -33, y: 84.79999}
+        - {x: -30, y: 79.79999}
+    - name: ice-attack_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 331
+        width: 84
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 75}
+        - {x: -27, y: 84}
+        - {x: -38, y: 84}
+        - {x: -42, y: 79}
+        - {x: -42, y: -6}
+        - {x: -13, y: -21}
+        - {x: 42, y: -21}
+        - {x: 42, y: 21}
+        - {x: 36, y: 38}
+      - - {x: -20, y: -4}
+        - {x: -16, y: -5}
+        - {x: -13, y: -3}
+        - {x: -14, y: 0}
+        - {x: -19, y: 1}
+        - {x: -21, y: -1}
+      - - {x: -16, y: 4}
+        - {x: -13, y: 5}
+        - {x: -13, y: 8}
+        - {x: -16, y: 9}
+        - {x: -18, y: 7}
+      - - {x: -24, y: 8}
+        - {x: -21, y: 9}
+        - {x: -21, y: 12}
+        - {x: -24, y: 13}
+        - {x: -26, y: 11}
+      - - {x: 36, y: 10}
+        - {x: 39, y: 11}
+        - {x: 39, y: 14}
+        - {x: 36, y: 15}
+        - {x: 34, y: 13}
+      - - {x: -35, y: 13}
+        - {x: -29, y: 11}
+        - {x: -26, y: 13}
+        - {x: -27, y: 16}
+        - {x: -32, y: 18}
+        - {x: -35, y: 18}
+        - {x: -36, y: 16}
+      - - {x: -21, y: 14}
+        - {x: -18, y: 15}
+        - {x: -18, y: 18}
+        - {x: -21, y: 19}
+        - {x: -23, y: 17}
+      - - {x: -40, y: 16}
+        - {x: -37, y: 17}
+        - {x: -37, y: 20}
+        - {x: -40, y: 21}
+        - {x: -42, y: 19}
+      - - {x: -40, y: 43}
+        - {x: -37, y: 40}
+        - {x: -34, y: 41}
+        - {x: -34, y: 43}
+        - {x: -37, y: 46}
+        - {x: -39, y: 46}
+      - - {x: -37, y: 55}
+        - {x: -34, y: 56}
+        - {x: -34, y: 59}
+        - {x: -37, y: 60}
+        - {x: -39, y: 58}
+      - - {x: -39, y: 80}
+        - {x: -39, y: 83}
+        - {x: -42, y: 84}
+        - {x: -42, y: 79}
+    - name: ice-attack_5
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 333
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 17}
+        - {x: -17, y: 17}
+        - {x: -17, y: -12}
+        - {x: -12, y: -17}
+        - {x: 16, y: -17}
+        - {x: 17, y: -16}
+        - {x: 17, y: -3}
+        - {x: 9, y: 9}
+    - name: ice-attack_6
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 221
+        width: 75
+        height: 88
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 70.399994}
+        - {x: -37.5, y: -2.600006}
+        - {x: -18.5, y: -15.600006}
+        - {x: -12.5, y: -17.600006}
+        - {x: 33.5, y: -17.600006}
+        - {x: 37.5, y: -16.600006}
+        - {x: 37.5, y: 21.399994}
+        - {x: -4.5, y: 70.399994}
+    - name: ice-attack_7
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 221
+        width: 74
+        height: 86
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 68.8}
+        - {x: -37, y: -1.199997}
+        - {x: -35, y: -17.199997}
+        - {x: 37, y: -17.199997}
+        - {x: 37, y: 33.800003}
+        - {x: 7, y: 68.8}
+    - name: ice-attack_8
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 222
+        width: 76
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 69.600006}
+        - {x: -37, y: 69.600006}
+        - {x: -38, y: 68.600006}
+        - {x: -38, y: 27.600006}
+        - {x: -35, y: 2.600006}
+        - {x: -16, y: -17.399994}
+        - {x: 38, y: -17.399994}
+        - {x: 38, y: 12.600006}
+        - {x: 21, y: 61.600006}
+    - name: ice-attack_9
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 224
+        width: 60
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 56}
+        - {x: -30, y: 56}
+        - {x: -30, y: 21}
+        - {x: -26, y: 13}
+        - {x: -23, y: 10}
+        - {x: -6, y: -14}
+        - {x: 27, y: -14}
+        - {x: 30, y: -13}
+        - {x: 30, y: 20}
+        - {x: 23, y: 46}
+    - name: ice-attack_10
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 224
+        width: 53
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: 60}
+        - {x: -26.5, y: 17}
+        - {x: -21.5, y: -14}
+        - {x: -16.5, y: -15}
+        - {x: 26.5, y: -15}
+        - {x: 26.5, y: 19}
+        - {x: -7.5, y: 60}
+      - - {x: -22.5, y: 25}
+        - {x: -19.5, y: 26}
+        - {x: -19.5, y: 29}
+        - {x: -22.5, y: 30}
+        - {x: -24.5, y: 28}
+    - name: ice-attack_11
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 224
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ice-attack_12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 111
+        width: 55
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 56}
+        - {x: -27.5, y: -13}
+        - {x: -24.5, y: -14}
+        - {x: 27.5, y: -14}
+        - {x: 27.5, y: 35}
+        - {x: -8.5, y: 56}
+    - name: ice-attack_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 112
+        width: 55
+        height: 69
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 55.199997}
+        - {x: -27.5, y: 48.199997}
+        - {x: -27.5, y: 2.199997}
+        - {x: -19.5, y: -13.800003}
+        - {x: 25.5, y: -13.800003}
+        - {x: 27.5, y: -9.800003}
+        - {x: 27.5, y: 17.199997}
+        - {x: -11.5, y: 55.199997}
+    - name: ice-attack_14
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 111
+        width: 57
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 56.800003}
+        - {x: -28.5, y: -4.199997}
+        - {x: -25.5, y: -14.199997}
+        - {x: 28.5, y: -14.199997}
+        - {x: 28.5, y: 22.800003}
+        - {x: -5.5, y: 56.800003}
+    - name: ice-attack_15
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 114
+        width: 49
+        height: 59
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5, y: 47.199997}
+        - {x: -23.5, y: 47.199997}
+        - {x: -24.5, y: 46.199997}
+        - {x: -24.5, y: 13.199997}
+        - {x: -13.5, y: -6.800003}
+        - {x: -4.5, y: -11.800003}
+        - {x: 22.5, y: -11.800003}
+        - {x: 24.5, y: -9.800003}
+        - {x: 24.5, y: 25.199997}
+        - {x: 20.5, y: 38.199997}
+    - name: ice-attack_16
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 115
+        width: 44
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 49.6}
+        - {x: -21, y: 16.599998}
+        - {x: -15, y: -12.400002}
+        - {x: 18, y: -12.400002}
+        - {x: 22, y: -11.400002}
+        - {x: 22, y: 13.599998}
+        - {x: 20, y: 22.599998}
+        - {x: -6, y: 49.6}
+      - - {x: -22, y: 15.599998}
+        - {x: -20, y: 15.599998}
+        - {x: -18, y: 17.599998}
+        - {x: -19, y: 20.599998}
+        - {x: -22, y: 20.599998}
+    - name: ice-attack_17
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 116
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ice-attack_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2
+        width: 50
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 42}
+        - {x: -22, y: 26}
+        - {x: -25, y: 8}
+        - {x: -25, y: -42}
+        - {x: 25, y: -42}
+        - {x: 25, y: 21}
+        - {x: 12, y: 42}
+    - name: ice-attack_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1
+        width: 51
+        height: 86
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 68.8}
+        - {x: -25.5, y: 29.8}
+        - {x: -25.5, y: -15.200001}
+        - {x: -14.5, y: -17.2}
+        - {x: 21.5, y: -17.2}
+        - {x: 25.5, y: -15.200001}
+        - {x: 25.5, y: 41.8}
+        - {x: 10.5, y: 68.8}
+    - name: ice-attack_20
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 75
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 69.6}
+        - {x: -37.5, y: 29.6}
+        - {x: -37.5, y: -17.4}
+        - {x: 17.5, y: -17.4}
+        - {x: 17.5, y: 3.6000004}
+        - {x: 14.5, y: 41.6}
+        - {x: 0.5, y: 69.6}
+      - - {x: 29.5, y: -16.4}
+        - {x: 29.5, y: -17.4}
+        - {x: 37.5, y: -17.4}
+        - {x: 37.5, y: -14.4}
+        - {x: 31.5, y: -14.4}
+    - name: ice-attack_21
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 2
+        width: 47
+        height: 77
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.5, y: 38.6}
+        - {x: 14.5, y: 51.6}
+        - {x: 4.5, y: 61.6}
+        - {x: -7.5, y: 61.6}
+        - {x: -9.5, y: 57.6}
+        - {x: -14.5, y: 49.6}
+        - {x: -14.5, y: 47.6}
+        - {x: -11.5, y: 44.6}
+        - {x: -11.5, y: 42.6}
+        - {x: -13.5, y: 45.6}
+        - {x: -17.5, y: 48.6}
+        - {x: -23.5, y: 47.6}
+        - {x: -23.5, y: 4.5999985}
+        - {x: -20.5, y: -10.400002}
+        - {x: -12.5, y: -15.400002}
+        - {x: 10.5, y: -15.400002}
+        - {x: 16.5, y: -12.400002}
+        - {x: 22.5, y: -6.4000015}
+        - {x: 23.5, y: 3.5999985}
+    - name: ice-attack_22
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 3
+        width: 36
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 64.8}
+        - {x: -3, y: 64.8}
+        - {x: -18, y: 47.8}
+        - {x: -18, y: -16.2}
+        - {x: 18, y: -16.2}
+        - {x: 18, y: 52.8}
+        - {x: 12, y: 62.8}
+    - name: ice-attack_23
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 6
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 

@@ -5,7 +5,11 @@ using UnityEngine.UI;
 public class playerController : MonoBehaviour
 {
 
+    public int activedAttack;
+
     public GameObject Tiro1;
+    public GameObject Tiro2;
+    public GameObject Tiro3;
 
     public GameObject weaponRight;
     public GameObject weaponLeft;
@@ -118,9 +122,18 @@ public class playerController : MonoBehaviour
         }
         else if (attack == 3)
         {
+            switch (activedAttack) {
+                case 1:
             Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
-            
-            PerdeMana(10);
+                    break;
+                case 2:
+                    Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
+                    break;
+                default:
+                    break;
+
+            }
+        PerdeMana(10);
         }
         
         animator.SetInteger("Attack", 0);
