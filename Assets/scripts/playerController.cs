@@ -123,7 +123,23 @@ public class playerController : MonoBehaviour
         }
         else if (attack == 3)
         {
-            switch (activedAttack) {
+            int currentAttack;
+
+            //Se não tiver mana, o ataque vai cair no caso default, ou seja, não disparará magia.
+
+            if (manaAtual <= 0)
+            {
+                //criei a variável currentAttack, porque assim a activedAttack nunca vai setar para outro valor, 
+                //a não ser o que o player setar.
+                currentAttack = -1;
+                
+            }
+            else
+            {
+                currentAttack = activedAttack;
+            }
+            
+            switch (currentAttack) {
                 case 0:
             Instantiate(Tiro0, transform.position, Tiro1.transform.rotation);
                     break;
@@ -134,6 +150,14 @@ public class playerController : MonoBehaviour
             Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
                     break;
                 default:
+                    if (lastHdirection == 1)
+                    {
+                        weaponRight.SetActive(true);
+                    }
+                    else
+                    {
+                        weaponLeft.SetActive(true);
+                    }
                     break;
 
             }
