@@ -7,9 +7,10 @@ public class playerController : MonoBehaviour
 
     public int activedAttack;
 
-    public GameObject Tiro0;
-    public GameObject Tiro1;
-    public GameObject Tiro2;
+    public GameObject Tiro1; // Tiro1
+    public GameObject Tiro2; //Tiro2
+    public GameObject Tiro3; //Tiro3
+   
     
 
     public GameObject weaponRight;
@@ -62,11 +63,14 @@ public class playerController : MonoBehaviour
         painelMana = GameObject.Find("Canvas/PainelMana");
         painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
         painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        chooseSpecialAttack();
 
         if (!stopMove)
         {
@@ -79,6 +83,27 @@ public class playerController : MonoBehaviour
         }
 
         
+
+    }
+
+    void chooseSpecialAttack()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            activedAttack = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            activedAttack = 2;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            activedAttack = 3;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            activedAttack = 0;
+        }
 
     }
 
@@ -126,7 +151,7 @@ public class playerController : MonoBehaviour
 
             //Se não tiver mana, o ataque vai cair no caso default, ou seja, não disparará magia.
 
-            if (manaAtual <= 0)
+            if (manaAtual <= 0 || !gameObject.GetComponent<MyItems>().runeAvailable(activedAttack))
             {
                 //criei a variável currentAttack, porque assim a activedAttack nunca vai setar para outro valor, 
                 //a não ser o que o player setar.
@@ -141,17 +166,23 @@ public class playerController : MonoBehaviour
             //Inicia o golpe especial e o som do golpe
             switch (currentAttack) {
                 
-                case 0:
-                    
-                    Instantiate(Tiro0, transform.position, Tiro1.transform.rotation);
-                    break;
                 case 1:
                     
                     Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
+                    gameObject.GetComponent<MyItems>().useRune(currentAttack);
+                    PerdeMana(10);
                     break;
                 case 2:
-                  
+                    
                     Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
+                    gameObject.GetComponent<MyItems>().useRune(currentAttack);
+                    PerdeMana(10);
+                    break;
+                case 3:
+                  
+                    Instantiate(Tiro3, transform.position, Tiro1.transform.rotation);
+                    gameObject.GetComponent<MyItems>().useRune(currentAttack);
+                    PerdeMana(10);
                     break;
                 default:
                     if (lastHdirection == 1)
@@ -165,7 +196,7 @@ public class playerController : MonoBehaviour
                     break;
 
             }
-        PerdeMana(10);
+        
         }
         
         animator.SetInteger("Attack", 0);
