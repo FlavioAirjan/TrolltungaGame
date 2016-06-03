@@ -28,8 +28,6 @@ public class DaDano : MonoBehaviour {
         tiroLayer = LayerMask.NameToLayer("Tiro");
         weaponLayer = LayerMask.NameToLayer("Weapon");
         mob= gameObject.GetComponent(nameIA) as mobIA;
-
-
     }
 
 // Update is called once per frame

@@ -43,7 +43,6 @@ public class playerController : MonoBehaviour
     public bool isOnFloor;
     public AudioClip attack1Sound;
     public AudioClip attack2Sound;
-    public AudioClip attack3Sound;
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
@@ -86,9 +85,11 @@ public class playerController : MonoBehaviour
     IEnumerator Atack(int attack)
     {
         float vol = Random.Range(volLowRange, volHighRange);
-
+       
         animator.SetInteger("Attack", attack);
-        yield return new WaitForSeconds((float)0.3);
+
+        //Seleciona o som do ataque normal
+        yield return new WaitForSeconds((float)0.2);
         if (attack == 1)
         {
             source.PlayOneShot(attack1Sound, vol);
@@ -97,11 +98,9 @@ public class playerController : MonoBehaviour
         {
             source.PlayOneShot(attack2Sound, vol);
         }
-        else
-        {
-            source.PlayOneShot(attack3Sound, vol);
-        } 
-        yield return new WaitForSeconds((float)0.4);
+        
+
+       yield return new WaitForSeconds((float)0.4);
 
         if (attack == 1)
         {
@@ -139,15 +138,20 @@ public class playerController : MonoBehaviour
                 currentAttack = activedAttack;
             }
             
+            //Inicia o golpe especial e o som do golpe
             switch (currentAttack) {
+                
                 case 0:
-            Instantiate(Tiro0, transform.position, Tiro1.transform.rotation);
+                    
+                    Instantiate(Tiro0, transform.position, Tiro1.transform.rotation);
                     break;
                 case 1:
-            Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
+                    
+                    Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
                     break;
                 case 2:
-            Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
+                  
+                    Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
                     break;
                 default:
                     if (lastHdirection == 1)
