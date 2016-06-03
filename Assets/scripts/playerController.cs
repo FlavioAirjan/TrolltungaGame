@@ -7,9 +7,10 @@ public class playerController : MonoBehaviour
 
     public int activedAttack;
 
+    public GameObject Tiro0;
     public GameObject Tiro1;
     public GameObject Tiro2;
-    public GameObject Tiro3;
+    
 
     public GameObject weaponRight;
     public GameObject weaponLeft;
@@ -123,11 +124,14 @@ public class playerController : MonoBehaviour
         else if (attack == 3)
         {
             switch (activedAttack) {
+                case 0:
+            Instantiate(Tiro0, transform.position, Tiro1.transform.rotation);
+                    break;
                 case 1:
             Instantiate(Tiro1, transform.position, Tiro1.transform.rotation);
                     break;
                 case 2:
-                    Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
+            Instantiate(Tiro2, transform.position, Tiro1.transform.rotation);
                     break;
                 default:
                     break;

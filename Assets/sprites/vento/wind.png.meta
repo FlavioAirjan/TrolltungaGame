@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: bd51d55be925f7940a8bfc7cd637a1f3
-timeCreated: 1464908566
+timeCreated: 1464912520
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -95,8 +95,8 @@ TextureImporter:
         y: 141
         width: 30
         height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_3
@@ -106,8 +106,8 @@ TextureImporter:
         y: 142
         width: 21
         height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_4
@@ -117,8 +117,8 @@ TextureImporter:
         y: 141
         width: 30
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_5
@@ -128,8 +128,8 @@ TextureImporter:
         y: 94
         width: 28
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_6
@@ -139,8 +139,8 @@ TextureImporter:
         y: 94
         width: 30
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_7
@@ -150,8 +150,8 @@ TextureImporter:
         y: 94
         width: 28
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_8
@@ -161,8 +161,8 @@ TextureImporter:
         y: 47
         width: 28
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_9
@@ -172,8 +172,8 @@ TextureImporter:
         y: 47
         width: 28
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_10
@@ -183,8 +183,8 @@ TextureImporter:
         y: 47
         width: 27
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_11
@@ -194,62 +194,62 @@ TextureImporter:
         y: 48
         width: 32
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 3, y: -22}
-        - {x: 12, y: -22}
-        - {x: 10, y: -17}
-        - {x: 7, y: -17}
-        - {x: 2, y: -20}
-      - - {x: 9, y: -8}
-        - {x: -14, y: -8}
-        - {x: -14, y: -13}
-        - {x: -8, y: -18}
-        - {x: 0, y: -18}
-        - {x: 7, y: -14}
-        - {x: 9, y: -12}
-      - - {x: 6, y: -4}
-        - {x: 6, y: -8}
-        - {x: 12, y: -8}
-        - {x: 13, y: -7}
-        - {x: 13, y: -3}
-        - {x: 11, y: -1}
-        - {x: 10, y: -1}
-      - - {x: -13, y: 0}
-        - {x: -10, y: -3}
-        - {x: -6, y: -3}
-        - {x: -4, y: -1}
-        - {x: -5, y: 2}
-        - {x: -11, y: 3}
-      - - {x: 8, y: 2}
-        - {x: 10, y: 0}
-        - {x: 13, y: 0}
-        - {x: 16, y: 3}
-        - {x: 16, y: 10}
-        - {x: 14, y: 10}
-        - {x: 8, y: 8}
-      - - {x: -9, y: 10}
-        - {x: -9, y: 8}
-        - {x: -8, y: 6}
-        - {x: -5, y: 5}
-        - {x: -1, y: 5}
-        - {x: 3, y: 8}
-        - {x: 2, y: 11}
-        - {x: -7, y: 12}
-      - - {x: 0, y: 22}
-        - {x: 0, y: 16}
-        - {x: 5, y: 10}
-        - {x: 7, y: 9}
+      - - {x: 3, y: -11}
+        - {x: 12, y: -11}
+        - {x: 10, y: -6}
+        - {x: 7, y: -6}
+        - {x: 2, y: -9}
+      - - {x: 9, y: 3}
+        - {x: -14, y: 3}
+        - {x: -14, y: -2}
+        - {x: -8, y: -7}
+        - {x: 0, y: -7}
+        - {x: 7, y: -3}
+        - {x: 9, y: -1}
+      - - {x: 6, y: 7}
+        - {x: 6, y: 3}
+        - {x: 12, y: 3}
+        - {x: 13, y: 4}
+        - {x: 13, y: 8}
+        - {x: 11, y: 10}
         - {x: 10, y: 10}
-        - {x: 16, y: 15}
-        - {x: 16, y: 22}
-      - - {x: -16, y: 22}
-        - {x: -16, y: 15}
-        - {x: -14, y: 15}
-        - {x: -10, y: 17}
-        - {x: -10, y: 22}
+      - - {x: -13, y: 11}
+        - {x: -10, y: 8}
+        - {x: -6, y: 8}
+        - {x: -4, y: 10}
+        - {x: -5, y: 13}
+        - {x: -11, y: 14}
+      - - {x: 8, y: 13}
+        - {x: 10, y: 11}
+        - {x: 13, y: 11}
+        - {x: 16, y: 14}
+        - {x: 16, y: 21}
+        - {x: 14, y: 21}
+        - {x: 8, y: 19}
+      - - {x: -9, y: 21}
+        - {x: -9, y: 19}
+        - {x: -8, y: 17}
+        - {x: -5, y: 16}
+        - {x: -1, y: 16}
+        - {x: 3, y: 19}
+        - {x: 2, y: 22}
+        - {x: -7, y: 23}
+      - - {x: 0, y: 33}
+        - {x: 0, y: 27}
+        - {x: 5, y: 21}
+        - {x: 7, y: 20}
+        - {x: 10, y: 21}
+        - {x: 16, y: 26}
+        - {x: 16, y: 33}
+      - - {x: -16, y: 33}
+        - {x: -16, y: 26}
+        - {x: -14, y: 26}
+        - {x: -10, y: 28}
+        - {x: -10, y: 33}
     - name: wind_17
       rect:
         serializedVersion: 2
@@ -257,8 +257,8 @@ TextureImporter:
         y: 1
         width: 31
         height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_12
@@ -268,8 +268,8 @@ TextureImporter:
         y: 94
         width: 30
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_13
@@ -279,8 +279,8 @@ TextureImporter:
         y: 47
         width: 30
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: wind_14
@@ -290,8 +290,8 @@ TextureImporter:
         y: 95
         width: 30
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []
