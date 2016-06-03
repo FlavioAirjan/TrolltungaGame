@@ -22,7 +22,6 @@ public class esqueletoBoss : MonoBehaviour, mobIA
 
     public void Start()
     {
-        GetComponent<CircleCollider2D>().enabled = false;
         source = GetComponent<AudioSource>();
         //target = GameObject.Find("Player").transform;
         atacking = false;
@@ -158,14 +157,20 @@ public class esqueletoBoss : MonoBehaviour, mobIA
         stopmove();
         deadStop = true;
         // Debug.Log("teste dead");
-        GetComponent<CircleCollider2D>().enabled = false;
-        GetComponent<CircleCollider2D>().isTrigger = false;
         GetComponent<BoxCollider2D>().enabled = false;
-
         animator.SetBool("Dead", true);
         Destroy(GetComponent<Rigidbody2D>());
+    }
 
-
+    public void live()
+    {
+        deadStop = false;
+        animator.SetBool("Dead", false);
+        GetComponent<BoxCollider2D>().enabled = true;
+        gameObject.AddComponent<Rigidbody2D>();
+        GetComponent<Rigidbody2D>().freezeRotation = true;
+        start();
+        
     }
 
     public float dirValue()

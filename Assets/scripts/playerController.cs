@@ -89,7 +89,7 @@ public class playerController : MonoBehaviour
         animator.SetInteger("Attack", attack);
 
         //Seleciona o som do ataque normal
-        yield return new WaitForSeconds((float)0.2);
+        yield return new WaitForSeconds((float)0.3);
         if (attack == 1)
         {
             source.PlayOneShot(attack1Sound, vol);

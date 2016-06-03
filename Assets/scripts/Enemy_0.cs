@@ -149,6 +149,16 @@ public class Enemy_0 : MonoBehaviour, mobIA {
 
 
     }
+
+    public void live()
+    {
+        deadStop = false;
+        animator.SetBool("dead", false);
+        start();
+        gameObject.AddComponent<Rigidbody2D>();
+        GetComponent<BoxCollider2D>().enabled = true;
+    }
+
     public bool isAtacking()
     {
         return (atacking);

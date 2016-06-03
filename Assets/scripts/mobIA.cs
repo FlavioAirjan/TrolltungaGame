@@ -30,5 +30,7 @@ using System.Collections;
 
     bool isAtacking();
 
+    void live();
+
     float dirValue();
 }
