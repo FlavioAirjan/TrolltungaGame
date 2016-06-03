@@ -237,7 +237,16 @@ public class playerController : MonoBehaviour
         if (collisor.gameObject.layer == enemyLayer)
         {
             Vector2 v = gameObject.GetComponent<Rigidbody2D>().velocity;
-            v.x = lastHdirection*-2f;
+            if (collisor.gameObject.transform.position.x - transform.position.x > 0)
+            {
+                
+                v.x = -2f;
+            }
+            else
+            {
+                v.x = 2f;
+            }
+
             v.y = 2f;
             gameObject.GetComponent<Rigidbody2D>().velocity = v;
             

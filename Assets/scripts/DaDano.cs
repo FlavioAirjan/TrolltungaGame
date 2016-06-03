@@ -54,7 +54,17 @@ void Update()
                     Player.GetComponent<playerController>().PerdeVida(dano);
                     Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
                     mob.hitsound();
-                    v.x = Player.GetComponent<playerController>().lastHdirection * -2f;
+
+                    if ( gameObject.transform.position.x - Player.GetComponent<Transform>().position.x > 0)
+                    {
+                        v.x = -2f;
+                    }
+                    else
+                    {
+                        v.x = 2f;
+                    }
+
+                    
                     v.y = 2f;
                     Player.GetComponent<Rigidbody2D>().velocity = v;
 
@@ -84,6 +94,7 @@ void Update()
                 (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
 
                 Vector2 position = colisor.gameObject.transform.position;
+
             if ((colisor.gameObject.GetComponent(ia) as mobIA).dirValue() >= 0)
             {
                 dir = 1;
