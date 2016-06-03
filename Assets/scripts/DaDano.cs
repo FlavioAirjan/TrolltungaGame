@@ -48,9 +48,10 @@ void Update()
 //            Debug.Log(gameObject.name);
           if (mob.isAtacking())
         {
-            if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano)
+            //Se o jogador estiver à uma distância menor ou igual à dist_dano e se o jogador estiver em uma altura que vá até a altura do colisor do inimigo.
+            if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano && Player.transform.position.y < gameObject.GetComponent<BoxCollider2D>().size.y)
             {
-                
+                    
                     Player.GetComponent<playerController>().PerdeVida(dano);
                     Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
                     mob.hitsound();
