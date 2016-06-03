@@ -47,7 +47,8 @@ public class usaItem : MonoBehaviour {
                     DestroyObject(gameObject);
                     break;
                 case 3:
-                    Debug.Log("Gold ainda não implementado.");
+                    colisor.gameObject.GetComponent<MyItems>().ganhaGold(quantidadeGanha);
+                    DestroyObject(gameObject);
                     break;
                 default:
                     break;
