@@ -22,6 +22,7 @@ public class rebirthMob : MonoBehaviour {
     public void death()
     {
         if (vidas<1) {
+            gameObject.GetComponent<dropItem>().death();
             DestroyObject(gameObject);
         }else
         {
