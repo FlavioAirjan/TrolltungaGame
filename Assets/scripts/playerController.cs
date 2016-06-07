@@ -47,11 +47,13 @@ public class playerController : MonoBehaviour
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
+    public bool pause;
 
 
     // Use this for initialization
     void Start()
     {
+        pause = false;
         source = GetComponent<AudioSource>();
         vidaAtual = maxVida;
         manaAtual = maxMana;
@@ -63,25 +65,27 @@ public class playerController : MonoBehaviour
         painelMana = GameObject.Find("Canvas/PainelMana");
         painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
         painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
-       
+        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (pause==false) {
+            chooseSpecialAttack();
 
-        chooseSpecialAttack();
-
-        if (!stopMove)
-        {
-            attack();
-            
             if (!stopMove)
             {
-                Moviments();
+                attack();
+
+                if (!stopMove)
+                {
+                    Moviments();
+                }
             }
         }
-
         
 
     }
