@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
 
     public Canvas PauseMenu;
+    public Canvas ControlMenu;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +21,12 @@ public class GameManager : MonoBehaviour {
     void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePauseMenu();
+            if (ControlMenu.enabled)
+            {
+                ToggleControlMenu();
+            }else{
+                TogglePauseMenu();
+            }
         }
     }
 
@@ -43,7 +49,20 @@ public class GameManager : MonoBehaviour {
             Time.timeScale = 0f;
         }
 
-        Debug.Log("GAMEMANAGER:: TimeScale: " + Time.timeScale);
+      
     }
+
+    public void ToggleControlMenu()
+    {
+        if (ControlMenu.enabled)
+        {
+            ControlMenu.enabled = false;
+        }
+        else
+        {
+            ControlMenu.enabled = true;
+        }
+    }
+
 
 }

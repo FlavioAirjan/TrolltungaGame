@@ -92,15 +92,16 @@ public class playerController : MonoBehaviour
 
     void chooseSpecialAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        
+        if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Rune1")))
         {
             activedAttack = 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Rune2")))
         {
             activedAttack = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Rune3")))
         {
             activedAttack = 3;
         }
@@ -213,9 +214,9 @@ public class playerController : MonoBehaviour
 
     void attack()
     {
-        bool atack1 = Input.GetButtonDown("Fire1");
-        bool atack2 = Input.GetButtonDown("Fire2");
-        bool atack3 = Input.GetButtonDown("Fire3");
+        bool atack1 = Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Attack1"));
+        bool atack2 = Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Attack2"));
+        bool atack3 = Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Attack3"));
 
         if (atack1||atack2|| atack3)
         {
@@ -250,8 +251,20 @@ public class playerController : MonoBehaviour
 
         velocity = initialVelocity;
         jumpForce = initialJumpForce;
+  
+        if (Input.GetKey(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Right")))
+        {
+            Hdirection = 1;
+        }else if(Input.GetKey(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Left")))
+        {
+            Hdirection = -1;
+        }else
+        {
+            Hdirection = 0;
+        }
+        //Hdirection = Input.GetAxisRaw("Horizontal");
 
-        Hdirection = Input.GetAxisRaw("Horizontal");
+
         animator.SetFloat("Hdirection", Mathf.Abs(Hdirection));
 
 
@@ -277,7 +290,7 @@ public class playerController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && jumps > 0)
+        if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Jump")) && jumps > 0)
         {
 
             //Decrementa o numero de pulos.

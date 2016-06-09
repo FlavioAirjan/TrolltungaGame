@@ -39,7 +39,6 @@ public class menuScript : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("scene01");
-
     }
 
     public void ExitGame()

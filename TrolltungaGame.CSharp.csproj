@@ -72,6 +72,7 @@
     <Compile Include="Assets\scripts\MyItems.cs" />
     <Compile Include="Assets\scripts\Parallaxing.cs" />
     <Compile Include="Assets\scripts\checkFloor.cs" />
+    <Compile Include="Assets\scripts\controlsChange.cs" />
     <Compile Include="Assets\scripts\dropItem.cs" />
     <Compile Include="Assets\scripts\esqueletoBoss.cs" />
     <Compile Include="Assets\scripts\magpie_move.cs" />
