@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{2490B168-956C-4304-003E-6367D306856E}") = "TrolltungaGame", "Assembly-CSharp.csproj", "{610B39A8-442F-901A-F038-227523234870}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrolltungaGame.CSharp", "TrolltungaGame.CSharp.csproj", "{2C04C4B0-7BB0-B4F1-C5AA-824209CA1942}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{610B39A8-442F-901A-F038-227523234870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{610B39A8-442F-901A-F038-227523234870}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{610B39A8-442F-901A-F038-227523234870}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{610B39A8-442F-901A-F038-227523234870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C04C4B0-7BB0-B4F1-C5AA-824209CA1942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C04C4B0-7BB0-B4F1-C5AA-824209CA1942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C04C4B0-7BB0-B4F1-C5AA-824209CA1942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C04C4B0-7BB0-B4F1-C5AA-824209CA1942}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
