@@ -40,18 +40,18 @@ public class MyItems : MonoBehaviour {
         return isAvailable;
     }
 
-    public void buyRune(int runeType)
+	public void buyRune(int runeType, int quantity)
     {
         switch (runeType)
         {
             case 1:
-                windRune++;
+				windRune += quantity;
                 break;
             case 2:
-                freezeRune++;
+				freezeRune += quantity;
                 break;
             case 3:
-                fireRune++;
+				fireRune += quantity;
                 break;
             default:
                 break;

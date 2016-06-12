@@ -17,11 +17,10 @@ public class newScene : MonoBehaviour {
 
 
 
-        IEnumerator changeScene()
+    IEnumerator changeScene()
     {
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(scene);
-
     }
 
     void Update()

@@ -24,8 +24,9 @@ public class dropItem : MonoBehaviour {
         for (int i = 0; i < Itens.Length; i++) { 
         if (Random.value <= chance[i])
         {
-            Instantiate(Itens[i], position, transform.rotation);
-            position.x += Itens[i].GetComponent<BoxCollider2D>().size.x;
+				position.y = Itens [i].position.y;
+				Instantiate(Itens[i], position, transform.rotation);
+				position.x += Itens[i].GetComponent<BoxCollider2D>().size.x;
         }
     }
     }

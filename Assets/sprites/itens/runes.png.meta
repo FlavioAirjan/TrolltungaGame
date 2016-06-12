@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: 141e28e5013d27b42bdd8ab3ec96092f
+timeCreated: 1465667608
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: runes_0
+    21300002: runes_1
+    21300004: runes_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: runes_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 243
+        width: 175
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5110736, y: 0.5818211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83.56212, y: 48.726837}
+        - {x: 69.56212, y: 62.726837}
+        - {x: -81.43788, y: 62.726837}
+        - {x: -89.43788, y: 40.726837}
+        - {x: -89.43788, y: -53.273163}
+        - {x: -68.43788, y: -79.27316}
+        - {x: -35.43788, y: -87.27316}
+        - {x: 35.56212, y: -87.27316}
+        - {x: 57.56212, y: -77.27316}
+        - {x: 85.56212, y: -41.273163}
+        - {x: 85.56212, y: 37.726837}
+    - name: runes_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 235
+        width: 175
+        height: 158
+      alignment: 9
+      pivot: {x: 0.5147647, y: 0.55314827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84.91617, y: 49.60257}
+        - {x: 73.91617, y: 70.60257}
+        - {x: -85.08383, y: 70.60257}
+        - {x: -90.08383, y: 45.60257}
+        - {x: -90.08383, y: -46.39743}
+        - {x: -65.08383, y: -82.39743}
+        - {x: -36.08383, y: -87.39743}
+        - {x: 30.916168, y: -87.39743}
+        - {x: 60.91617, y: -68.39743}
+        - {x: 84.91617, y: -38.39743}
+    - name: runes_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 161
+        height: 163
+      alignment: 9
+      pivot: {x: 0.5200608, y: 0.45640793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69.72978, y: 88.60551}
+        - {x: -83.72978, y: 44.605507}
+        - {x: -83.72978, y: -39.394493}
+        - {x: -51.729782, y: -67.39449}
+        - {x: -40.729782, y: -74.39449}
+        - {x: 69.27022, y: -74.39449}
+        - {x: 77.27022, y: -42.394493}
+        - {x: 77.27022, y: 86.60551}
+        - {x: 76.27022, y: 88.60551}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -42,7 +42,10 @@ namespace UnityStandardAssets._2D
         {
             if (followYplayer)
             {
-                lowY = target.position.y;
+				if (target.position.y > initialLowY)
+					lowY = target.position.y;
+				else 
+					lowY = initialLowY;
             }
             else {
                 lowY = initialLowY;

@@ -31,6 +31,9 @@ public class rebirthMob : MonoBehaviour
         else
         {
             vidas--;
+			Vector3 t = gameObject.GetComponentInChildren<vidaObjeto> ().transform.position;
+			t.z = 0;
+			gameObject.GetComponentInChildren<vidaObjeto> ().transform.position = new Vector3(t.x, t.y, t.z);
             gameObject.GetComponentInChildren<vidaObjeto>().ganhaVida(gameObject.GetComponentInChildren<vidaObjeto>().maxVida);
             (gameObject.GetComponent(nameIA) as mobIA).live();
         }
@@ -39,7 +42,7 @@ public class rebirthMob : MonoBehaviour
     IEnumerator destroy()
     {
         gameObject.GetComponent<dropItem>().death();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5);
         DestroyObject(gameObject);
     }
 }

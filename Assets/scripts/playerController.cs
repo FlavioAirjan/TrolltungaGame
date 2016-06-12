@@ -18,11 +18,12 @@ public class playerController : MonoBehaviour
 
     public int maxVida;
     private int vidaAtual;
-    private GameObject painelVida;
+    //private GameObject painelVida;
+	private GameObject painel;
 
     public int maxMana;
     private int manaAtual;
-    private GameObject painelMana;
+    //private GameObject painelMana;
 
 
     public Transform spritePlayer;
@@ -61,13 +62,10 @@ public class playerController : MonoBehaviour
         lastHdirection = 1f;
         maxJumps = 2;
         animator = spritePlayer.GetComponent<Animator>();
-        painelVida = GameObject.Find("Canvas/PainelVida");
-        painelMana = GameObject.Find("Canvas/PainelMana");
-        painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
-        painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
-        
+		painel = GameObject.Find("Canvas/Painel");
 
-
+		painel.GetComponentsInChildren<Text>()[0].text = vidaAtual.ToString() + "  /  " + maxVida.ToString(); 	
+		painel.GetComponentsInChildren<Text>()[1].text = manaAtual.ToString() + "  /  " + maxMana.ToString();   
     }
 
     // Update is called once per frame
@@ -79,12 +77,11 @@ public class playerController : MonoBehaviour
             if (!stopMove)
             {
                 attack();
-
-                if (!stopMove)
-                {
-                    Moviments();
-                }
             }
+			if (!stopMove || !isOnFloor)
+			{
+				Moviments();
+			}
         }
         
 
@@ -218,7 +215,7 @@ public class playerController : MonoBehaviour
         bool atack2 = Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Attack2"));
         bool atack3 = Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Attack3"));
 
-        if (atack1||atack2|| atack3)
+        if (atack1 || atack2 || atack3)
         {
             stopMove = true;
             animator.SetFloat("Hdirection",0);
@@ -264,9 +261,10 @@ public class playerController : MonoBehaviour
         }
         //Hdirection = Input.GetAxisRaw("Horizontal");
 
-
+		animator.SetFloat ("Vvelocity", GetComponent<Rigidbody2D>().velocity.y);
         animator.SetFloat("Hdirection", Mathf.Abs(Hdirection));
 
+		animator.SetBool("IsOnFloor", isOnFloor);
 
         if (isOnFloor == true)
         {
@@ -344,8 +342,8 @@ public class playerController : MonoBehaviour
             Debug.Log("morreu");
         }
 
-        painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
-
+        //painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
+		painel.GetComponentsInChildren<Text>()[0].text = vidaAtual.ToString() + "  /  " + maxVida.ToString(); 	
 
 
     }
@@ -364,8 +362,8 @@ public class playerController : MonoBehaviour
 
         }
 
-        painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
-
+        //painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
+		painel.GetComponentsInChildren<Text>()[0].text = vidaAtual.ToString() + "  /  " + maxVida.ToString(); 	
 
     }
 
@@ -383,8 +381,8 @@ public class playerController : MonoBehaviour
 
         }
 
-        painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
-
+        //painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
+		painel.GetComponentsInChildren<Text>()[1].text = manaAtual.ToString() + "  /  " + maxMana.ToString();
     }
 
     public void PerdeMana(int dano)
@@ -399,11 +397,10 @@ public class playerController : MonoBehaviour
 
         }
 
-        painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
-
+        //painelMana.GetComponentInChildren<Text>().text = "  " + "Mana  " + manaAtual.ToString() + "  /  " + maxMana.ToString();
+		painel.GetComponentsInChildren<Text>()[1].text = manaAtual.ToString() + "  /  " + maxMana.ToString();
 
 
     }
-
 
 }

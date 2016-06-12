@@ -12,6 +12,9 @@ public class usaItem : MonoBehaviour {
     //Tipo1: ganhaMana
     //Tipo2: ganhaMana e ganhaVida
     //Tipo3: ganhaGold
+	//Tipo4: ganhaWind
+	//Tipo5: ganhaFreeze
+	//Tipo6: ganhaFire
     public int TipoItem;
 
     // Use this for initialization
@@ -50,7 +53,19 @@ public class usaItem : MonoBehaviour {
                     colisor.gameObject.GetComponent<MyItems>().ganhaGold(quantidadeGanha);
                     DestroyObject(gameObject);
                     break;
-                default:
+				case 4:
+					colisor.gameObject.GetComponent<MyItems>().buyRune(1,5);
+					DestroyObject(gameObject);
+					break;
+				case 5:
+					colisor.gameObject.GetComponent<MyItems>().buyRune(2,5);
+					DestroyObject(gameObject);
+					break;
+				case 6:
+					colisor.gameObject.GetComponent<MyItems>().buyRune(3,5);
+					DestroyObject(gameObject);
+					break;
+				default:
                     break;
 
             }
