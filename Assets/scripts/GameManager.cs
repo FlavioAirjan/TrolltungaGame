@@ -9,8 +9,11 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
-	}
+        PauseMenu.enabled = false;
+        PauseMenu.GetComponentInChildren<UnityEngine.UI.Slider>().enabled = false;
+        Time.timeScale = 1.0f;
+        GameObject.Find("Player").GetComponent<playerController>().pause = false;
+    }
 
     public void SetVolume(float val)
     {

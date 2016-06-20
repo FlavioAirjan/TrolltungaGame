@@ -50,10 +50,10 @@ namespace UnityStandardAssets._2D
             else {
                 lowY = initialLowY;
             }
-
+            Vector3 posZero;
             if (target.position.x > (startMap.position.x+(cameraSize)) && target.position.x < (endMap.position.x - (cameraSize))) { 
-            Vector3 posZero = new Vector3(target.position.x, lowY, target.position.z);
-
+            posZero = new Vector3(target.position.x, lowY, target.position.z);
+           
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (posZero - m_LastTargetPosition).x;
 
@@ -75,7 +75,18 @@ namespace UnityStandardAssets._2D
             transform.position = newPos;
 
             m_LastTargetPosition = new Vector3(target.position.x, lowY, target.position.z);
-        }
+            }
+            else
+            {
+                posZero = new Vector3(transform.position.x, lowY, transform.position.z);
+
+            
+                transform.position = new Vector3(transform.position.x, lowY, target.position.z);
+
+                m_LastTargetPosition = new Vector3(transform.position.x, lowY, target.position.z);
+
+
+            }
         }
     }
 }

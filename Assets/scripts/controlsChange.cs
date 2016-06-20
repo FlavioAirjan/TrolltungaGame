@@ -13,7 +13,6 @@ public class controlsChange : MonoBehaviour {
 
     private Color32 normal = new Color32(203,182,172,255);
     private Color32 selected = new Color32(182, 11, 74, 255);
-    KeyCode teste;
 
     // Use this for initialization
     void Start () {
@@ -37,7 +36,7 @@ public class controlsChange : MonoBehaviour {
         rune1.text = keys["Rune1"].ToString();
         rune2.text = keys["Rune2"].ToString();
         rune3.text = keys["Rune3"].ToString();
-         teste = keys["Jump"];
+
     }
 
     public KeyCode getKeyCode(string key)
