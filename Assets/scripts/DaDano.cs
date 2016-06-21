@@ -46,32 +46,83 @@ void Update()
 //            Debug.Log(gameObject.name);
           if (mob.isAtacking())
         {
-            //Se o jogador estiver à uma distância menor ou igual à dist_dano e se o jogador estiver em uma altura que vá até a altura do colisor do inimigo.
-            if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano && Player.transform.position.y < gameObject.GetComponent<BoxCollider2D>().size.y)
+                //Se o jogador estiver à uma distância menor ou igual à dist_dano e se o jogador estiver em uma altura que vá até a altura do colisor do inimigo.
+                if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano && Player.transform.position.y < gameObject.GetComponent<BoxCollider2D>().size.y)
+                {
+                    //Se o jogador está verticalmente perto do inimigo.
+                    if (Math.Abs(gameObject.transform.position.y - Player.transform.position.y) <= dist_dano) {
+
+                        Player.GetComponent<playerController>().PerdeVida(dano);
+                        Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
+                        mob.hitsound();
+
+                        if (gameObject.transform.position.x - Player.GetComponent<Transform>().position.x > 0)
+                        {
+                            v.x = -2f;
+                        }
+                        else
+                        {
+                            v.x = 2f;
+                        }
+
+
+                        v.y = 2f;
+                        Player.GetComponent<Rigidbody2D>().velocity = v;
+
+                    }
+                }
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D colisor)
+    {
+        string ia;
+       // ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
+        //Se for tiro.
+        if (gameObject.layer == tiroLayer)
             {
-                    
-                    Player.GetComponent<playerController>().PerdeVida(dano);
-                    Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
-                    mob.hitsound();
-
-                    if ( gameObject.transform.position.x - Player.GetComponent<Transform>().position.x > 0)
+                //Se a colisao não for com o player.
+                if (colisor.gameObject.layer != playerLayer)
+                {
+                    if (colisor.gameObject.layer == enemyLayer)
                     {
-                        v.x = -2f;
-                    }
-                    else
+                        ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
+                        (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
+                        int dir;
+
+                        Vector2 Position = colisor.gameObject.transform.position;
+                        if ((colisor.gameObject.GetComponent(ia) as mobIA).dirValue() >= 0)
+                        {
+                            dir = 1;
+                        }
+                        else
+                        {
+                            dir = -1;
+                        }
+
+                        Position.x += dir * -0.3f;
+
+
+
+
+                        colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
+
+                        colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);
+                    //Se destroiAtacante tiver habilitado.
+                    if (destroiAtacante)
                     {
-                        v.x = 2f;
+                        //destroi o atacante.
+                        Destroy(gameObject);
                     }
 
-                    
-                    v.y = 2f;
-                    Player.GetComponent<Rigidbody2D>().velocity = v;
+                }
+               
 
                 }
 
             }
         }
-    }
     
 
     void OnTriggerEnter2D(Collider2D colisor)
@@ -142,15 +193,15 @@ void Update()
                     colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
                     
                     colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);
+                    //Se destroiAtacante tiver habilitado.
+                    if (destroiAtacante)
+                    {
+                        //destroi o atacante.
+                        Destroy(gameObject);
+                    }
 
-                    
                 }
-                        //Se destroiAtacante tiver habilitado.
-                        if (destroiAtacante)
-                        {
-                            //destroi o atacante.
-                            Destroy(gameObject);
-                        }
+                       
 
                     }
 

@@ -56,7 +56,6 @@ public class tiro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        
         transform.Translate(direcao*Vector2.right * velocidade * Time.deltaTime);
 
 	}
