@@ -20,11 +20,10 @@ public class dropItem : MonoBehaviour {
     public void death()
     {
         Vector3 position= transform.position;
-       
         for (int i = 0; i < Itens.Length; i++) { 
         if (Random.value <= chance[i])
         {
-				//position.y = Itens [i].position.y;
+				
 				Instantiate(Itens[i], position, transform.rotation);
 				position.x += Itens[i].GetComponent<BoxCollider2D>().size.x;
         }

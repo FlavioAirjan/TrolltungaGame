@@ -38,7 +38,7 @@ void Update()
         
     }
 
-    public void enemyAttack()
+    public bool enemyAttack()
     {
         
         if (gameObject.layer == enemyLayer)
@@ -68,11 +68,13 @@ void Update()
 
                         v.y = 2f;
                         Player.GetComponent<Rigidbody2D>().velocity = v;
+                        return true;
 
                     }
                 }
             }
         }
+        return false;
     }
 
     void OnCollisionEnter2D(Collision2D colisor)
