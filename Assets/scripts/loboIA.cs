@@ -15,6 +15,9 @@ public class loboIA : MonoBehaviour, mobIA
     public float dir;
 
     public AudioClip attack1Sound;
+    public AudioClip damageSound;
+    public AudioClip startSound;
+    public AudioClip deadSound;
     private AudioSource source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
@@ -81,10 +84,14 @@ public class loboIA : MonoBehaviour, mobIA
 
     public void hitsound()
     {
-        float vol = Random.Range(volLowRange, volHighRange);
-        source.PlayOneShot(attack1Sound, vol);
+        playsound(damageSound);
     }
 
+    private void playsound(AudioClip audio)
+    {
+        float vol = Random.Range(volLowRange, volHighRange);
+        source.PlayOneShot(audio, vol);
+    }
     public IEnumerator Atack()
     {
         stop = true;
@@ -93,6 +100,7 @@ public class loboIA : MonoBehaviour, mobIA
         animator.SetBool("walk", false);
         animator.SetBool("atack", true);
         yield return new WaitForSeconds(0.8f);
+        playsound(attack1Sound);
         bool dano=gameObject.GetComponent<DaDano>().enemyAttack();
        
             //adiciona velocidade para o pulo do lobo
@@ -156,6 +164,7 @@ public class loboIA : MonoBehaviour, mobIA
     {
         stop = false;
         animator.enabled = true;
+        playsound(startSound);
     }
 
     public void dead()
@@ -168,6 +177,7 @@ public class loboIA : MonoBehaviour, mobIA
         GetComponent<BoxCollider2D>().enabled = false;
 
         animator.SetBool("dead", true);
+        playsound(deadSound);
         Destroy(GetComponent<Rigidbody2D>());
 
 
