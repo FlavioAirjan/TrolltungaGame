@@ -30,7 +30,7 @@ public class usaItem : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter2D(Collider2D colisor)
+    void OnCollisionEnter2D(Collision2D colisor)
     {
         if (colisor.gameObject.layer == playerLayer)
         {
