@@ -13,6 +13,7 @@ public class loboIA : MonoBehaviour, mobIA
     public int rotationSpeed;
     public bool atacking;
     public float dir;
+    private float dirxy;
 
     public AudioClip attack1Sound;
     public AudioClip damageSound;
@@ -45,7 +46,8 @@ public class loboIA : MonoBehaviour, mobIA
             if (target != null && atacking == false)
             {
                 dir = target.position.x - transform.position.x;
-                if (dir > dist || dir < -dist)
+                dirxy = Vector2.Distance(transform.position, target.position);
+                if (dirxy > dist)
                 {
                     animator.SetBool("walk", true);
                     
@@ -67,7 +69,7 @@ public class loboIA : MonoBehaviour, mobIA
 
                     transform.Translate(direction * moveSpeed * Time.deltaTime);
                 }
-                else
+                else if(dirxy <= dist)
                 {
 
                     StartCoroutine(Atack());

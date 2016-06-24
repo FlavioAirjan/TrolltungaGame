@@ -12,6 +12,7 @@ public class Enemy_0 : MonoBehaviour, mobIA {
     public int rotationSpeed;
     public bool atacking;
     public float dir;
+    private float dirxy;
 
     public AudioClip attack1Sound;
     private AudioSource source;
@@ -39,8 +40,10 @@ public class Enemy_0 : MonoBehaviour, mobIA {
         if (target != null && atacking == false )
         {
             dir = target.position.x - transform.position.x;
-            if (dir > dist || dir < -dist)
-            {
+
+                dirxy = Vector2.Distance(transform.position, target.position);
+                if (dirxy > dist)
+                {
                 animator.SetBool("walk", true);
                 Vector2 direction;
                 direction.x = 0;
@@ -61,8 +64,8 @@ public class Enemy_0 : MonoBehaviour, mobIA {
 
                 transform.Translate(direction * moveSpeed * Time.deltaTime);
             }
-            else
-            {
+            else if (dirxy <= dist)
+                {
 
                 StartCoroutine(Atack());
             }

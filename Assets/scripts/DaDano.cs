@@ -46,11 +46,12 @@ void Update()
 //            Debug.Log(gameObject.name);
           if (mob.isAtacking())
         {
+
                 //Se o jogador estiver à uma distância menor ou igual à dist_dano e se o jogador estiver em uma altura que vá até a altura do colisor do inimigo.
-                if (Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano && Player.transform.position.y < gameObject.GetComponent<BoxCollider2D>().size.y)
-                {
+                if (Vector2.Distance(transform.position, Player.transform.position) <= dist_dano) {//Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano && Player.transform.position.y < gameObject.GetComponent<BoxCollider2D>().size.y)
+            
                     //Se o jogador está verticalmente perto do inimigo.
-                    if (Math.Abs(gameObject.transform.position.y - Player.transform.position.y) <= dist_dano) {
+                  
 
                         Player.GetComponent<playerController>().PerdeVida(dano);
                         Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
@@ -70,7 +71,7 @@ void Update()
                         Player.GetComponent<Rigidbody2D>().velocity = v;
                         return true;
 
-                    }
+                   
                 }
             }
         }
