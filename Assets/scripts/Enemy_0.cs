@@ -31,6 +31,7 @@ public class Enemy_0 : MonoBehaviour, mobIA {
         animator.enabled = false;
         stop = true;
         deadStop = false;
+       
     }
 
     public void Update()
@@ -95,8 +96,8 @@ public class Enemy_0 : MonoBehaviour, mobIA {
         yield return new WaitForSeconds(0.3f);
             
             animator.SetBool("atack", false);
-            //yield return new WaitForSeconds(0.5f);
-            gameObject.GetComponent<DaDano>().enemyAttack();
+        //yield return new WaitForSeconds(0.5f);
+        gameObject.GetComponent<DaDano>().enemyAttack();
             yield return new WaitForSeconds(1.0f);
             
             atacking = false;

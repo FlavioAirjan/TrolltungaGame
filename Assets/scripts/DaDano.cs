@@ -18,6 +18,8 @@ public class DaDano : MonoBehaviour {
 
     private GameObject Player;
 
+    public int mobBlood;
+    public int playerBlood;
 
     // Use this for initialization
     void Start()
@@ -33,8 +35,8 @@ public class DaDano : MonoBehaviour {
 // Update is called once per frame
 void Update()
     {
-        
-        
+
+    
         
     }
 
@@ -54,6 +56,7 @@ void Update()
                   
 
                         Player.GetComponent<playerController>().PerdeVida(dano);
+                        Player.GetComponent<bloodmaker>().createBlood(playerBlood);
                         Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
                         mob.hitsound();
 
@@ -108,8 +111,8 @@ void Update()
 
 
 
-
-                        colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
+                    colisor.gameObject.GetComponent<bloodmaker>().createBlood(mobBlood);
+                    colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
 
                         colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);
                     //Se destroiAtacante tiver habilitado.
@@ -139,9 +142,9 @@ void Update()
         {
                  ia= colisor.gameObject.GetComponent<mobSpawn>().myIA();
                 int dir;
-            //Tira vida do inimigo.
-            
-            var inimigo = colisor.gameObject.GetComponentInChildren<vidaObjeto>();
+                //Tira vida do inimigo.
+                colisor.gameObject.GetComponent<bloodmaker>().createBlood(mobBlood);
+                var inimigo = colisor.gameObject.GetComponentInChildren<vidaObjeto>();
             
             inimigo.PerdeVida(dano);
                 (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
@@ -190,9 +193,9 @@ void Update()
 
                     Position.x += dir * -0.3f;
 
+
                     
-
-
+                    colisor.gameObject.GetComponent<bloodmaker>().createBlood(mobBlood);
                     colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
                     
                     colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);

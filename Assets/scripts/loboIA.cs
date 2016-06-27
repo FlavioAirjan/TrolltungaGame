@@ -103,6 +103,7 @@ public class loboIA : MonoBehaviour, mobIA
         animator.SetBool("atack", true);
         yield return new WaitForSeconds(0.8f);
         playsound(attack1Sound);
+        
         bool dano=gameObject.GetComponent<DaDano>().enemyAttack();
        
             //adiciona velocidade para o pulo do lobo
