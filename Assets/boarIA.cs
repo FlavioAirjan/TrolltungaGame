@@ -72,8 +72,19 @@ public class boarIA : MonoBehaviour,mobIA {
                 }
                 else if (dirxy <= dist)
                 {
+                    if (dir < 0)
+                    {
+                        direction.x = -1;
+                        enemy.GetComponent<SpriteRenderer>().flipX = true;
+                    }
 
-                    StartCoroutine(Atack());
+                    if (dir > 0)
+                    {
+                        direction.x = 1;
+                        enemy.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+
+                        StartCoroutine(Atack());
                 }
             }
             else
@@ -102,12 +113,13 @@ public class boarIA : MonoBehaviour,mobIA {
         animator.SetBool("walk", true);
 
         yield return new WaitForSeconds(0.8f);
-        playsound(attack1Sound);
+       
 
         bool dano = gameObject.GetComponent<DaDano>().enemyAttack();
         dirxy = Vector2.Distance(transform.position, target.position);
+        playsound(attack1Sound);
         //adiciona velocidade para o pulo do lobo
-        for (int i = 0;!dano && dirxy<dist*1.5 && !stopRun; i++)
+        for (int i = 0;i<100 && !dano && dirxy<dist*1.5 && !stopRun; i++)
         {
             dirxy = Vector2.Distance(transform.position, target.position);
             if (transform.GetComponent<Rigidbody2D>() != null)
@@ -132,6 +144,7 @@ public class boarIA : MonoBehaviour,mobIA {
         }
         if (transform.GetComponent<Rigidbody2D>() != null && dirxy < dist * 1.5 && !stopRun)
         {
+            animator.SetBool("walk", false);
             animator.SetBool("atack", true);
             yield return new WaitForSeconds(1.5f);
             animator.SetBool("atack", false);
@@ -142,9 +155,9 @@ public class boarIA : MonoBehaviour,mobIA {
         }
 
 
-
-            atacking = false;
-             stop = false;
+        animator.SetBool("walk", false);
+        atacking = false;
+        stop = false;
 
     }
 
