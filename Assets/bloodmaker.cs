@@ -25,7 +25,8 @@ public class bloodmaker : MonoBehaviour {
             temp.z += 3;
            
             tempBlood = Create(blood2,temp,transform);
-            tempBlood.setBlood(tipo);
+            tempBlood.setBlood(tipo,!gameObject.GetComponentInChildren<SpriteRenderer>().flipX);
+            
         }
 
     }

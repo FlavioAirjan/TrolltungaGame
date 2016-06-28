@@ -12,11 +12,12 @@ public class blood : MonoBehaviour {
         
     }
 
-    public void setBlood(int ntipo)
+    public void setBlood(int ntipo,bool flipx)
     {
         if (ntipo<duracao.Length+1) {
             tipo = ntipo;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            gameObject.GetComponent<SpriteRenderer>().flipX=flipx;
             gameObject.GetComponent<Animator>().enabled = true;
             gameObject.GetComponent<Animator>().SetInteger("tipo", tipo);
             DestroyObject(gameObject,duracao[tipo-1]);
