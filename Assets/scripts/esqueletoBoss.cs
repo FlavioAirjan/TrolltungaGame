@@ -63,6 +63,15 @@ public class esqueletoBoss : MonoBehaviour, mobIA
                 }
                 else
                 {
+                    if (dir < 0)
+                    {
+                        enemy.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+
+                    if (dir > 0)
+                    {     
+                        enemy.GetComponent<SpriteRenderer>().flipX = false;
+                    }
 
                     StartCoroutine(Atack());
                 }

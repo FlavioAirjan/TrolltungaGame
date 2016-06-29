@@ -40,6 +40,18 @@ void Update()
         
     }
 
+
+    private bool Infront()
+    {
+        bool direita = !transform.GetComponentInChildren<SpriteRenderer>().flipX;
+       float DistX= transform.position.x - Player.transform.position.x;
+        if ((direita && DistX<0)||(!direita &&DistX>0))
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
 
     public bool enemyAttack()
@@ -53,9 +65,10 @@ void Update()
 
                 //Se o jogador estiver à uma distância menor ou igual à dist_dano e se o jogador estiver em uma altura que vá até a altura do colisor do inimigo.
                 if (Vector2.Distance(transform.position, Player.transform.position) <= dist_dano) {//Math.Abs(gameObject.transform.position.x - Player.transform.position.x) <= dist_dano && Player.transform.position.y < gameObject.GetComponent<BoxCollider2D>().size.y)
-            
+
                     //Se o jogador está verticalmente perto do inimigo.
-                  
+                    if (Infront())
+                    {
 
                         Player.GetComponent<playerController>().PerdeVida(dano);
                         Player.GetComponent<bloodmaker>().createBlood(playerBlood);
@@ -75,7 +88,7 @@ void Update()
                         v.y = 2f;
                         Player.GetComponent<Rigidbody2D>().velocity = v;
                         return true;
-
+                    }
                    
                 }
             }

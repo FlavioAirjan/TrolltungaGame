@@ -67,8 +67,17 @@ public class Enemy_0 : MonoBehaviour, mobIA {
             }
             else if (dirxy <= dist)
                 {
+                    if (dir < 0)
+                    {
+                        enemy.GetComponent<SpriteRenderer>().flipX = true;
+                    }
 
-                StartCoroutine(Atack());
+                    if (dir > 0)
+                    {
+                        enemy.GetComponent<SpriteRenderer>().flipX = false;
+
+                    }
+                    StartCoroutine(Atack());
             }
         }
         else
