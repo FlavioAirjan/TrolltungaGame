@@ -314,14 +314,14 @@ public class playerController : MonoBehaviour
             if (collisor.gameObject.transform.position.x - transform.position.x > 0)
             {
                 
-                v.x = -2f;
+                v.x = -1f;
             }
             else
             {
-                v.x = 2f;
+                v.x = 1f;
             }
 
-            v.y = 2f;
+            v.y = 1f;
             gameObject.GetComponent<Rigidbody2D>().velocity = v;
             
 

@@ -18,8 +18,8 @@ public class checkFloor : MonoBehaviour {
         {
 
             Vector2 v = gameObject.GetComponentInParent<Rigidbody2D>().velocity;
-            v.x = gameObject.GetComponentInParent<playerController>().lastHdirection * -3f;
-            v.y = 2f;
+            v.x = gameObject.GetComponentInParent<playerController>().lastHdirection * -2f;
+            v.y = 1f;
             gameObject.GetComponentInParent<Rigidbody2D>().velocity = v;
 
 

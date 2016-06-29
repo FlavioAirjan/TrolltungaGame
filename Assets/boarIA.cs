@@ -117,7 +117,7 @@ public class boarIA : MonoBehaviour,mobIA {
 
         bool dano = gameObject.GetComponent<DaDano>().enemyAttack();
         dirxy = Vector2.Distance(transform.position, target.position);
-        playsound(attack1Sound);
+       
         //adiciona velocidade para o pulo do lobo
         for (int i = 0;i<100 && !dano && dirxy<dist*1.5 && !stopRun; i++)
         {
@@ -133,6 +133,7 @@ public class boarIA : MonoBehaviour,mobIA {
                 }
                 if (dano)
                 {
+                    playsound(attack1Sound);
                     animator.SetBool("walk", false);
                     
                 }
