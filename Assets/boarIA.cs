@@ -103,8 +103,11 @@ public class boarIA : MonoBehaviour,mobIA {
 
     private void playsound(AudioClip audio)
     {
-        float vol = Random.Range(volLowRange, volHighRange);
-        source.PlayOneShot(audio, vol);
+        if (source.isActiveAndEnabled)
+        {
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(audio, vol);
+        }
     }
     public IEnumerator Atack()
     {
@@ -134,7 +137,8 @@ public class boarIA : MonoBehaviour,mobIA {
                 if (dano)
                 {
                     playsound(attack1Sound);
-                    animator.SetBool("walk", false);
+                    if (animator.isActiveAndEnabled)
+                        animator.SetBool("walk", false);
                     
                 }
                 
@@ -143,7 +147,7 @@ public class boarIA : MonoBehaviour,mobIA {
         if (transform.GetComponent<Rigidbody2D>()!=null) {
             transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
-        if (transform.GetComponent<Rigidbody2D>() != null && dirxy < dist * 1.5 && !stopRun)
+        if (transform.GetComponent<Rigidbody2D>() != null && dirxy < dist * 1.5 && !stopRun && animator.isActiveAndEnabled)
         {
             animator.SetBool("walk", false);
             animator.SetBool("atack", true);
@@ -155,8 +159,8 @@ public class boarIA : MonoBehaviour,mobIA {
 
         }
 
-
-        animator.SetBool("walk", false);
+        if (animator.isActiveAndEnabled)
+            animator.SetBool("walk", false);
         atacking = false;
         stop = false;
 

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\blood.cs" />
+    <Compile Include="Assets\bloodBack.cs" />
     <Compile Include="Assets\bloodmaker.cs" />
     <Compile Include="Assets\boarIA.cs" />
     <Compile Include="Assets\minotauroIA.cs" />

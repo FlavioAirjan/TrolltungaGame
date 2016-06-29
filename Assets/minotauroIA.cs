@@ -91,8 +91,11 @@ public class minotauroIA : MonoBehaviour, mobIA
 
     private void playsound(AudioClip audio)
     {
-        float vol = Random.Range(volLowRange, volHighRange);
-        source.PlayOneShot(audio, vol);
+        if (source.isActiveAndEnabled)
+        {
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(audio, vol);
+        }
     }
 
     public bool isAtacking()
@@ -123,7 +126,7 @@ public class minotauroIA : MonoBehaviour, mobIA
         {
             atack = 3;
         }
-
+        if (animator.isActiveAndEnabled) { 
         atacking = true;
         animator.SetBool("Walk", false);
         animator.SetInteger("Attack", atack);
@@ -133,7 +136,7 @@ public class minotauroIA : MonoBehaviour, mobIA
         yield return new WaitForSeconds(1.0f);
 
         atacking = false;
-
+    }
 
     }
 

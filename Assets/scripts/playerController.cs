@@ -337,15 +337,21 @@ public class playerController : MonoBehaviour
         if (vidaAtual <= 0)
         {
             vidaAtual = 0;
-
-            //DestroyObject(gameObject);
-            Debug.Log("morreu");
+            StartCoroutine(dead());
+            Debug.Log("morreu");          
+           
         }
 
         //painelVida.GetComponentInChildren<Text>().text = "  " + "HP    " + vidaAtual.ToString() + "  /  " + maxVida.ToString();
 		painel.GetComponentsInChildren<Text>()[0].text = vidaAtual.ToString() + "  /  " + maxVida.ToString(); 	
-
-
+    }
+    IEnumerator dead()
+    {
+        animator.SetBool("dead", true);
+        GameObject.Find("bloodBack").GetComponent<bloodBack>().bloodStart();
+        yield return new WaitForSeconds(15f);
+        DestroyObject(gameObject);
+        GameObject.Find("GM").GetComponent<menuPause>().ExitGame();
     }
 
     public void ganhaVida(int valor)

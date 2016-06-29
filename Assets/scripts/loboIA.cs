@@ -101,21 +101,26 @@ public class loboIA : MonoBehaviour, mobIA
 
     private void playsound(AudioClip audio)
     {
-        float vol = Random.Range(volLowRange, volHighRange);
-        source.PlayOneShot(audio, vol);
+        if (source.isActiveAndEnabled)
+        {
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(audio, vol);
+        }
     }
     public IEnumerator Atack()
     {
-        stop = true;
-        direction.y = 1f;
-        atacking = true;
-        animator.SetBool("walk", false);
-        animator.SetBool("atack", true);
-        yield return new WaitForSeconds(0.8f);
-        playsound(attack1Sound);
-        
-        bool dano=gameObject.GetComponent<DaDano>().enemyAttack();
-       
+        if (animator.isActiveAndEnabled)
+        {
+            stop = true;
+            direction.y = 1f;
+            atacking = true;
+            animator.SetBool("walk", false);
+            animator.SetBool("atack", true);
+            yield return new WaitForSeconds(0.8f);
+            playsound(attack1Sound);
+
+            bool dano = gameObject.GetComponent<DaDano>().enemyAttack();
+
             //adiciona velocidade para o pulo do lobo
             for (int i = 0; i < 27; i++)
             {
@@ -130,18 +135,18 @@ public class loboIA : MonoBehaviour, mobIA
                     }
                 }
             }
-        if (transform.GetComponent<Rigidbody2D>() != null)
-        {
-            direction.y = 0;
-            animator.SetBool("atack", false);
-            transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            //yield return new WaitForSeconds(0.5f);
+            if (transform.GetComponent<Rigidbody2D>() != null)
+            {
+                direction.y = 0;
+                animator.SetBool("atack", false);
+                transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                //yield return new WaitForSeconds(0.5f);
 
-            yield return new WaitForSeconds(1.0f);
+                yield return new WaitForSeconds(1.0f);
+            }
+            atacking = false;
+            stop = false;
         }
-        atacking = false;
-        stop = false;
-
     }
 
     public void damaged()

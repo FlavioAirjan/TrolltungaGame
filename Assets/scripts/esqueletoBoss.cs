@@ -92,8 +92,11 @@ public class esqueletoBoss : MonoBehaviour, mobIA
 
     public void hitsound()
     {
-        float vol = Random.Range(volLowRange, volHighRange);
-        source.PlayOneShot(attack1Sound, vol);
+        if (source.isActiveAndEnabled)
+        {
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(attack1Sound, vol);
+        }
     }
 
     public IEnumerator Atack()
@@ -111,17 +114,18 @@ public class esqueletoBoss : MonoBehaviour, mobIA
         {
            atack = 3;
         }
+        if (animator.isActiveAndEnabled)
+        {
+            atacking = true;
+            animator.SetBool("Walk", false);
+            animator.SetInteger("Attack", atack);
+            yield return new WaitForSeconds(1f);
+            animator.SetInteger("Attack", 0);
+            gameObject.GetComponent<DaDano>().enemyAttack();
+            yield return new WaitForSeconds(1.0f);
 
-        atacking = true;
-        animator.SetBool("Walk", false);
-        animator.SetInteger("Attack", atack);
-        yield return new WaitForSeconds(1f);
-        animator.SetInteger("Attack", 0);
-        gameObject.GetComponent<DaDano>().enemyAttack();
-        yield return new WaitForSeconds(1.0f);
-
-        atacking = false;
-
+            atacking = false;
+        }
 
     }
 
