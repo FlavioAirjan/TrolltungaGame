@@ -45,10 +45,16 @@ public class playerController : MonoBehaviour
     public bool isOnFloor;
     public AudioClip attack1Sound;
     public AudioClip attack2Sound;
+    public AudioClip painSound;
+    public AudioClip deadSound;
+    public AudioClip walkSound;
+    public AudioClip selectSound;
+
     private AudioSource source;
-    private float volLowRange = .5f;
+    private float volLowRange = 0.5f;
     private float volHighRange = 1.0f;
     public bool pause;
+    private bool foot;
 
 
     // Use this for initialization
@@ -58,7 +64,7 @@ public class playerController : MonoBehaviour
         source = GetComponent<AudioSource>();
         vidaAtual = maxVida;
         manaAtual = maxMana;
-
+        foot = true;
         lastHdirection = 1f;
         maxJumps = 2;
         animator = spritePlayer.GetComponent<Animator>();
@@ -93,18 +99,22 @@ public class playerController : MonoBehaviour
         if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Rune1")))
         {
             activedAttack = 1;
+            playsound(selectSound);
         }
         else if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Rune2")))
         {
             activedAttack = 2;
+            playsound(selectSound);
         }
         else if (Input.GetKeyDown(GameObject.Find("GM").GetComponent<controlsChange>().getKeyCode("Rune3")))
         {
             activedAttack = 3;
+            playsound(selectSound);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             activedAttack = 0;
+            playsound(selectSound);
         }
 
     }
@@ -274,6 +284,10 @@ public class playerController : MonoBehaviour
 
         if (Hdirection > 0)
         {
+            if (foot) {
+                StartCoroutine(playFoot());
+                playsound(walkSound,1f);
+            }
             lastHdirection = Hdirection;
             transform.Translate(Vector2.right * velocity * Time.deltaTime);
             spritePlayer.GetComponent<SpriteRenderer>().flipX = false;
@@ -282,6 +296,11 @@ public class playerController : MonoBehaviour
 
         if (Hdirection < 0)
         {
+            if (foot)
+            {
+                StartCoroutine(playFoot());
+                playsound(walkSound,1f);
+            }
             lastHdirection = Hdirection;
             transform.Translate(Vector2.left * velocity * Time.deltaTime);
             spritePlayer.GetComponent<SpriteRenderer>().flipX = true;
@@ -303,6 +322,28 @@ public class playerController : MonoBehaviour
 
         }
 
+    }
+
+    IEnumerator playFoot()
+    {
+        foot = false;
+        yield return new WaitForSeconds(0.5f);
+        foot = true;
+    }
+
+    private void playsound(AudioClip audio)
+    {
+        if (source.isActiveAndEnabled)
+        {
+            float vol = Random.Range(volLowRange, volHighRange);
+            source.PlayOneShot(audio, vol);
+        }
+    }
+    private void playsound(AudioClip audio,float vol)
+    {
+       
+            source.PlayOneShot(audio, vol);
+        
     }
 
     void OnCollisionEnter2D(Collision2D collisor)
@@ -330,13 +371,14 @@ public class playerController : MonoBehaviour
 
     public void PerdeVida(int dano)
     {
+        playsound(painSound);
         vidaAtual -= dano;
-
         
 
         if (vidaAtual <= 0)
         {
             vidaAtual = 0;
+            playsound(painSound);
             StartCoroutine(dead());
             Debug.Log("morreu");          
            

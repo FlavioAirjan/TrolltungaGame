@@ -92,7 +92,10 @@ public class Enemy_0 : MonoBehaviour, mobIA {
     public void hitsound()
     {
         float vol = Random.Range(volLowRange, volHighRange);
-        source.PlayOneShot(attack1Sound, vol);
+        if (source.isActiveAndEnabled)
+        {
+            source.PlayOneShot(attack1Sound, vol);
+        }
     }
 
     public IEnumerator Atack()

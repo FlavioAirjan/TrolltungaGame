@@ -23,7 +23,8 @@ public class bloodBack : MonoBehaviour {
 
     public void bloodStart()
     {
-       // GameObject.Find("GM").GetComponent<AudioSource>().Stop();
+        // GameObject.Find("GM").GetComponent<AudioSource>().Stop();
+        GameObject.Find("GM").GetComponent<AudioSource>().enabled = true;
         GameObject.Find("GM").GetComponent<AudioSource>().clip = source;
         GameObject.Find("GM").GetComponent<AudioSource>().Play();
         DActiveAllObjects();

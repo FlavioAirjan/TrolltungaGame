@@ -179,8 +179,9 @@ public class boarIA : MonoBehaviour,mobIA {
 
     {
         stopmove();
+        playsound(attack1Sound);
         animator.SetBool("damaged", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         animator.SetBool("damaged", false);
         stop = false;
         stopRun = false;
