@@ -25,6 +25,7 @@ public class boarIA : MonoBehaviour,mobIA {
     private bool deadStop;
     private Vector2 direction;
     private bool stopRun;
+  
 
     public void Start()
     {
@@ -46,6 +47,7 @@ public class boarIA : MonoBehaviour,mobIA {
         {
             if (target != null && atacking == false)
             {
+
                 dir = target.position.x - transform.position.x;
                 dirxy = Vector2.Distance(transform.position, target.position);
                 if (dirxy > dist)
@@ -85,6 +87,7 @@ public class boarIA : MonoBehaviour,mobIA {
                     }
 
                         StartCoroutine(Atack());
+                    
                 }
             }
             else

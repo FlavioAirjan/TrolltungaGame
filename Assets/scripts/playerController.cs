@@ -284,7 +284,7 @@ public class playerController : MonoBehaviour
 
         if (Hdirection > 0)
         {
-            if (foot) {
+            if (foot && isOnFloor) {
                 StartCoroutine(playFoot());
                 playsound(walkSound,1f);
             }
@@ -296,7 +296,7 @@ public class playerController : MonoBehaviour
 
         if (Hdirection < 0)
         {
-            if (foot)
+            if (foot && isOnFloor)
             {
                 StartCoroutine(playFoot());
                 playsound(walkSound,1f);

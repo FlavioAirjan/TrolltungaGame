@@ -7,6 +7,7 @@ public class bloodmaker : MonoBehaviour {
     private blood tempBlood;
 
 
+
     public static blood Create(GameObject blood, Vector3 temp,Transform transform)
     {
         
@@ -23,10 +24,10 @@ public class bloodmaker : MonoBehaviour {
         {
             Vector3 temp = transform.position;
             temp.z += 3;
-           
-            tempBlood = Create(blood2,temp,transform);
+             tempBlood = Create(blood2,temp,transform);
             tempBlood.setBlood(tipo,!gameObject.GetComponentInChildren<SpriteRenderer>().flipX);
-            
+
+
         }
 
     }

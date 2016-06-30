@@ -6,8 +6,10 @@ public class blood : MonoBehaviour {
     public int tipo;
     public float[] duracao=new float[4];
     private bool destroi;
-	// Use this for initialization
-	void Start () {
+    public GameObject bloodFloor;
+    public Sprite[] spritesBlood;
+    // Use this for initialization
+    void Start () {
         //Debug.Log(tipo);
         
     }
@@ -27,6 +29,12 @@ public class blood : MonoBehaviour {
             
             gameObject.GetComponent<Animator>().enabled = true;
             gameObject.GetComponent<Animator>().SetInteger("tipo", tipo);
+            Vector3 temp = transform.position;
+            temp.z = bloodFloor.GetComponent<Transform>().position.z;
+            int sprite = Random.Range(0, spritesBlood.Length - 1);
+            bloodFloor.GetComponent<SpriteRenderer>().sprite = spritesBlood[sprite];
+            Instantiate(bloodFloor, temp, transform.rotation);
+
             DestroyObject(gameObject,duracao[tipo-1]);
         }
     }

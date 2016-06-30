@@ -13,6 +13,7 @@ public class minotauroIA : MonoBehaviour, mobIA
     public int rotationSpeed;
     public bool atacking;
     public float dir;
+    private float dirxy;
 
     public AudioClip attack1Sound;
     public AudioClip damageSound;
@@ -42,8 +43,9 @@ public class minotauroIA : MonoBehaviour, mobIA
         {
             if (target != null && atacking == false)
             {
-                dir = target.position.x - transform.position.x;
-                if (dir > dist || dir < -dist)
+                dir = target.position.x- transform.position.x;
+                 dirxy = Vector2.Distance(transform.position, target.position);
+                if (dirxy > dist)
                 {
                     animator.SetBool("Walk", true);
                     Vector2 direction;
@@ -77,7 +79,9 @@ public class minotauroIA : MonoBehaviour, mobIA
                         enemy.GetComponent<SpriteRenderer>().flipX = false;
 
                     }
-                    StartCoroutine(Atack());
+                    if (Vector2.Distance(transform.position, target.position)<dist+0.2) {
+                        StartCoroutine(Atack());
+                    }
                 }
             }
             else

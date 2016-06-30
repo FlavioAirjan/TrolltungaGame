@@ -77,8 +77,11 @@ public class Enemy_0 : MonoBehaviour, mobIA {
                         enemy.GetComponent<SpriteRenderer>().flipX = false;
 
                     }
-                    StartCoroutine(Atack());
-            }
+                    if (Vector2.Distance(transform.position, target.position) < dist + 0.2)
+                    {
+                        StartCoroutine(Atack());
+                    }
+                }
         }
         else
         {
