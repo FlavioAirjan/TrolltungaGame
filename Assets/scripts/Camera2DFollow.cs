@@ -28,8 +28,8 @@ namespace UnityStandardAssets._2D
         private void Start()
         {
             //target.position.Set(target.position.x, lowY, target.position.z);
-            m_LastTargetPosition = new Vector3(target.position.x, lowY, target.position.z);
-            m_OffsetZ = (transform.position - target.position).z;
+            m_LastTargetPosition = new Vector3(target.position.x, lowY, -10);
+            m_OffsetZ = 0;
             transform.parent = null;
             initialLowY = lowY;
            
@@ -52,7 +52,7 @@ namespace UnityStandardAssets._2D
             }
             Vector3 posZero;
             if (target.position.x > (startMap.position.x+(cameraSize)) && target.position.x < (endMap.position.x - (cameraSize))) { 
-            posZero = new Vector3(target.position.x, lowY, target.position.z);
+            posZero = new Vector3(target.position.x, lowY, -10);
            
             // only update lookahead pos if accelerating or changed direction
             float xMoveDelta = (posZero - m_LastTargetPosition).x;
@@ -74,16 +74,16 @@ namespace UnityStandardAssets._2D
 
             transform.position = newPos;
 
-            m_LastTargetPosition = new Vector3(target.position.x, lowY, target.position.z);
+            m_LastTargetPosition = new Vector3(target.position.x, lowY, -10);
             }
             else
             {
-                posZero = new Vector3(transform.position.x, lowY, transform.position.z);
+                posZero = new Vector3(transform.position.x, lowY, -10);
 
             
-                transform.position = new Vector3(transform.position.x, lowY, target.position.z);
+                transform.position = new Vector3(transform.position.x, lowY,-10);
 
-                m_LastTargetPosition = new Vector3(transform.position.x, lowY, target.position.z);
+                m_LastTargetPosition = new Vector3(transform.position.x, lowY,-10);
 
 
             }
