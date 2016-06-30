@@ -4,7 +4,18 @@ using System.Collections;
 public class checkFloor : MonoBehaviour {
 
 
+    private bool floor;
 
+
+
+    void OnTriggerStay2D(Collider2D target)
+    {
+        if (target.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        {
+            gameObject.GetComponentInParent<playerController>().isOnFloor = true;
+        }
+
+    }
 
     void OnTriggerEnter2D(Collider2D target)
     {
@@ -31,16 +42,31 @@ public class checkFloor : MonoBehaviour {
     void OnTriggerExit2D(Collider2D target)
     {
         if (target.gameObject.layer == LayerMask.NameToLayer("Floor"))
-        { 
-            gameObject.GetComponentInParent<playerController>().isOnFloor = false;
+        {
+                gameObject.GetComponentInParent<playerController>().isOnFloor = false;
+              //  StartCoroutine(isFloor());
         }
 
     }
 
+    IEnumerator isFloor()
+    {
+        floor=false;
+        for (int i=0;i<100 && !floor ; i++) {
+            floor = gameObject.GetComponentInParent<playerController>().isOnFloor;
+            yield return new WaitForSeconds(0.01f);
+        }
+        if (!floor) {
+            floor = true;
+            gameObject.GetComponentInParent<playerController>().isOnFloor = true;
+        }
+    }
+
     // Use this for initialization
     void Start () {
-	
-	}
+
+        floor = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
