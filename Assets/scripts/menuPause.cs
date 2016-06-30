@@ -49,6 +49,7 @@ public class menuPause : MonoBehaviour {
     public void ExitGame()
     {
         GameObject.Find("bloodBack").GetComponent<bloodBack>().bloodEnd();
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
 
        // SceneManager.SetActiveScene(SceneManager.GetActiveScene());

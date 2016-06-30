@@ -391,7 +391,15 @@ public class playerController : MonoBehaviour
     {
         animator.SetBool("dead", true);
         GameObject.Find("bloodBack").GetComponent<bloodBack>().bloodStart();
-        yield return new WaitForSeconds(15f);
+        bool sai = false;
+        while (!sai)
+        {
+            if (Input.anyKey)
+            {
+                sai = true;
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
         DestroyObject(gameObject);
         GameObject.Find("GM").GetComponent<menuPause>().ExitGame();
     }
