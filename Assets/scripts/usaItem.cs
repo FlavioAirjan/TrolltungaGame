@@ -32,6 +32,11 @@ public class usaItem : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D colisor)
     {
+
+        if (colisor.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
         if (colisor.gameObject.layer == playerLayer)
         {
             switch (TipoItem)
