@@ -50,6 +50,7 @@
      <Compile Include="Assets\bloodFloor.cs" />
      <Compile Include="Assets\bloodmaker.cs" />
      <Compile Include="Assets\boarIA.cs" />
+     <Compile Include="Assets\inventoryItemSelection.cs" />
      <Compile Include="Assets\menuControl.cs" />
      <Compile Include="Assets\minotauroIA.cs" />
      <Compile Include="Assets\readRunesOnPanel.cs" />

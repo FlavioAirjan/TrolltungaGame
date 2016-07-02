@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
     public Canvas PauseMenu;
     public Canvas ControlMenu;
+	public Canvas InventoryMenu;
+
 
     // Use this for initialization
     void Start () {
@@ -22,7 +24,7 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && !InventoryMenu.enabled)
         {
             if (ControlMenu.enabled)
             {
@@ -31,6 +33,13 @@ public class GameManager : MonoBehaviour {
                 TogglePauseMenu();
             }
         }
+
+		if (Input.GetKeyDown (KeyCode.I) && !PauseMenu.enabled) {
+			Debug.Log ("Enable Inventory");
+			InventoryMenu.enabled = !InventoryMenu.enabled;
+			Time.timeScale = 1.0f - Time.timeScale;
+			GameObject.Find("Player").GetComponent<playerController>().pause = !GameObject.Find("Player").GetComponent<playerController>().pause;
+		}
     }
 
 
@@ -66,6 +75,15 @@ public class GameManager : MonoBehaviour {
             ControlMenu.enabled = true;
         }
     }
+
+	public void ToggleInventory()
+	{
+		if (InventoryMenu.enabled) {
+			InventoryMenu.enabled = false;
+		} else {
+			InventoryMenu.enabled = true;
+		}
+	}
 
 
 }
