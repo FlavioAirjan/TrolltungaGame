@@ -13,6 +13,7 @@ public class DaDano : MonoBehaviour {
     private int enemyLayer;
     private int playerLayer;
     private int tiroLayer;
+    private int tiroBossLayer;
     private int weaponLayer;
     public mobIA mob;
 
@@ -27,6 +28,7 @@ public class DaDano : MonoBehaviour {
         Player = GameObject.Find("Player");
         enemyLayer = LayerMask.NameToLayer("Enemy");
         playerLayer = LayerMask.NameToLayer("Player");
+        tiroBossLayer= LayerMask.NameToLayer("tiroTroll");
         tiroLayer = LayerMask.NameToLayer("Tiro");
         weaponLayer = LayerMask.NameToLayer("Weapon");
         mob= gameObject.GetComponent(nameIA) as mobIA;
@@ -99,37 +101,37 @@ void Update()
     void OnCollisionEnter2D(Collision2D colisor)
     {
         string ia;
-       // ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
+        // ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
         //Se for tiro.
         if (gameObject.layer == tiroLayer)
+        {
+            //Se a colisao não for com o player.
+            if (colisor.gameObject.layer != playerLayer)
             {
-                //Se a colisao não for com o player.
-                if (colisor.gameObject.layer != playerLayer)
+                if (colisor.gameObject.layer == enemyLayer)
                 {
-                    if (colisor.gameObject.layer == enemyLayer)
+                    ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
+                    (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
+                    int dir;
+
+                    Vector2 Position = colisor.gameObject.transform.position;
+                    if ((colisor.gameObject.GetComponent(ia) as mobIA).dirValue() >= 0)
                     {
-                        ia = colisor.gameObject.GetComponent<mobSpawn>().myIA();
-                        (colisor.gameObject.GetComponent(ia) as mobIA).damaged();
-                        int dir;
+                        dir = 1;
+                    }
+                    else
+                    {
+                        dir = -1;
+                    }
 
-                        Vector2 Position = colisor.gameObject.transform.position;
-                        if ((colisor.gameObject.GetComponent(ia) as mobIA).dirValue() >= 0)
-                        {
-                            dir = 1;
-                        }
-                        else
-                        {
-                            dir = -1;
-                        }
-
-                        Position.x += dir * -0.3f;
+                    Position.x += dir * -0.3f;
 
 
 
                     colisor.gameObject.GetComponent<bloodmaker>().createBlood(mobBlood);
                     colisor.gameObject.GetComponentInChildren<vidaObjeto>().PerdeVida(dano);
 
-                        colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);
+                    colisor.gameObject.GetComponent<Rigidbody2D>().MovePosition(Position);
                     //Se destroiAtacante tiver habilitado.
                     if (destroiAtacante)
                     {
@@ -138,12 +140,38 @@ void Update()
                     }
 
                 }
-               
 
-                }
 
             }
+
         }
+        else if (gameObject.layer == tiroBossLayer)
+        {
+            if (colisor.gameObject.layer == playerLayer)
+            {
+                Player.GetComponent<playerController>().PerdeVida(dano);
+                Player.GetComponent<bloodmaker>().createBlood(playerBlood);
+                Vector2 v = Player.GetComponent<Rigidbody2D>().velocity;
+
+                if (gameObject.transform.position.x - Player.GetComponent<Transform>().position.x > 0)
+                {
+                    v.x = -2f;
+                }
+                else
+                {
+                    v.x = 2f;
+                }
+
+
+                v.y = 2f;
+                Player.GetComponent<Rigidbody2D>().velocity = v;
+                colisor.gameObject.GetComponent<bloodmaker>().createBlood(0);
+                Destroy(gameObject);
+            }
+
+
+        }
+    }
     
 
     void OnTriggerEnter2D(Collider2D colisor)
