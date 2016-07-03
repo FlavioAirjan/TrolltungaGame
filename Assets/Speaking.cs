@@ -8,7 +8,7 @@ public class Speaking : MonoBehaviour {
     public GameObject DialogBoxText;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         DialogBoxText.transform.parent.gameObject.SetActive(true);
 
 

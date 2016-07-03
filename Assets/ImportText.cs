@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class ImportText : MonoBehaviour {
 
     public int limiteCaracteresPorLinha = 30;
-    [HideInInspector]
-    public string[] text;
     private int currentLine;
     List<string> list;
+
+    [HideInInspector]
+    public string[] text;
    
 
     // Use this for initialization
@@ -28,12 +29,13 @@ public class ImportText : MonoBehaviour {
         if (text.Length > 0)
         {
 
-            
 
             if (currentLine == 0)
             {
+                Debug.Log("Entrou");
                 gameObject.GetComponent<Text>().text = list[currentLine];
                 currentLine++;
+                Debug.Log("Passou!");
             }
 
             if (Input.GetKeyDown(KeyCode.G))
