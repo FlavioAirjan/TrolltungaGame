@@ -39,6 +39,7 @@ public class usaItem : MonoBehaviour {
         }
         if (colisor.gameObject.layer == playerLayer)
         {
+			Debug.Log ("Got " + gameObject.GetComponentInChildren<SpriteRenderer>().sprite.name);
             switch (TipoItem)
             {
                 case 0:
@@ -72,7 +73,6 @@ public class usaItem : MonoBehaviour {
 					break;
 				default:
                     break;
-
             }
 
         }

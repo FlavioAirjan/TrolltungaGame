@@ -1,18 +1,18 @@
 fileFormatVersion: 2
 guid: c8df5157423f19047b83045db428a97e
-timeCreated: 1467493629
+timeCreated: 1467496854
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: items_0
-    21300002: items_1
-    21300004: items_2
-    21300006: items_3
-    21300008: items_4
-    21300010: items_5
-    21300012: items_6
-    21300014: items_7
-    21300016: items_8
+    21300000: salmon
+    21300002: meat
+    21300004: bread
+    21300006: cheese
+    21300008: pizza
+    21300010: beer
+    21300012: water
+    21300014: fire
+    21300016: wind
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -59,7 +59,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: items_0
+    - name: salmon
       rect:
         serializedVersion: 2
         x: 7
@@ -74,7 +74,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_1
+    - name: meat
       rect:
         serializedVersion: 2
         x: 81
@@ -89,7 +89,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_2
+    - name: bread
       rect:
         serializedVersion: 2
         x: 155
@@ -104,7 +104,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_3
+    - name: cheese
       rect:
         serializedVersion: 2
         x: 7
@@ -119,7 +119,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_4
+    - name: pizza
       rect:
         serializedVersion: 2
         x: 82
@@ -134,7 +134,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_5
+    - name: beer
       rect:
         serializedVersion: 2
         x: 157
@@ -149,7 +149,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_6
+    - name: water
       rect:
         serializedVersion: 2
         x: 7
@@ -164,7 +164,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_7
+    - name: fire
       rect:
         serializedVersion: 2
         x: 84
@@ -179,7 +179,7 @@ TextureImporter:
         - {x: -33, y: -33}
         - {x: 33, y: -33}
         - {x: 33, y: 33}
-    - name: items_8
+    - name: wind
       rect:
         serializedVersion: 2
         x: 157

@@ -1,22 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\inventoryItemSelection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\playerController.cs">
     <Files>
+      <File FileName="Assets\inventoryItemSelection.cs" Line="43" Column="55" />
       <File FileName="Assets\scripts\GameManager.cs" Line="37" Column="30" />
-      <File FileName="Assets\inventoryItemSelection.cs" Line="21" Column="51" />
+      <File FileName="Assets\scripts\playerController.cs" Line="409" Column="3" />
+      <File FileName="Assets\scripts\MyItems.cs" Line="97" Column="23" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="TrolltungaGame" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="scripts" expanded="True" />
-              <Node name="inventoryItemSelection.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

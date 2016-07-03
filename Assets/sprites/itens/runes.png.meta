@@ -1,12 +1,12 @@
 fileFormatVersion: 2
 guid: 141e28e5013d27b42bdd8ab3ec96092f
-timeCreated: 1465667608
+timeCreated: 1467499575
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: runes_0
-    21300002: runes_1
-    21300004: runes_2
+    21300000: wind
+    21300002: water
+    21300004: fire
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,7 +53,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: runes_0
+    - name: wind
       rect:
         serializedVersion: 2
         x: 48
@@ -75,7 +75,7 @@ TextureImporter:
         - {x: 57.56212, y: -77.27316}
         - {x: 85.56212, y: -41.273163}
         - {x: 85.56212, y: 37.726837}
-    - name: runes_1
+    - name: water
       rect:
         serializedVersion: 2
         x: 365
@@ -96,7 +96,7 @@ TextureImporter:
         - {x: 30.916168, y: -87.39743}
         - {x: 60.91617, y: -68.39743}
         - {x: 84.91617, y: -38.39743}
-    - name: runes_2
+    - name: fire
       rect:
         serializedVersion: 2
         x: 59
