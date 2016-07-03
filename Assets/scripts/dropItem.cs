@@ -25,7 +25,7 @@ public class dropItem : MonoBehaviour {
         {
 				
 				Instantiate(Itens[i], position, transform.rotation);
-				position.x += Itens[i].GetComponent<BoxCollider2D>().size.x;
+				position.x += Itens[i].GetComponent<BoxCollider2D>().size.x/2;
         }
     }
     }

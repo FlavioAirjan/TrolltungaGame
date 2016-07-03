@@ -20,7 +20,7 @@ public class bloodmaker : MonoBehaviour {
 
     public void createBlood(int tipo)
     {
-        if (tipo > 0)
+        if (tipo >= 0)
         {
             Vector3 temp = transform.position;
             temp.z += 3;
