@@ -27,7 +27,9 @@ public class npcIA : MonoBehaviour
 
     private int playerLayer;
 
-    public GameObject speechBubble;
+    public GameObject speechBubble01;
+    public GameObject speechBubble02;
+    public GameObject speechBubble03;
 
     // Use this for initialization
     void Start()
@@ -63,10 +65,15 @@ public class npcIA : MonoBehaviour
     {
         if (!interception)
         {
+            
+
             timeSpeechBubble -= Time.deltaTime;
             if (timeSpeechBubble <= 0)
             {
-                speechBubble.GetComponent<SpriteRenderer>().enabled = !speechBubble.GetComponent<SpriteRenderer>().enabled;
+                speechBubble02.GetComponent<SpriteRenderer>().enabled = false;
+                speechBubble03.GetComponent<SpriteRenderer>().enabled = false;
+
+                speechBubble01.GetComponent<SpriteRenderer>().enabled = !speechBubble01.GetComponent<SpriteRenderer>().enabled;
                 timeSpeechBubble = durationSpeechBubble;
             }
 
@@ -109,8 +116,12 @@ public class npcIA : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D colisor)
     {
+        
         if (colisor.gameObject.layer == playerLayer)
         {
+            speechBubble01.GetComponent<SpriteRenderer>().enabled = false;
+            speechBubble02.GetComponent<SpriteRenderer>().enabled = true;
+            speechBubble03.GetComponent<SpriteRenderer>().enabled = false;
             interception = true;
 
         }
@@ -121,6 +132,10 @@ public class npcIA : MonoBehaviour
     {
         if (colisor.gameObject.layer == playerLayer)
         {
+            speechBubble01.GetComponent<SpriteRenderer>().enabled = false;
+            speechBubble02.GetComponent<SpriteRenderer>().enabled = false;
+            speechBubble03.GetComponent<SpriteRenderer>().enabled = true;
+            timeSpeechBubble = durationSpeechBubble;
             interception = false;
 
         }
@@ -133,11 +148,7 @@ public class npcIA : MonoBehaviour
         {
 			if (Input.GetKeyDown(KeyCode.Return) && !PauseMenu.enabled && !InventoryMenu.enabled)
             {
-                //if (ControlMenu.enabled)
-                //{
-                //    ControlMenu.enabled = !ControlMenu.enabled;
-                //}
-
+                
 				BuyMenu.enabled = !BuyMenu.enabled;
 				Time.timeScale = 1.0f - Time.timeScale;
 				GameObject.Find("Player").GetComponent<playerController>().pause = !GameObject.Find("Player").GetComponent<playerController>().pause;             
