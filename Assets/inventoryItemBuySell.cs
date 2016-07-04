@@ -12,31 +12,39 @@ public class inventoryItemBuySell : MonoBehaviour {
 	public GameObject itemQuantidade;
 	public GameObject itemPrice;
 	private int quatidade;
-
+	public AudioClip menu_selection;
+	public AudioSource source;
 	// Use this for initialization
 	void Start () {
-	
+		//source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (!player.GetComponent<playerController> ().pause) {
+			return;
+		}
+
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			//Debug.Log ("InvLeft " + currentItem.ToString ());
 			currentItem -= 1;
 			currentItem = mod(currentItem, itemList.Length);
 			image.GetComponent<Image>().sprite = itemList[currentItem];
+			source.PlayOneShot (menu_selection, 1);
 		}
 
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+		if (Input.GetKeyDown (KeyCode.RightArrow) ) {
 			//Debug.Log ("InvRight " + currentItem.ToString ());
 			currentItem += 1;
 			currentItem = mod(currentItem, itemList.Length);
 			image.GetComponent<Image>().sprite = itemList[currentItem];
+			source.PlayOneShot (menu_selection, 1);
 		}
 			
 		//sell
 		if (Input.GetKeyDown (KeyCode.S)) {
 			Debug.Log ("Got a " + itemList [currentItem].name);
+			source.PlayOneShot (menu_selection, 1);
 			switch (itemList [currentItem].name) {
 			case "meat":
 				if (player.GetComponent<MyItems> ().meat == 0)
@@ -98,6 +106,7 @@ public class inventoryItemBuySell : MonoBehaviour {
 		//buy
 		if (Input.GetKeyDown (KeyCode.B)) {
 			Debug.Log ("Got a " + itemList [currentItem].name);
+			source.PlayOneShot (menu_selection, 1);
 			switch (itemList [currentItem].name) {
 			case "meat":
 				if (player.GetComponent<MyItems> ().gold - player.GetComponent<MyItems> ().pricemeat < 0)

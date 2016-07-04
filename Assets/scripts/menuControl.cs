@@ -50,7 +50,8 @@ public class menuControl : MonoBehaviour {
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene("scene01");
+		//SceneManager.LoadScene("scene01");
+		SceneManager.LoadScene("MenuMap");
 	}
 
 	public void ExitGame()

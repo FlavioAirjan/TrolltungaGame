@@ -11,6 +11,8 @@ public class inventoryItemSelection : MonoBehaviour {
 	public GameObject itemText;
 	public GameObject itemQuantidade;
 	private int quatidade;
+	public AudioClip menu_selection;
+	public AudioSource source;
 	// Use this for initialization
 	void Start () {
 	
@@ -18,12 +20,16 @@ public class inventoryItemSelection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!player.GetComponent<playerController> ().pause) {
+			return;
+		}
+
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			//Debug.Log ("InvLeft " + currentItem.ToString ());
 			currentItem -= 1;
 			currentItem = mod(currentItem, itemList.Length);
 			image.GetComponent<Image>().sprite = itemList[currentItem];
-
+			source.PlayOneShot (menu_selection, 1);
 		}
 
 		if (Input.GetKeyDown (KeyCode.RightArrow)) {
@@ -31,10 +37,12 @@ public class inventoryItemSelection : MonoBehaviour {
 			currentItem += 1;
 			currentItem = mod(currentItem, itemList.Length);
 			image.GetComponent<Image>().sprite = itemList[currentItem];
+			source.PlayOneShot (menu_selection, 1);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			Debug.Log ("Got a " + itemList [currentItem].name);
+			source.PlayOneShot (menu_selection, 1);
 			switch (itemList [currentItem].name) {
 			case "meat":
 				if (player.GetComponent<MyItems> ().meat == 0)
