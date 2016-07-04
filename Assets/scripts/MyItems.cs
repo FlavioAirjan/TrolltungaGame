@@ -14,6 +14,16 @@ public class MyItems : MonoBehaviour {
 	public int bread;
 	public int cheese;
 
+	public int pricewindRune = 20;
+	public int pricefreezeRune = 20;
+	public int pricefireRune = 20;
+	public int pricemeat = 40;
+	public int pricesalmon = 50;
+	public int pricepizza = 5;
+	public int pricebeer = 10;
+	public int pricebread = 5;
+	public int pricecheese = 5;
+
     // Use this for initialization
     void Start () {
 	
@@ -141,6 +151,33 @@ public class MyItems : MonoBehaviour {
 			if (windRune < 0)
 				windRune = 0;
 			return windRune;
+		default:
+			return -1;
+		}
+
+	}
+
+
+	public int getItemPrice(string item){
+		switch (item) {
+		case "meat":
+			return pricemeat;
+		case "salmon":
+			return pricesalmon;
+		case "pizza":
+			return pricepizza;
+		case "beer":
+			return pricebeer;
+		case "bread":
+			return pricebread;
+		case "cheese":
+			return pricecheese;
+		case "water":
+			return pricefreezeRune;
+		case "fire":
+			return pricefireRune;
+		case "wind":
+			return pricewindRune;
 		default:
 			return -1;
 		}

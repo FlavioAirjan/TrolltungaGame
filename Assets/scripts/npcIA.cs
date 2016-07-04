@@ -7,6 +7,7 @@ public class npcIA : MonoBehaviour
     public Canvas PauseMenu;
     public Canvas ControlMenu;
     public Canvas InventoryMenu;
+	public Canvas BuyMenu;
 
     public bool interception = false;
     bool Walk = false;
@@ -130,20 +131,17 @@ public class npcIA : MonoBehaviour
 
         if (interception == true)
         {
-            if (Input.GetKeyDown(KeyCode.Return) && PauseMenu.enabled == false)
+			if (Input.GetKeyDown(KeyCode.Return) && !PauseMenu.enabled && !InventoryMenu.enabled)
             {
-                if (ControlMenu.enabled)
-                {
-                    ControlMenu.enabled = !ControlMenu.enabled;
-                }
+                //if (ControlMenu.enabled)
+                //{
+                //    ControlMenu.enabled = !ControlMenu.enabled;
+                //}
 
-                if (InventoryMenu.enabled)
-                {
-                    InventoryMenu.enabled = !InventoryMenu.enabled;
-                }
-
-
-                Debug.Log("Chamar o inventário de venda!");
+				BuyMenu.enabled = !BuyMenu.enabled;
+				Time.timeScale = 1.0f - Time.timeScale;
+				GameObject.Find("Player").GetComponent<playerController>().pause = !GameObject.Find("Player").GetComponent<playerController>().pause;             
+				Debug.Log("Chamar o inventário de venda!" + InventoryMenu.enabled.ToString());
                 
 
             }
