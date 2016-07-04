@@ -4,11 +4,13 @@ using System.Collections;
 public class collectItem : MonoBehaviour {
 
 	public int playerLayer;
+    private GameObject GM;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		playerLayer = LayerMask.NameToLayer("Player");
-	}
+        GM = GameObject.Find("GM");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -52,7 +54,7 @@ public class collectItem : MonoBehaviour {
 				DestroyObject (gameObject);
 				break;
 			case "map":
-				colisor.gameObject.GetComponent<MyItems> ().ganhaGold(30);
+                GM.GetComponent<GameManager>().GameEnd = true;
 				DestroyObject (gameObject);
 				break;
 			case "chest":
