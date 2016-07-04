@@ -9,11 +9,13 @@ public class menuScript : MonoBehaviour
     public Canvas quitMenu;
     public Button startText;
     public Button exitText;
+    private GameObject FilesManager;
 
 
     // Use this for initialization
     void Start()
     {
+        FilesManager = GameObject.Find("FileManager");
         quitMenu = quitMenu.GetComponent<Canvas>();
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
@@ -36,14 +38,6 @@ public class menuScript : MonoBehaviour
         exitText.enabled = true;
     }
 
-    public void StartGame()
-    {
-        SceneManager.LoadScene("scene01");
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
+   
 
 }

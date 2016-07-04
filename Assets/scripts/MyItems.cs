@@ -3,6 +3,8 @@ using System.Collections;
 
 public class MyItems : MonoBehaviour {
 
+    public GameObject FilesManager;
+
     public int gold;
     public int windRune;
     public int freezeRune;
@@ -26,7 +28,26 @@ public class MyItems : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
+
+        try
+        {
+            FilesManager = GameObject.Find("FileManager");
+            gold = FilesManager.GetComponent<FileManagerScript>().Items[0];
+            windRune = FilesManager.GetComponent<FileManagerScript>().Items[1];
+            freezeRune = FilesManager.GetComponent<FileManagerScript>().Items[2];
+            fireRune = FilesManager.GetComponent<FileManagerScript>().Items[3];
+            salmon = FilesManager.GetComponent<FileManagerScript>().Items[4];
+            meat = FilesManager.GetComponent<FileManagerScript>().Items[5];
+            bread = FilesManager.GetComponent<FileManagerScript>().Items[6];
+            cheese = FilesManager.GetComponent<FileManagerScript>().Items[7];
+            pizza = FilesManager.GetComponent<FileManagerScript>().Items[8];
+            beer = FilesManager.GetComponent<FileManagerScript>().Items[9];
+        }
+        catch
+        {
+
+        }
+
 	}
 	
 	// Update is called once per frame

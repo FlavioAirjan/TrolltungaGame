@@ -5,13 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class mapStateControl : MonoBehaviour {
 
+    private GameObject FilesManager;
 	public GameObject panel;
 	public Sprite[] mapList;
 	public int status;
 
 	// Use this for initialization
 	void Start () {
-	
+
+        try
+        {
+            FilesManager = GameObject.Find("FileManager");
+            status = FilesManager.GetComponent<FileManagerScript>().currentLevel;
+        }
+        catch
+        {
+
+        }
+
 	}
 	
 	// Update is called once per frame

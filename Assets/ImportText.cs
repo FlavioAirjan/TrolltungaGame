@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ImportText : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class ImportText : MonoBehaviour
                     text = null;
                     currentLine = 0;
                     gameObject.transform.parent.gameObject.SetActive(false);
+                    SceneManager.LoadScene("MenuMap");
 
                 }
                 else

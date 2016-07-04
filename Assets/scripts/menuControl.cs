@@ -14,11 +14,16 @@ public class menuControl : MonoBehaviour {
 
 	public AudioClip menu_selection;
 	private AudioSource source;
+    private GameObject FilesManager;
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake () {
 		source = GetComponent<AudioSource> ();
 	}
+    void Start()
+    {
+        FilesManager = GameObject.Find("FileManager");
+    }
 		
 
 	// Update is called once per frame
@@ -48,15 +53,21 @@ public class menuControl : MonoBehaviour {
 		}
 	}
 
-	public void StartGame()
-	{
-		//SceneManager.LoadScene("scene01");
-		SceneManager.LoadScene("MenuMap");
-	}
+    public void StartGame()
+    {
+        FilesManager.GetComponent<FileManagerScript>().createNewFiles();
+        SceneManager.LoadScene("Intro DialogBox");
+    }
 
-	public void ExitGame()
-	{
-		Application.Quit();
-	}
+    public void ContinueGame()
+    {
+        FilesManager.GetComponent<FileManagerScript>().checkFiles();
+        SceneManager.LoadScene("MenuMap");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
 
