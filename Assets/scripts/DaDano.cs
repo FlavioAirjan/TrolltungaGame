@@ -47,7 +47,7 @@ void Update()
     {
         bool direita = !transform.GetComponentInChildren<SpriteRenderer>().flipX;
        float DistX= transform.position.x - Player.transform.position.x;
-        if ((direita && DistX<0)||(!direita &&DistX>0))
+        if ((direita && DistX<=0)||(!direita &&DistX>=0))
         {
             return true;
         } else {

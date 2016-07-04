@@ -137,7 +137,7 @@ public class TrollIA : MonoBehaviour,mobIA {
     public void hitsound()
     {
 
-        playsound(attack1Sound);
+        //playsound(attack1Sound);
     }
     public IEnumerator Atack()
     {
