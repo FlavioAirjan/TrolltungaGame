@@ -25,7 +25,12 @@ public class FileManagerScript : MonoBehaviour {
         {
             createNewFiles();
         }
-        readData();
+       
+    }
+
+    void Start()
+    {
+       
     }
 
     bool filesExist()
@@ -123,7 +128,7 @@ public class FileManagerScript : MonoBehaviour {
 
         foreach (int i in Items)
         {
-            Debug.Log(i);
+            //Debug.Log(i);
         }
 
     }

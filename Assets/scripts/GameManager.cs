@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public Canvas PauseMenu;
     public Canvas ControlMenu;
 	public Canvas InventoryMenu;
+    public Canvas BuyMenu;
 
     public GameObject FadeOut;
     private GameObject FilesManager;
@@ -88,7 +89,7 @@ public class GameManager : MonoBehaviour {
 
         CheckGameEnded();
 
-		if (Input.GetKeyDown(KeyCode.Escape) && !InventoryMenu.enabled)
+		if (Input.GetKeyDown(KeyCode.Escape) && !InventoryMenu.enabled && !BuyMenu.enabled)
         {
             if (ControlMenu.enabled)
             {
@@ -98,7 +99,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-		if (Input.GetKeyDown (KeyCode.I) && !PauseMenu.enabled) {
+		if (Input.GetKeyDown (KeyCode.I) && !PauseMenu.enabled && !BuyMenu.enabled) {
 			Debug.Log ("Enable Inventory");
 			InventoryMenu.enabled = !InventoryMenu.enabled;
 			Time.timeScale = 1.0f - Time.timeScale;

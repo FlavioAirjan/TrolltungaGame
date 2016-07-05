@@ -5,7 +5,9 @@ using System.Collections;
 public class menuControl : MonoBehaviour {
 	public GameObject start;
 	public GameObject quit;
+    public GameObject continuar;
 	public bool onStart = true;
+    public int pos = 2;
 
 	public Sprite start_selected;
 	public Sprite start_unselected;
@@ -30,26 +32,43 @@ public class menuControl : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Return)){
 			source.PlayOneShot (menu_selection, 1);
-			if (onStart){
-				StartGame();
-			}
-			else {
-				ExitGame();
-			}
+
+
+            if (pos == 2)
+            {
+                StartGame();
+            }
+            else if (pos == 0)
+            {
+                ExitGame();
+            }
+            else if (pos == 1) {
+                ContinueGame();
+            }
 		}
 
 		if (Input.GetKeyDown ("up")) {
 			onStart = true;
+            pos++;
+            if (pos > 2) pos = 2;
 			source.PlayOneShot (menu_selection, 1);
-			start.GetComponent<SpriteRenderer> ().sprite = start_selected;
-			quit.GetComponent<SpriteRenderer> ().sprite = quit_unselected;
+            if (pos == 2)
+            {
+                start.GetComponent<SpriteRenderer>().sprite = start_selected;
+                quit.GetComponent<SpriteRenderer>().sprite = quit_unselected;
+            }
 		}
 
 		if (Input.GetKeyDown ("down")) {
 			onStart = false;
-			source.PlayOneShot (menu_selection, 1);
-			start.GetComponent<SpriteRenderer> ().sprite = start_unselected;
-			quit.GetComponent<SpriteRenderer> ().sprite = quit_selected;
+            pos--;
+            if (pos < 0) pos = 0;
+            source.PlayOneShot (menu_selection, 1);
+            if (pos == 0)
+            {
+                start.GetComponent<SpriteRenderer>().sprite = start_unselected;
+                quit.GetComponent<SpriteRenderer>().sprite = quit_selected;
+            }
 		}
 	}
 

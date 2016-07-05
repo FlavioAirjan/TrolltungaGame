@@ -21,7 +21,8 @@ public class inventoryItemBuySell : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!player.GetComponent<playerController> ().pause) {
+		if (!player.GetComponent<playerController> ().pause)
+        {
 			return;
 		}
 

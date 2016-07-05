@@ -16,11 +16,12 @@ public class mapStateControl : MonoBehaviour {
         try
         {
             FilesManager = GameObject.Find("FileManager");
+            FilesManager.GetComponent<FileManagerScript>().readData();
             status = FilesManager.GetComponent<FileManagerScript>().currentLevel;
         }
         catch
         {
-
+            Debug.Log("FileManager Object not found");
         }
 
 	}
